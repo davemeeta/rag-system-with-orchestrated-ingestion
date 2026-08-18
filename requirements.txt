@@ -1,0 +1,7 @@
+requests
+beautifulsoup4
+lxml
+qdrant-client
+ollama
+pydantic
+tiktoken
