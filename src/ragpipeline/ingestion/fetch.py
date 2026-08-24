@@ -50,27 +50,31 @@ def _latest_10k(cik: str) -> dict:
     raise ValueError(f"No 10-K filing found for CIK {cik}")
 
 
-def fetch_all(tickers: list[str] | None = None, out_dir: Path = config.RAW_DIR) -> list[Path]:
-    tickers = tickers or list(CIK_MAP.keys())
+def fetch_one(ticker: str, out_dir: Path = config.RAW_DIR) -> Path:
+    """Fetch a single company's latest 10-K. Used directly by the Dagster
+    per-ticker partitioned asset, and looped over by fetch_all below."""
     out_dir.mkdir(parents=True, exist_ok=True)
 
+    cik = CIK_MAP[ticker]
+    filing = _latest_10k(cik)
+    accession_nodash = filing["accession"].replace("-", "")
+    doc_url = DOC_URL.format(cik_int=int(cik), accession_nodash=accession_nodash, doc=filing["primary_document"])
+
+    resp = requests.get(doc_url, headers=_headers(), timeout=60)
+    resp.raise_for_status()
+
+    out_path = out_dir / f"{ticker}_10K_{filing['filing_date']}.htm"
+    out_path.write_bytes(resp.content)
+    print(f"[fetch] {ticker}: 10-K filed {filing['filing_date']} -> {out_path.name} ({len(resp.content):,} bytes)")
+    return out_path
+
+
+def fetch_all(tickers: list[str] | None = None, out_dir: Path = config.RAW_DIR) -> list[Path]:
+    tickers = tickers or list(CIK_MAP.keys())
     saved = []
     for ticker in tickers:
-        cik = CIK_MAP[ticker]
-        filing = _latest_10k(cik)
-        accession_nodash = filing["accession"].replace("-", "")
-        doc_url = DOC_URL.format(cik_int=int(cik), accession_nodash=accession_nodash, doc=filing["primary_document"])
-
-        resp = requests.get(doc_url, headers=_headers(), timeout=60)
-        resp.raise_for_status()
-
-        out_path = out_dir / f"{ticker}_10K_{filing['filing_date']}.htm"
-        out_path.write_bytes(resp.content)
-        saved.append(out_path)
-        print(f"[fetch] {ticker}: 10-K filed {filing['filing_date']} -> {out_path.name} ({len(resp.content):,} bytes)")
-
+        saved.append(fetch_one(ticker, out_dir))
         time.sleep(0.3)  # stay well under SEC's rate limit
-
     return saved
 
 

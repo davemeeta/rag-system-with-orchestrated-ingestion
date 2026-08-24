@@ -4,42 +4,9 @@ A retrieval-augmented generation system over SEC 10-K filings, built to compare
 retrieval strategies (dense vs. hybrid) on a measured eval set, with ingestion
 run as an orchestrated, schedulable pipeline rather than a one-off script.
 
-**Status: Phase 1 complete** (naive end-to-end baseline). Phases 2–5
-(orchestration, retrieval/chunking comparison, failure analysis, serving) are
-in progress — see [Build phases](#build-phases) below.
-
-## Why these choices
-
-**Corpus — SEC 10-K filings** (AAPL, MSFT, JPM, XOM, PFE, TSLA), pulled live
-from [SEC EDGAR](https://www.sec.gov/edgar) (public domain, no auth). 10-Ks
-were chosen over cleaner corpora (e.g. library docs) because they have real
-structural noise: dense legal prose, financial tables, near-duplicate
-boilerplate risk-factor language repeated across filers, inconsistent
-heading markup, and — specific to inline-XBRL filings — large blocks of
-hidden machine-readable data interleaved with the human-readable text (see
-`src/ragpipeline/ingestion/extract.py`, which explicitly strips
-`<ix:header>`/`<ix:hidden>`/`display:none` elements). That noise is exactly
-what should make fixed-size vs. semantic chunking diverge in Phase 3 — a
-clean, well-structured corpus wouldn't stress-test chunking strategy the
-same way. Financial-document QA is also a realistic enterprise RAG use case.
-
-**Orchestrator — Dagster.** Airflow is more commonly listed in job postings,
-but it requires a metadata database, scheduler, and webserver to run
-locally — heavy for a solo project. Dagster's asset-based model runs
-locally with a single process and is a defensible, modern choice for
-a portfolio project built and run by one person.
-
-**Embeddings — `nomic-embed-text` via Ollama.** Since generation already
-requires a local Ollama server, using Ollama for embeddings too means one
-model server for both stages instead of running a second
-sentence-transformers process. It also has an 8k token context, which
-gives headroom for variable-length chunks once semantic chunking (Phase 3)
-is added. `bge-small-en-v1.5` was considered as a faster CPU-only
-alternative and is noted here as the documented tradeoff.
-
-**Generation — `llama3.2:3b` via Ollama.** Small enough to run comfortably
-on a laptop CPU while still following instructions well enough to stay
-grounded in retrieved context (see [Phase 1 results](#phase-1-results)).
+**Status: Phase 2 complete** (orchestrated ingestion DAG with data quality
+checks). Phases 3–5 (retrieval/chunking comparison, failure analysis,
+serving) are in progress — see [Build phases](#build-phases) below.
 
 ## Architecture (target — see [Build phases](#build-phases) for what's live)
 
@@ -47,9 +14,11 @@ grounded in retrieved context (see [Phase 1 results](#phase-1-results)).
 SEC EDGAR (10-K filings)
      |
      v
-Orchestrated ingestion pipeline (Dagster, containerized)     [Phase 2]
-  - extract -> chunk (fixed-size AND semantic) -> embed -> load
-  - data quality checks at each stage
+Orchestrated ingestion pipeline (Dagster, containerized)     [Phase 2, live]
+  - extract -> chunk (fixed-size; semantic added Phase 3) -> embed -> load
+  - partitioned per company (6 static partitions) so each filing is
+    independently materializable/retriable
+  - dbt-style data quality check at every stage
      |
      v
 Qdrant (Docker)
@@ -74,21 +43,26 @@ FastAPI serving, structured logging                          [Phase 5]
 src/ragpipeline/
   config.py              # .env-backed settings, shared paths
   ingestion/
-    fetch.py              # SEC EDGAR downloader
-    extract.py             # HTML -> cleaned text, strips hidden XBRL, tags [SECTION] headers
-    chunk.py                # fixed-size token chunker (strategy #1)
+    fetch.py              # SEC EDGAR downloader (fetch_one/fetch_all)
+    extract.py             # HTML -> cleaned text, strips hidden XBRL, tags [SECTION] headers (extract_one/extract_all)
+    chunk.py                # fixed-size token chunker (strategy #1), deterministic chunk IDs
     embed.py                  # Ollama embedding wrapper (nomic-embed-text)
     load.py                    # Qdrant collection create + upsert, dimension checks
   retrieval/
     dense.py               # dense-only retrieval baseline
   generation/
     ollama_client.py       # grounded RAG prompt -> llama3.2:3b
+orchestration/             # Phase 2: Dagster ingestion DAG
+  assets.py                # extract/chunk/embed/load, partitioned per ticker
+  checks.py                # dbt-style data quality assertions per stage
+  definitions.py           # Definitions object, job, daily schedule
 scripts/
   run_naive_pipeline.py    # Phase 1 end-to-end script (--ingest, --query)
 data/
   raw/                    # downloaded 10-K HTML (gitignored)
   processed/              # cleaned text per filing (gitignored)
-docker-compose.yml        # Qdrant (api + dagster services added in later phases)
+Dockerfile                # image for the dagster service
+docker-compose.yml        # qdrant + dagster (api service added in Phase 5)
 ```
 
 ## Setup (Phase 1)
@@ -130,10 +104,57 @@ Run the naive pipeline:
   returns "I couldn't find any information on Netflix..." instead of
   hallucinating).
 
+## Setup (Phase 2 — orchestrated ingestion)
+
+Everything from Phase 1 setup, plus:
+
+```bash
+./.venv/bin/pip install -r requirements.txt   # now includes dagster, dagster-webserver
+```
+
+Run the DAG locally (outside Docker) for one company:
+
+```bash
+export DAGSTER_HOME=$(pwd)/.dagster_home && mkdir -p "$DAGSTER_HOME"
+./.venv/bin/dagster asset materialize --select "*" -m orchestration.definitions --partition AAPL
+```
+
+...or bring up the containerized version and use the UI:
+
+```bash
+docker compose up -d qdrant dagster
+open http://localhost:3000
+```
+
+In the UI: **Overview → Assets → Materialize all**, then pick a partition (or
+"All partitions") to run the whole `extracted_filing → chunks →
+embedded_chunks → loaded_points` chain for each of the 6 tickers, with each
+stage's data quality check visible next to it.
+
+## Phase 2 results
+
+- **Partitioned per ticker**: 4 stages × 6 companies, each independently retriable.
+- **Data quality checks per stage** (dbt-style): min extracted-text length,
+  no blank chunks, embedding dim/count match, Qdrant row-count reconciliation.
+- **Clean-state run verified**: dropped the collection, materialized all 24
+  stage/partition combos, all checks passed, 1,812 total points — matching
+  Phase 1 exactly.
+- **Idempotent retries verified**: re-running a partition leaves the point
+  count unchanged. Required switching chunk IDs from random `uuid4` to
+  deterministic `uuid5` (`ticker/source_file/strategy/chunk_index`) so
+  re-loads upsert instead of duplicate — the row-count check is what caught
+  the original duplication (270 vs. expected 135 for AAPL).
+- **Containerized**: `dagster` service + `Dockerfile`, reaches Qdrant over
+  the compose network and the host's Ollama via `host.docker.internal`
+  (Ollama stays local, not containerized). Verified assets load correctly
+  in-container via the GraphQL API.
+- **Caveat**: partitioned asset checks are a preview feature as of Dagster
+  1.13 and may change in a future patch release.
+
 ## Build phases
 
-- [x] **Phase 1** — Corpus + naive baseline (this README's current state).
-- [ ] **Phase 2** — Rebuild ingestion as a Dagster DAG (extract/chunk/embed/load/quality-check as independently retriable tasks), add dbt-style data quality assertions.
+- [x] **Phase 1** — Corpus + naive baseline.
+- [x] **Phase 2** — Orchestrated ingestion DAG (Dagster, partitioned per ticker) with dbt-style data quality checks at every stage; containerized.
 - [ ] **Phase 3** — Add semantic/recursive chunking and hybrid (dense+BM25) retrieval, build a 20–30 question eval set, produce a measured comparison table.
 - [ ] **Phase 4** — Failure analysis (no-answer, ambiguous, multi-document questions) and a confidence-based refusal mechanism.
 - [ ] **Phase 5** — FastAPI serving with structured logging, full `docker-compose up` from a clean clone, final README pass.

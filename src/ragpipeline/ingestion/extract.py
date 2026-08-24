@@ -57,16 +57,22 @@ def tag_sections(text: str) -> str:
     return "\n".join(out_lines)
 
 
-def extract_all(raw_dir: Path = config.RAW_DIR, out_dir: Path = config.PROCESSED_DIR) -> list[Path]:
+def extract_one(html_path: Path, out_dir: Path = config.PROCESSED_DIR) -> Path:
+    """Extract a single downloaded filing. Used directly by the Dagster
+    per-ticker partitioned asset, and looped over by extract_all below."""
     out_dir.mkdir(parents=True, exist_ok=True)
+    raw_html = html_path.read_text(errors="ignore")
+    text = tag_sections(html_to_text(raw_html))
+    out_path = out_dir / (html_path.stem + ".txt")
+    out_path.write_text(text)
+    print(f"[extract] {html_path.name} -> {out_path.name} ({len(text):,} chars)")
+    return out_path
+
+
+def extract_all(raw_dir: Path = config.RAW_DIR, out_dir: Path = config.PROCESSED_DIR) -> list[Path]:
     saved = []
     for html_path in sorted(raw_dir.glob("*.htm*")):
-        raw_html = html_path.read_text(errors="ignore")
-        text = tag_sections(html_to_text(raw_html))
-        out_path = out_dir / (html_path.stem + ".txt")
-        out_path.write_text(text)
-        saved.append(out_path)
-        print(f"[extract] {html_path.name} -> {out_path.name} ({len(text):,} chars)")
+        saved.append(extract_one(html_path, out_dir))
     return saved
 
 

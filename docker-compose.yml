@@ -13,5 +13,32 @@ services:
       timeout: 5s
       retries: 5
 
+  dagster:
+    build: .
+    container_name: rag-pipeline-dagster
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/app
+      - dagster_home:/app/.dagster_home
+    environment:
+      QDRANT_URL: http://qdrant:6333
+      QDRANT_COLLECTION: sec_filings
+      # Ollama runs on the host, not in this compose stack (per the project's
+      # "no hosted/metered API" requirement — generation/embedding stay local
+      # to the host machine's Ollama install, not containerized).
+      OLLAMA_HOST: http://host.docker.internal:11434
+      EMBED_MODEL: nomic-embed-text
+      GEN_MODEL: llama3.2:3b
+      SEC_EDGAR_USER_AGENT: ${SEC_EDGAR_USER_AGENT}
+      DAGSTER_HOME: /app/.dagster_home
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      qdrant:
+        condition: service_healthy
+    command: ["dagster", "dev", "-h", "0.0.0.0", "-p", "3000", "-m", "orchestration.definitions"]
+
 volumes:
   qdrant_storage:
+  dagster_home:

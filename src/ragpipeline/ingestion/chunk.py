@@ -20,6 +20,16 @@ CHUNK_OVERLAP_TOKENS = 50
 _ENCODING = tiktoken.get_encoding("cl100k_base")
 _SECTION_MARKER_RE = re.compile(r"^\[SECTION\]\s*(.*)$")
 
+# Namespace for deterministic chunk IDs: re-materializing the same
+# (ticker, source_file, strategy, chunk_index) always yields the same ID, so
+# re-running ingestion overwrites the existing Qdrant point instead of
+# inserting a duplicate. This is what makes the Dagster load asset idempotent.
+_ID_NAMESPACE = uuid.UUID("7f6f6e8a-2f6f-4a3f-9a3f-6f6f6e8a2f6f")
+
+
+def _chunk_id(ticker: str, source_file: str, strategy: str, chunk_index: int) -> str:
+    return str(uuid.uuid5(_ID_NAMESPACE, f"{ticker}:{source_file}:{strategy}:{chunk_index}"))
+
 
 @dataclass
 class Chunk:
@@ -79,6 +89,7 @@ def chunk_document(
     source_file: str,
     chunk_size: int = CHUNK_SIZE_TOKENS,
     overlap: int = CHUNK_OVERLAP_TOKENS,
+    strategy: str = "fixed_size",
 ) -> list[Chunk]:
     chunks: list[Chunk] = []
     idx = 0
@@ -88,12 +99,13 @@ def chunk_document(
                 continue  # data-quality: drop empty/whitespace-only chunks
             chunks.append(
                 Chunk(
-                    id=str(uuid.uuid4()),
+                    id=_chunk_id(ticker, source_file, strategy, idx),
                     ticker=ticker,
                     source_file=source_file,
                     section=section,
                     chunk_index=idx,
                     text=chunk_text,
+                    strategy=strategy,
                 )
             )
             idx += 1

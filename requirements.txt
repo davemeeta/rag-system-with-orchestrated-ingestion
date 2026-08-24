@@ -5,3 +5,5 @@ qdrant-client
 ollama
 pydantic
 tiktoken
+dagster
+dagster-webserver
