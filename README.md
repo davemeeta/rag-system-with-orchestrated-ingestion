@@ -4,9 +4,41 @@ A retrieval-augmented generation system over SEC 10-K filings, built to compare
 retrieval strategies (dense vs. hybrid) on a measured eval set, with ingestion
 run as an orchestrated, schedulable pipeline rather than a one-off script.
 
-**Status: Phase 4 complete** (failure analysis + confidence-based refusal
-guardrail). Phase 5 (serving) is in progress — see
-[Build phases](#build-phases) below.
+**Status: all 5 phases complete.** `docker compose up -d` brings up the full
+stack (Qdrant + Dagster + FastAPI) from a clean clone.
+
+## Why these choices
+
+**Corpus — SEC 10-K filings** (AAPL, MSFT, JPM, XOM, PFE, TSLA), pulled live
+from [SEC EDGAR](https://www.sec.gov/edgar) (public domain, no auth). 10-Ks
+were chosen over cleaner corpora (e.g. library docs) because they have real
+structural noise: dense legal prose, financial tables, near-duplicate
+boilerplate risk-factor language repeated across filers, inconsistent
+heading markup, and — specific to inline-XBRL filings — large blocks of
+hidden machine-readable data interleaved with the human-readable text (see
+`src/ragpipeline/ingestion/extract.py`, which explicitly strips
+`<ix:header>`/`<ix:hidden>`/`display:none` elements). That noise is exactly
+what should make fixed-size vs. semantic chunking diverge in Phase 3 — a
+clean, well-structured corpus wouldn't stress-test chunking strategy the
+same way. Financial-document QA is also a realistic enterprise RAG use case.
+
+**Orchestrator — Dagster.** Airflow is more commonly listed in job postings,
+but it requires a metadata database, scheduler, and webserver to run
+locally — heavy for a solo project. Dagster's asset-based model runs
+locally with a single process and is a defensible, modern choice for
+a portfolio project built and run by one person.
+
+**Embeddings — `nomic-embed-text` via Ollama.** Since generation already
+requires a local Ollama server, using Ollama for embeddings too means one
+model server for both stages instead of running a second
+sentence-transformers process. It also has an 8k token context, which
+gives headroom for variable-length chunks once semantic chunking (Phase 3)
+is added. `bge-small-en-v1.5` was considered as a faster CPU-only
+alternative and is noted here as the documented tradeoff.
+
+**Generation — `llama3.2:3b` via Ollama.** Small enough to run comfortably
+on a laptop CPU while still following instructions well enough to stay
+grounded in retrieved context (see [Phase 1 results](#phase-1-results)).
 
 ## Architecture (target — see [Build phases](#build-phases) for what's live)
 
@@ -34,7 +66,8 @@ Evaluation harness: hand-built precision@5/hit@5/MRR +
 LLM-judged faithfulness/relevance, 24-question eval set      [Phase 3, live]
      |
      v
-FastAPI serving, structured logging                          [Phase 5]
+FastAPI serving: confidence-gated /query, structured
+per-request logging (latency, tokens, retrieved doc IDs)     [Phase 5, live]
 ```
 
 ## Repo layout
@@ -52,8 +85,12 @@ src/ragpipeline/
     dense.py               # dense-only retrieval baseline, strategy-filtered
     hybrid.py              # dense + BM25 sparse, fused via Reciprocal Rank Fusion
   generation/
-    ollama_client.py       # grounded RAG prompt -> llama3.2:3b
+    ollama_client.py       # grounded RAG prompt -> llama3.2:3b, returns token counts
   rag.py                   # Phase 4: winning config + confidence-based refusal gate
+  serving/                 # Phase 5: FastAPI app
+    main.py                # /health, /query
+    schemas.py              # Pydantic request/response models
+    logging_config.py        # structured (JSON-per-line) request logging
 orchestration/             # Phase 2: Dagster ingestion DAG
   assets.py                # extract/chunk/embed/load, partitioned per ticker
   checks.py                # dbt-style data quality assertions per stage
@@ -71,8 +108,8 @@ eval/
 data/
   raw/                    # downloaded 10-K HTML (gitignored)
   processed/              # cleaned text per filing (gitignored)
-Dockerfile                # image for the dagster service
-docker-compose.yml        # qdrant + dagster (api service added in Phase 5)
+Dockerfile                # shared image for the dagster and api services
+docker-compose.yml        # qdrant + dagster + api
 ```
 
 ## Setup (Phase 1)
@@ -300,10 +337,68 @@ cleanly, cheaply (refuses before spending a generation call).
   proper fix would detect multi-entity questions and retrieve per-entity,
   then merge — not implemented here.
 
+## Setup (Phase 5 — full stack)
+
+From a clean clone, with Docker and [Ollama](https://ollama.com) (with
+`nomic-embed-text` and `llama3.2:3b` pulled) running on the host:
+
+```bash
+cp .env.example .env   # set SEC_EDGAR_USER_AGENT
+
+docker compose up -d   # qdrant + dagster + api
+
+curl http://localhost:8000/health
+curl -X POST http://localhost:8000/query \
+  -H 'Content-Type: application/json' \
+  -d '{"question": "What does JPMorgan say about interest rate risk?"}'
+```
+
+`docker compose up -d` brings up the *infrastructure* (vector DB,
+orchestrator, API) from nothing — it does not itself run ingestion. Load
+data either through the Dagster UI at `localhost:3000` (materialize all
+partitions) or `./.venv/bin/python scripts/ingest_chunking_strategies.py --recreate`
+before querying the API, the same two-step split as Phase 2.
+
+## Phase 5 results
+
+`src/ragpipeline/serving/main.py` wraps `rag.answer_question` (the Phase 4
+guarded, Phase 3 winning config) in a single `POST /query` endpoint plus a
+`GET /health` check. Every request logs one structured JSON line to stdout
+(`docker logs rag-pipeline-api`) with exactly the fields the spec calls for
+— per-stage latency, tokens, and retrieved doc IDs — verified with a real
+request against the containerized service:
+
+```json
+{"level": "INFO", "logger": "ragpipeline.serving", "message": "query",
+ "request_id": "5f58febe-ca52-407d-b5ad-2a4dd71b8289",
+ "question": "What does JPMorgan say about interest rate risk?",
+ "refused": false, "top_score": 0.7527,
+ "retrieved_doc_ids": ["d8f813fa-5c97-...", "4486273e-7978-...", "07c25985-d8e7-...", "0c350922-3644-...", "050bb8d8-33fc-..."],
+ "retrieved_tickers": ["JPM", "JPM", "JPM", "JPM", "JPM"],
+ "retrieval_time_s": 1.022, "generation_time_s": 44.795, "total_time_s": 45.818,
+ "prompt_tokens": 2682, "completion_tokens": 243}
+```
+
+- Verified both response paths through the containerized API: a normal
+  answer (JPMorgan interest-rate question, `refused: false`) and the
+  confidence-gated refusal (chocolate-cake question, `refused: true`,
+  returns immediately without a generation call).
+- Verified `docker compose down` + `docker compose up -d` (services
+  recreated from scratch) brings the full 3-container stack back up
+  cleanly, with the Qdrant *data* volume persisting independently (3,343
+  points — both chunking strategies — still present after recreation, since
+  `down` without `-v` doesn't touch named volumes).
+- **Note on latency**: generation through the containerized API measured
+  noticeably slower than calling Ollama directly from the host (~45s vs
+  ~11s for a similar question) — the container reaches Ollama over
+  `host.docker.internal`, adding a network hop plus Docker's NAT compared to
+  a direct localhost call. Not addressed further here; would matter for a
+  production deployment, less so for this project's scope.
+
 ## Build phases
 
 - [x] **Phase 1** — Corpus + naive baseline.
 - [x] **Phase 2** — Orchestrated ingestion DAG (Dagster, partitioned per ticker) with dbt-style data quality checks at every stage; containerized.
 - [x] **Phase 3** — Semantic/recursive chunking + hybrid (dense+BM25 RRF) retrieval, 24-question eval set, measured comparison table + chart.
 - [x] **Phase 4** — Failure analysis (no-answer, ambiguous, multi-document questions) against real captured behavior, plus a confidence-based refusal gate for the clearest failure mode (off-topic questions).
-- [ ] **Phase 5** — FastAPI serving with structured logging, full `docker-compose up` from a clean clone, final README pass.
+- [x] **Phase 5** — FastAPI serving with structured logging (latency, tokens, retrieved doc IDs), full `docker compose up` bringing up the whole stack from a clean clone.

@@ -39,6 +39,26 @@ services:
         condition: service_healthy
     command: ["dagster", "dev", "-h", "0.0.0.0", "-p", "3000", "-m", "orchestration.definitions"]
 
+  api:
+    build: .
+    container_name: rag-pipeline-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/app
+    environment:
+      QDRANT_URL: http://qdrant:6333
+      QDRANT_COLLECTION: sec_filings
+      OLLAMA_HOST: http://host.docker.internal:11434
+      EMBED_MODEL: nomic-embed-text
+      GEN_MODEL: llama3.2:3b
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      qdrant:
+        condition: service_healthy
+    command: ["uvicorn", "ragpipeline.serving.main:app", "--host", "0.0.0.0", "--port", "8000"]
+
 volumes:
   qdrant_storage:
   dagster_home:

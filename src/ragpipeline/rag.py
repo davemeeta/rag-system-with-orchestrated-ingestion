@@ -11,9 +11,10 @@ about the right *topic* (risk factors) even though they're the wrong
 *company*. This gate is intentionally scoped to the failure mode it can
 actually catch; see the README's Phase 4 section for what it doesn't.
 """
+import time
 from dataclasses import dataclass
 
-from ragpipeline.generation.ollama_client import generate_answer
+from ragpipeline.generation.ollama_client import generate_answer_detailed
 from ragpipeline.retrieval.dense import RetrievedChunk, dense_search
 
 # Chosen from the empirical score gap in the Phase 4 failure-analysis run:
@@ -35,14 +36,40 @@ class RagAnswer:
     refused: bool
     top_score: float
     chunks: list[RetrievedChunk]
+    retrieval_time_s: float = 0.0
+    generation_time_s: float = 0.0
+    prompt_tokens: int | None = None
+    completion_tokens: int | None = None
 
 
 def answer_question(question: str, top_k: int = 5, threshold: float = CONFIDENCE_THRESHOLD) -> RagAnswer:
+    t0 = time.time()
     chunks = dense_search(question, top_k=top_k, strategy="fixed_size")
+    retrieval_time_s = time.time() - t0
     top_score = chunks[0].score if chunks else 0.0
 
     if top_score < threshold:
-        return RagAnswer(question=question, answer=REFUSAL_MESSAGE, refused=True, top_score=top_score, chunks=chunks)
+        return RagAnswer(
+            question=question,
+            answer=REFUSAL_MESSAGE,
+            refused=True,
+            top_score=top_score,
+            chunks=chunks,
+            retrieval_time_s=retrieval_time_s,
+        )
 
-    answer = generate_answer(question, chunks)
-    return RagAnswer(question=question, answer=answer, refused=False, top_score=top_score, chunks=chunks)
+    t1 = time.time()
+    generation = generate_answer_detailed(question, chunks)
+    generation_time_s = time.time() - t1
+
+    return RagAnswer(
+        question=question,
+        answer=generation.answer,
+        refused=False,
+        top_score=top_score,
+        chunks=chunks,
+        retrieval_time_s=retrieval_time_s,
+        generation_time_s=generation_time_s,
+        prompt_tokens=generation.prompt_tokens,
+        completion_tokens=generation.completion_tokens,
+    )

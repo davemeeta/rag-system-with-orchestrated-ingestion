@@ -98,6 +98,7 @@ def hybrid_search(
 
     return [
         RetrievedChunk(
+            id=doc_id,
             text=payload_by_id[doc_id]["text"],
             score=fused_scores[doc_id],
             ticker=payload_by_id[doc_id]["ticker"],

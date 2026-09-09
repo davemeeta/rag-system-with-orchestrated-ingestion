@@ -8,3 +8,5 @@ tiktoken
 dagster
 dagster-webserver
 rank_bm25
+fastapi
+uvicorn

@@ -10,6 +10,7 @@ from ragpipeline.ingestion.embed import embed_text
 
 @dataclass
 class RetrievedChunk:
+    id: str
     text: str
     score: float
     ticker: str
@@ -39,6 +40,7 @@ def dense_search(
 
     return [
         RetrievedChunk(
+            id=str(hit.id),
             text=hit.payload["text"],
             score=hit.score,
             ticker=hit.payload["ticker"],
