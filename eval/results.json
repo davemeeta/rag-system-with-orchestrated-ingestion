@@ -1,0 +1,1874 @@
+[
+  {
+    "chunk_strategy": "fixed_size",
+    "retrieval_strategy": "dense",
+    "num_questions": 24,
+    "avg_precision_at_k": 0.9333333333333332,
+    "avg_hit_at_k": 1.0,
+    "avg_mrr": 1.0,
+    "avg_faithfulness": 4.833333333333333,
+    "avg_relevance": 4.5,
+    "per_question": [
+      {
+        "id": "q01",
+        "question": "What supply chain risks does Apple describe in its 10-K?",
+        "expected_ticker": "AAPL",
+        "retrieved_tickers": [
+          "AAPL",
+          "AAPL",
+          "AAPL",
+          "AAPL",
+          "AAPL"
+        ],
+        "answer": "Apple describes the following supply chain risks in its 10-K:\n\n1. Industrial accidents at suppliers and contract manufacturers, which can result in serious injuries, loss of life, disruption to business, and harm to reputation.\n2. Dependence on single or limited sources for critical components, which can lead to supply and pricing risks, including shortages and price fluctuations.\n3. Component supplier failures, consolidation, or shift in focus to common components, which can limit the Company's ability to obtain sufficient quantities of components on commercially reasonable terms.\n4. Design and manufacturing defects in products and services, which can affect the Company's business and harm its reputation.\n5. Cybersecurity risks, including hacking, ransomware attacks, and data breaches, which can result in unauthorized access to systems and services, and harm the Company's reputation and customers.\n6. Information technology system failures and network disruptions, which can prevent access to online services, interfere with customer transactions, and impede the manufacturing and shipping of products.\n7. Credit and collectibility risks, including increased risk on trade receivables, failure of derivative counterparties, and limitations on the Company's ability to issue new debt.\n\nThese risks are highlighted in various parts of Apple's 10-K, including sections on risk factors, operations, and liquidity and capital resources.",
+        "retrieval_time_s": 0.5,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q02",
+        "question": "How does Apple describe risks from international trade restrictions and tariffs?",
+        "expected_ticker": "AAPL",
+        "retrieved_tickers": [
+          "AAPL",
+          "AAPL",
+          "AAPL",
+          "AAPL",
+          "AAPL"
+        ],
+        "answer": "According to Item 1A of Apple's 2025 Form 10-K, risks from international trade restrictions and tariffs include:\n\n* Materially adverse effect on the Company's business, results of operations, financial condition, and stock price\n* Increased cost or limit on the availability of the Company's products and components\n* Requirement to change suppliers, restructure business relationships and operations\n* Refrain from offering and distributing affected products, services, and third-party applications to customers\n* Increase in prices of the Company's products and services\n* Changing the Company's business and supply chain in accordance with new or changed restrictions, which can be expensive, time-consuming, and disruptive to the Company's business and results of operations.\n\nThis is further emphasized in Item 7A, where it is stated that \"Tariffs and other measures that are applied to the Company's products or their components can have a material adverse impact on the Company's business, results of operations and financial condition, including impacting the Company's supply chain, the availability of rare earths and other raw materials and components, pricing and gross margin.\"\n\nAdditionally, the Company notes that restrictions on international trade can have an adverse impact on the overall macroeconomic environment and result in shifts and reductions in consumer spending and negative consumer sentiment for the Company's products and services.",
+        "retrieval_time_s": 0.25,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q03",
+        "question": "What does Apple's 10-K say about risks from adverse macroeconomic conditions?",
+        "expected_ticker": "AAPL",
+        "retrieved_tickers": [
+          "AAPL",
+          "AAPL",
+          "AAPL",
+          "JPM",
+          "AAPL"
+        ],
+        "answer": "According to the provided context excerpt from SEC 10-K filings, specifically Item 1A. Risk Factors (AAPL 2025 Form 10-K), adverse macroeconomic conditions can lead to:\n\n* Increased credit and collectibility risk on the Company's trade receivables\n* Failure of derivative counterparties and other financial institutions\n* Limitations on the Company's ability to issue new debt\n* Reduced liquidity\n* Declines in the fair values of the Company's financial instruments\n\nThese risks can \"materially adversely affect the Company's business, results of operations, financial condition and stock price.\"",
+        "retrieval_time_s": 0.29,
+        "precision_at_k": 0.8,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q04",
+        "question": "What controls and procedures does Apple report regarding disclosure controls?",
+        "expected_ticker": "AAPL",
+        "retrieved_tickers": [
+          "AAPL",
+          "AAPL",
+          "AAPL",
+          "AAPL",
+          "TSLA"
+        ],
+        "answer": "According to Item 9A. Controls and Procedures in Apple Inc.'s 2025 Form 10-K, Apple's internal control over financial reporting includes the following controls and procedures regarding disclosure controls:\n\n(i) The maintenance of records that, in reasonable detail, accurately and fairly reflect the transactions and dispositions of the Company's assets.\n(ii) Providing reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements in accordance with GAAP, and that the Company's receipts and expenditures are being made only in accordance with authorizations of the Company's management and directors.\n(iii) Providing reasonable assurance regarding prevention or timely detection of unauthorized acquisition, use, or disposition of the Company's assets that could have a material effect on the financial statements.\n\nAdditionally, Item 9A. Controls and Procedures in Tesla Inc.'s 2025 Form 10-K reports that:\n\n* Disclosure controls and procedures were designed at a reasonable assurance level and were effective to provide reasonable assurance that the information required to be disclosed in reports that Tesla files or submits under the Exchange Act is recorded, processed, summarized and reported within the time periods specified in the SEC rules and forms.\n* Management, including the CEO and CFO, concluded that, as of December 31, 2025, disclosure controls and procedures were effective to provide reasonable assurance that the information required to be disclosed is accumulated and communicated to management, including the CEO and CFO, as appropriate, to allow timely decisions regarding required disclosures.",
+        "retrieval_time_s": 0.26,
+        "precision_at_k": 0.8,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q05",
+        "question": "What cybersecurity and data security risks does Microsoft disclose?",
+        "expected_ticker": "MSFT",
+        "retrieved_tickers": [
+          "MSFT",
+          "MSFT",
+          "JPM",
+          "AAPL",
+          "TSLA"
+        ],
+        "answer": "According to the provided excerpts, Microsoft discloses the following cybersecurity and data security risks:\n\n1. Determined adversaries: Microsoft mentions that it has a top corporate priority to protect its customers and employees' computing environments from determined adversaries. (MSFT 10-K, ITEM 1C. CY)\n2. Cybersecurity threats: Microsoft assesses its cybersecurity program's effectiveness through various validation activities, including penetration and vulnerability tests, red team exercises, and other related activities. (MSFT 10-K, ITEM 1C. CY)\n3. Cybersecurity risks to its strategies and ambitions: Microsoft is committed to managing the most significant risks to its strategies and ambitions, including cybersecurity risks. (MSFT 10-K, ITEM 1C. CY)\n4. Cybersecurity threats to its cloud infrastructure and services: Microsoft has controls, policies, and procedures to identify, manage, and mitigate cybersecurity threats to its cloud infrastructure and services. (MSFT 10-K, ITEM 1C. CY)\n5. Cybersecurity risks from third-party suppliers: Microsoft performs third-party risk management to identify and mitigate risks from third-party suppliers, including cybersecurity risks. (MSFT 10-K, ITEM 1C. CY)\n6. Data breaches, intellectual property theft, claims, litigation, regulatory investigations, significant liability, reputational damage, and other adverse consequences: Microsoft's risk factor disclosures mention that its information technology systems or data, or those of its service providers or customers or users could be subject to cyber-attacks or other security incidents, which could result in data breaches, intellectual property theft, claims, litigation, regulatory investigations, significant liability, reputational damage, and other adverse consequences. (MSFT 10-K, ITEM 1A)\n\nIt appears that Microsoft does not provide a comprehensive list of specific cybersecurity and data security risks, but rather highlights the importance of managing and mitigating various risks associated with its business.",
+        "retrieval_time_s": 0.66,
+        "precision_at_k": 0.4,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q06",
+        "question": "How does Microsoft describe competition in cloud and AI markets?",
+        "expected_ticker": "MSFT",
+        "retrieved_tickers": [
+          "MSFT",
+          "MSFT",
+          "MSFT",
+          "MSFT",
+          "MSFT"
+        ],
+        "answer": "According to the provided excerpts, Microsoft describes competition in cloud and AI markets as:\n\n* Highly competitive and dynamic\n* Fueled by the growth of AI technology and services\n* Characterized by shifting customer expectations, increasing regulatory and governmental scrutiny, intense competition, and rapid technological change\n* Featuring a variety of business models, including hyperscalers, open-source offerings, and frontier model providers\n* Influenced by the entry of new competitors, such as those using AI models that are open, and earning revenue on advertising or integrated products and services\n\nAdditionally, Microsoft highlights the following specific challenges in the cloud and AI markets:\n\n* Increased operating costs and decreased operating margins due to investments in cloud and AI infrastructure and devices\n* Difficulty in forecasting demand and capacity investments, which may result in underutilization of infrastructure and impairment of assets\n* Uncertainty in the cost structure for AI products and services, including model training and inference costs, component availability and pricing, and energy costs\n* Dependence on strategic relationships with third parties that provide technologies, models, products, and services to enhance offerings\n* Risk of misuse of products and services by customers, users, or malicious actors for unintended, fraudulent, abusive, or unlawful purposes\n\n(All of these points are mentioned in sections [1], [3], [4], and [5]).",
+        "retrieval_time_s": 0.43,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q07",
+        "question": "What does Microsoft's 10-K say about risks tied to artificial intelligence?",
+        "expected_ticker": "MSFT",
+        "retrieved_tickers": [
+          "MSFT",
+          "PFE",
+          "MSFT",
+          "JPM",
+          "MSFT"
+        ],
+        "answer": "According to Microsoft's 10-K, risks tied to artificial intelligence (AI) include:\n\n1. Issues in the development, deployment, and use of AI, which may result in reputational or competitive harm or liability (Item 1A).\n2. AI models and methodologies used to train them may be flawed, and datasets may be overbroad, insufficient, or contain biased or inaccurate information.\n3. Content generated by AI systems may be offensive, illegal, inaccurate, or otherwise harmful.\n4. Ineffective or inadequate AI development or deployment practices may result in incidents that impair the acceptance of AI solutions, cause harm to individuals, customers, or society, or result in products and services not working as intended.\n5. Human review of certain inputs and outputs or other forms of human oversight may be required for agentic AI systems that can take actions autonomously.\n6. Companion or highly-personalized AI systems may result in over-reliance or dependence by users that is harmful.\n7. Implementation of AI systems may result in legal liability, regulatory action, litigation, brand, reputational, or competitive harm, or other adverse impacts.\n8. The use of AI may lead to the unauthorized release of confidential or proprietary information, which may impact the organization's ability to realize the benefits of its data, including intellectual property.\n9. Reliance on third-party AI tools or services that incorporate AI may expose the organization to compliance gaps that are outside of its control.\n10. Relying on a small number of AI models or service providers may create risks related to data quality, security, and reliability.\n\nMicrosoft's 10-K emphasizes its commitment to designing and deploying AI responsibly, with a focus on safety and security from the outset. The company prioritizes security and has implemented various measures to protect its computing environments, products, and services from cybersecurity threats, including the Secure Future Initiative and a robust cybersecurity program and governance framework.",
+        "retrieval_time_s": 1.2,
+        "precision_at_k": 0.6,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 4,
+        "relevance": 5
+      },
+      {
+        "id": "q08",
+        "question": "What does Microsoft report about legal proceedings?",
+        "expected_ticker": "MSFT",
+        "retrieved_tickers": [
+          "MSFT",
+          "MSFT",
+          "MSFT",
+          "MSFT",
+          "XOM"
+        ],
+        "answer": "According to the provided context excerpt (MSFT, ITEM 3. LEGAL), Microsoft refers to the relevant portions of Note 14 \u2013 Contingencies of the Notes to Financial Statements for information regarding legal proceedings in which Microsoft is involved.",
+        "retrieval_time_s": 0.95,
+        "precision_at_k": 0.8,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 1
+      },
+      {
+        "id": "q09",
+        "question": "What interest rate risks does JPMorgan Chase discuss in its 10-K?",
+        "expected_ticker": "JPM",
+        "retrieved_tickers": [
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM"
+        ],
+        "answer": "According to the context excerpt from JPMorgan Chase's 10-K filing, the interest rate risks that JPMorgan Chase discusses are:\n\n* Credit risk: The risk that JPMorgan Chase's ability to operate could be impaired by constrained liquidity, and the dependence of JPMorgan Chase & Co. on its subsidiaries for funding.\n* Liquidity risks, including the potential adverse effects of downgrades of JPMorganChase's credit ratings on its liquidity and cost of funding.\n* Capital risks, including the risk that JPMorganChase's ability to distribute capital to shareholders or to support its business activities could be limited if it does not satisfy applicable regulatory capital requirements.\n\nThese risks are discussed in the context of credit risk concentrations, liquidity risks, and capital risks, which are outlined in Note 4 to the consolidated financial statements and Item 1A. Risk Factors in the 10-K filing.",
+        "retrieval_time_s": 0.41,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q10",
+        "question": "How does JPMorgan Chase describe credit risk from its lending business?",
+        "expected_ticker": "JPM",
+        "retrieved_tickers": [
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM"
+        ],
+        "answer": "According to Item 1A. Risk Factors (SEC 10-K filing), JPMorgan Chase describes credit risk from its lending business as follows:\n\n\"Concentrations of credit risk arise when a number of clients, counterparties or customers are engaged in similar business activities or activities in the same geographic region, or when they have similar economic features that would cause their ability to meet contractual obligations to be similarly affected by changes in economic conditions.\"\n\nAdditionally, the firm states that credit risk concentrations can occur when groupings of clients or counterparties engage in similar or related businesses, operate in the same geographic region, or have business profiles that could cause their ability to meet their obligations to be similarly affected by changes in economic conditions.\n\nIt is also mentioned that a significant deterioration in the credit quality of a counterparty, borrower, or other obligor could lead to concerns about the creditworthiness of other parties in similar, related, or dependent industries, potentially exacerbating JPMorganChase's credit, liquidity, and market risk exposure.\n\nNo further details on credit risk from lending are provided in the excerpts.",
+        "retrieval_time_s": 0.24,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q11",
+        "question": "What market risk disclosures does JPMorgan Chase provide about trading and investment portfolios?",
+        "expected_ticker": "JPM",
+        "retrieved_tickers": [
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM"
+        ],
+        "answer": "According to the provided excerpts from JPMorgan Chase's 2025 Form 10-K, the company provides market risk disclosures in the following areas:\n\n1. Market risk management: The company states that market risk is the risk associated with the effect of changes in market factors such as interest and foreign exchange rates, equity and commodity prices, credit spreads or implied volatilities, on the value of assets and liabilities held for both the short and long term. (Reference: Item 15. Exhibits, Financial Statement Schedules, Section 132)\n\n2. Market risk policy framework: The company has established a Firmwide risk policy framework for all principal investing activities that includes approval by executives who are independent from the investing businesses, as appropriate. (Reference: Item 15. Exhibits, Financial Statement Schedules, Section 132)\n\n3. Risk measurement: The company uses various metrics, including value-at-risk, stress testing, profit and loss drawdowns, earnings-at-risk, economic value sensitivity, and other sensitivity-based measures, to assess market risk. (Reference: Item 15. Exhibits, Financial Statement Schedules, Section 132)\n\n4. Risk monitoring and control: The company manages market risk exposure primarily through the monitoring of limits and the performance of stress testing and qualitative risk assessments. (Reference: Item 15. Exhibits, Financial Statement Schedules, Section 132)\n\n5. Trading and investment portfolio information: The company provides information on its trading and investment portfolios, including the carrying value of its investments, which includes alternative energy and affordable housing, private equity, and other investments. (Reference: Item 15. Exhibits, Financial Statement Schedules, Section 31)\n\n6. Allowance for credit losses: The company discloses the allowance for credit losses on its investment securities, which was $73 million, $105 million, and $94 million for 2025, 2024, and 2023, respectively. (Reference: Item 15. Exhibits, Financial Statement Schedules, Section 2)\n\n7. Credit exposure: The company provides information on its credit exposure, including the estimated total credit exposure related to the Apple Card transaction at the time that the transaction is expected to close of approximately $104 billion, including approximately $23 billion of estimated drawn loans. (Reference: Item 15. Exhibits, Financial Statement Schedules, Section 4)",
+        "retrieval_time_s": 0.61,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q12",
+        "question": "What does JPMorgan Chase's 10-K say about regulatory capital requirements?",
+        "expected_ticker": "JPM",
+        "retrieved_tickers": [
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM"
+        ],
+        "answer": "According to the provided context excerpts from JPMorgan Chase's 10-K filings ( Items 15. Exhibits, Financial Statement Schedules), here are some key points about regulatory capital requirements:\n\n1. **Capital Ratio Requirements**: The company is subject to capital ratio requirements under Basel III, including CET1, Tier 1, and Total capital ratio requirements. These requirements are:\n\t* CET1 capital: 11.5% (Standardized), 7.0% (Advanced)\n\t* Tier 1 capital: 13.0% (Standardized), 8.5% (Advanced)\n\t* Total capital: 15.0% (Standardized), 10.5% (Advanced)\n2. **Well-Capitalized Ratios**: The company must also meet minimum well-capitalized ratios under the Federal Reserve and the FDIC Improvement Act, which include:\n\t* Tier 1 leverage: 4.0% (Standardized), 5.0% (SLR), 6.0% (Advanced)\n\t* SLR (Supervisory Leverage Ratio): 3.0% (minimum requirement)\n3. **Alternative Regulatory Capital Requirements**: J.P. Morgan Securities, the company's principal U.S. broker-dealer subsidiary, is subject to alternative net capital requirements under the Net Capital Rule, including:\n\t* Minimum net capital: $6.559 million (as of December 31, 2025)\n\t* Tentative net capital: exceeding $5.0 billion\n4. **Non-U.S. Subsidiary Regulatory Capital**: JPMorgan Securities plc, a wholly-owned subsidiary, is jointly regulated in the UK by the Prudential Regulation Authority and the Financial Conduct Authority, and is subject to local capital and liquidity requirements.\n\nNote that these requirements apply to both the U.S. and non-U.S. subsidiaries of JPMorgan Chase, and that the company is subject to various regulatory capital requirements under both the Federal Reserve and the FDIC Improvement Act.",
+        "retrieval_time_s": 0.23,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q13",
+        "question": "What commodity price risks does ExxonMobil describe?",
+        "expected_ticker": "XOM",
+        "retrieved_tickers": [
+          "XOM",
+          "XOM",
+          "XOM",
+          "XOM",
+          "XOM"
+        ],
+        "answer": "According to the SEC 10-K filing, ExxonMobil describes the following commodity price risks:\n\n1. Changes in oil, gas, and petrochemical prices, which can affect the company's operations and earnings.\n2. Fluctuations in Brent and Henry Hub prices, which can have significant impacts on the company's earnings.\n3. Changes in TTF (Title Transfer Facility) prices, which are primarily related to LNG sales.\n4. Changes in crude oil prices, which can have material adverse effects on the company's operations and results.\n5. Changes in natural gas prices, which can also have material adverse effects on the company's operations and results.\n\nThese risks can arise from a variety of factors, including changes in supply and demand, global economic conditions, and market forces.",
+        "retrieval_time_s": 0.47,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q14",
+        "question": "How does ExxonMobil discuss climate change and environmental regulation risk?",
+        "expected_ticker": "XOM",
+        "retrieved_tickers": [
+          "XOM",
+          "XOM",
+          "XOM",
+          "XOM",
+          "XOM"
+        ],
+        "answer": "According to the provided context excerpts, ExxonMobil discusses climate change and environmental regulation risk in several sections:\n\n* In Item 1A. RISK FACTORS, ExxonMobil mentions that the oil, gas, and petrochemical businesses are fundamentally commodity businesses, which makes their operations and earnings vulnerable to changes in oil, gas, and petrochemical prices. However, they also highlight the growing importance of lower-emission and other new business opportunities, including carbon capture and storage, hydrogen and ammonia, lower-emission fuels, Proxxima TM resin systems, carbon materials, low-carbon data centers, and lithium. These products and services depend on the growth and development of markets for those products and services, including the implementation of supportive and stable government policies and developments in existing and new technology.\n* In Item 1A, ExxonMobil notes that government policies and regulations, including those related to climate change, may have material effects on their capital expenditures, earnings, and competitive position.\n* In the same section, ExxonMobil discusses various regulatory and litigation risks, including changes in laws or regulations, increases or changes in taxes, duties, or government royalty rates, price controls, and environmental, advertising, insurance, or other regulations or laws that penalize them for past or current production of legal and/or permitted products and operations.\n* In Item 7A. Risk factors related to regulatory and litigation risks, ExxonMobil mentions that regulatory interpretations that exclude or disfavor their products under government policies or programs intended to support new or developing markets or technologies, or that otherwise are not technology-neutral, could also be a risk.\n* In Item 1A, ExxonMobil also mentions that the term \"project\" as used in this report can refer to a variety of different activities and does not necessarily have the same meaning as in any government payment transparency reports, which may imply that the Company is aware of the complexity and potential risks of complying with environmental regulations and policies.\n\nOverall, ExxonMobil appears to recognize the growing importance of climate change and environmental regulation, but also notes that the risks and challenges associated with these issues are complex and multifaceted.",
+        "retrieval_time_s": 0.56,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q15",
+        "question": "What does ExxonMobil's 10-K say about operational and process safety risks?",
+        "expected_ticker": "XOM",
+        "retrieved_tickers": [
+          "XOM",
+          "XOM",
+          "XOM",
+          "XOM",
+          "XOM"
+        ],
+        "answer": "According to Item 1A of ExxonMobil's 10-K filing, the company faces operational and process safety risks, including:\n\n* Physical harm to people or the environment from severe weather events, natural disasters, and other events\n* Damage or destruction of assets from natural disasters, severe weather events, or other incidents\n* Compromise of business systems and information security, including cybersecurity disruptions\n* Disruption of operations, including production and refining capabilities\n* Potential for regulatory and litigation risks, including actions by governments and regulators to delay or deny necessary licenses and permits\n\nThe company's operations are designed, engineered, constructed, and operated to withstand various extreme climatic and other conditions, with safety factors built in to cover uncertainties. However, the company's ability to mitigate the adverse impacts of these events depends on the effectiveness of its robust facility engineering, disaster preparedness and response, and business continuity planning.\n\nAdditionally, the company has identified potential joint and several liability exposure in certain environmental cases, and has made provisions for environmental liabilities.",
+        "retrieval_time_s": 0.26,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 4,
+        "relevance": 2
+      },
+      {
+        "id": "q16",
+        "question": "What properties and reserves information does ExxonMobil disclose?",
+        "expected_ticker": "XOM",
+        "retrieved_tickers": [
+          "XOM",
+          "XOM",
+          "XOM",
+          "XOM",
+          "XOM"
+        ],
+        "answer": "ExxonMobil discloses the following properties and reserves information:\n\n1. Proved reserves:\n\t* Types of reserves: crude oil, natural gas liquids, bitumen, synthetic oil, and natural gas.\n\t* Proved reserves at year-end 2025: approximately 7.0 billion oil-equivalent barrels (GOEB), which represents 36% of the total proved reserves of 19.3 GOEB.\n\t* Proved undeveloped reserves at year-end 2025: approximately 7.0 billion GOEB.\n2. Oil and gas reserves:\n\t* Proved oil and natural gas reserves are determined in accordance with Securities and Exchange Commission (SEC) requirements.\n\t* Proved reserves are those quantities of oil and natural gas that can be estimated with reasonable certainty to be economically producible under existing economic and operating conditions and government regulations.\n3. Reserves estimation process:\n\t* The estimation of proved reserves is an ongoing process based on rigorous technical evaluations, commercial and market assessments, and detailed analysis of reservoir and well performance.\n\t* The Corporation only records proved reserves for projects that have received significant funding commitments by management toward the development of the reserves.\n4. Data used in reserves estimation:\n\t* Information obtained directly from the subsurface via wellbores, such as well logs, reservoir core samples, fluid samples, static and dynamic pressure information, production test data, and surveillance and performance information.\n\t* Subsurface information obtained through indirect measurements, including high-quality 3-D and 4-D seismic data, calibrated with available well control information.\n\t* Seismic processing software, reservoir modeling and simulation software, and data analysis packages are used to interpret the data.\n\nNote: The information provided is based on the context excerpts from ExxonMobil's 10-K filings, specifically Item 1A and Item 1B.",
+        "retrieval_time_s": 0.29,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q17",
+        "question": "What regulatory risks does Pfizer describe related to drug approvals?",
+        "expected_ticker": "PFE",
+        "retrieved_tickers": [
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE"
+        ],
+        "answer": "Pfizer describes the following regulatory risks related to drug approvals:\n\n1. Regulatory decisions impacting labeling, approval or authorization, including the scope of indicated patient populations, product dosage, manufacturing processes, safety and/or other matters (Item 1A. Risk Factors, section \"Risks Related to Government Regulation and Legal Proceedings\").\n2. Unfavorable regulatory decisions or feedback that could impact the future development of their product candidates, including regulatory approval dates and/or launch dates (Item 1A. Risk Factors, section \"Risks Related to Government Regulation and Legal Proceedings\").\n3. Uncertainties regarding the ability to successfully address comments received from regulatory authorities such as the FDA and the EMA, or obtain approval for new products and indications from regulators (Item 1A. Risk Factors, section \"Risks Related to Government Regulation and Legal Proceedings\").\n4. Increased inconsistencies and unexpected changes in the evaluations and determinations made by the FDA during the process of applying for marketing approvals of their products due to reductions in resources or changes in regulatory policies (Item 1A. Risk Factors, section \"Risks Related to Government Regulation and Legal Proceedings\").\n5. Potential for regulatory bodies to issue Complete Response Letters for unapproved drug candidates, which could result in the disclosure of trade secrets or confidential commercial information (Item 1A. Risk Factors, section \"Risks Related to Government Regulation and Legal Proceedings\").\n\nThese risks are related to the regulatory approval process for Pfizer's products, including the potential for regulatory decisions to impact product labeling, approval, or authorization, and the uncertainties surrounding the outcome of regulatory reviews and approval processes.",
+        "retrieval_time_s": 1.2,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q18",
+        "question": "What does Pfizer's 10-K say about patent protection and generic competition?",
+        "expected_ticker": "PFE",
+        "retrieved_tickers": [
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE"
+        ],
+        "answer": "According to the provided context excerpts, Pfizer's 10-K mentions several points related to patent protection and generic competition:\n\n1. Patent protection: Pfizer notes that the pursuit of valid business opportunities may require challenging intellectual property rights held by others that they believe were improperly granted, including challenges through negotiation and litigation.\n\n2. Generic competition: Pfizer expects to face intense competition from generic manufacturers in China, particularly in the biosimilar market. They mention that generic versions of their patented products may face competition from \"at-risk\" launch by generic or biosimilar manufacturers, and that biosimilar products referencing their biologic products may also enter the market.\n\n3. Pricing pressures: The company notes that the number of current and forthcoming competing biosimilars, coupled with Medicare's average sales price-based provider reimbursement methodology, is expected to increase pricing pressures on their biosimilar products.\n\n4. Patent litigation: Pfizer is involved in patent-related disputes with third parties over their attempts to market pharmaceutical products, which can be costly and time-consuming to resolve.\n\n5. Invalidation of patents: If any of Pfizer's patents in their pneumococcal portfolio are found to be invalid, additional competitor vaccines may enter the market earlier than anticipated.\n\n6. Patent infringement claims: Third parties may claim that Pfizer's products infringe one or more patents owned or controlled by them, which can result in significant royalty payments or damages.\n\nOverall, Pfizer's 10-K highlights the challenges of maintaining patent protection and navigating generic competition in the pharmaceutical industry.",
+        "retrieval_time_s": 0.77,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q19",
+        "question": "How does Pfizer describe risks from product liability and litigation?",
+        "expected_ticker": "PFE",
+        "retrieved_tickers": [
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE"
+        ],
+        "answer": "According to Item 8. Financial Statements of Pfizer Inc. (2025 Form 10-K), under the caption \"Pfizer Inc. and Subsidiary Companies,\" the company states that:\n\n\"Claims against our products include challenges to the coverage and/or validity of our patents on various products or processes. There can be no assurance as to the outcome of these matters, and a loss in any of these cases could result in a loss of patent protection for the product at issue, which could lead to a significant loss of sales of that product and could materially affect future results of operations.\"\n\nThis excerpt highlights the potential risks from product liability and litigation, including the possibility of patent challenges and the loss of patent protection, which could have a significant impact on the company's future results of operations.\n\nIn a later section of the same filing (Item 1. Business\u2013\u2013Government Regulation and Price Constraints), the company mentions \"product liability and other product-related litigation\" as one of the types of legal proceedings they are involved in. However, this section does not provide further details on how the company describes the risks from product liability and litigation.",
+        "retrieval_time_s": 0.24,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 4,
+        "relevance": 2
+      },
+      {
+        "id": "q20",
+        "question": "What does Pfizer's 10-K report about research and development risk?",
+        "expected_ticker": "PFE",
+        "retrieved_tickers": [
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE"
+        ],
+        "answer": "According to Item 7A of Pfizer's 2025 Form 10-K report, there is no specific information provided about research and development (R&D) risk. However, in the Analysis of Financial Condition, Liquidity, Capital Resources and Market Risk section, Pfizer mentions that certain governmental authorities, non-governmental organizations, customers, investors, employees, and other stakeholders have differing views on matters perceived to be related to responsible business practices, which may include aspects of R&D risk.\n\nIn the Biopharma reportable segment, Pfizer mentions that its R&D spending may encompass upfront and pre-approval milestone payments for intellectual property rights related to its programs, which would be recorded as Acquired in-process research and development expenses. However, this information does not provide specific details on the risks associated with R&D.\n\nIn the Responsibly Business Practices section, Pfizer mentions the potential risks of climate change, including transitional and physical risks that could impact pharmaceutical production, increase costs, or disrupt supply chains of medicines for patients. While this section does not specifically mention R&D risk, it highlights the potential risks associated with Pfizer's operations, including the potential need for significant capital investment and government policies and incentives to foster innovation and reduce costs of technologies.\n\nOverall, the 10-K report does not provide specific information on research and development risk. If you need more information on this topic, please provide more context or clarify your question.",
+        "retrieval_time_s": 0.19,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 4,
+        "relevance": 3
+      },
+      {
+        "id": "q21",
+        "question": "What manufacturing and production ramp risks does Tesla disclose?",
+        "expected_ticker": "TSLA",
+        "retrieved_tickers": [
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA"
+        ],
+        "answer": "According to the provided context excerpt (Item 1A. RISK FACTORS), Tesla discloses the following manufacturing and production ramp risks:\n\n1. Issues or delays in developing, launching, and ramping the production of products, services, and features.\n2. Delays in manufacturing costs.\n3. Delays in introducing and scaling new products, services, and features.\n4. Uncertainty regarding the demand for new products and services.\n5. Bottlenecks and other unexpected challenges that may arise during production ramps.\n6. Delays in launching and ramping the production of energy storage products and Solar Roof.\n7. Delays in the design, construction, and regulatory approvals necessary to build and bring online future manufacturing facilities and products.\n8. Issues with product recalls due to safety or non-compliance investigations.\n9. Inadequate warranty reserves, which may not be sufficient to cover future warranty claims.\n10. Uncertainty regarding the pace of bringing production equipment and processes online with the capability to manufacture high-quality units at scale.\n\nThese risks are related to the company's manufacturing and production capabilities, including the development, launch, and ramping of new products and services, as well as the production and deployment of energy products and services.",
+        "retrieval_time_s": 0.47,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q22",
+        "question": "How does Tesla describe risks related to autonomous driving technology?",
+        "expected_ticker": "TSLA",
+        "retrieved_tickers": [
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA"
+        ],
+        "answer": "According to the provided context excerpts from Tesla's 10-K filings, the company describes risks related to autonomous driving technology as follows:\n\n* The risk of collisions resulting in death or personal injury, which can lead to significant public attention and scrutiny (Item 1A. RISK FACTORS, page 22)\n* Misuse or claimed failures or alleged misrepresentations of the technologies (Item 1A. RISK FACTORS, page 23)\n* Technical failures or field testing failures that can lead to product liability claims, substantial monetary damages, product recalls, and redesign efforts (Item 1A. RISK FACTORS, page 24)\n* The potential for battery packs to rapidly release energy and ignite nearby materials, which can lead to fires and injuries (Item 1A. RISK FACTORS, page 25)\n* The need to maintain public credibility and confidence in their long-term business prospects, as well as maintaining credibility and confidence among customers, suppliers, analysts, investors, ratings agencies, and other parties (Item 1A. RISK FACTORS, page 28)\n* Regulatory complexity and fragmentation, particularly in the US and ECE countries, which can lead to additional delays, compliance costs, or restrictions on the deployment of certain capabilities (Item 1. BUSINESS, page 7)\n\nThese risks are highlighted as potential material adverse impacts on Tesla's business, results of operations, prospects, cash flows, financial position, or brand.",
+        "retrieval_time_s": 0.33,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q23",
+        "question": "What does Tesla's 10-K say about regulatory credits as a revenue source?",
+        "expected_ticker": "TSLA",
+        "retrieved_tickers": [
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA"
+        ],
+        "answer": "According to the 10-K filing, regulatory credits are a significant revenue source for Tesla. Here are the key points about regulatory credits as a revenue source:\n\n* Tesla sells regulatory credits globally to other regulated entities who can use the credits to comply with emission standards and other regulatory requirements.\n* Sales of regulatory credits are recognized within automotive regulatory credits revenue in the consolidated statements of operations.\n* The revenue from regulatory credits is directly related to new vehicle production, sales, and pricing negotiated with customers.\n* Tesla monetizes regulatory credits proactively as new vehicles are sold, based on standing arrangements with buyers of such credits, typically as close as possible to the production and delivery of the vehicle or changes in regulation impacting the credits.\n* Regulatory credits have negligible incremental costs associated with them.\n* The revenue from regulatory credits was $770 million in 2025, a decrease of 28% compared to 2024, primarily due to restrictions on certain regulatory credit programs tied to Tesla's products, as well as changes in demand for credits by other automobile manufacturers.\n\nIt's worth noting that regulatory credits have become an important revenue source for Tesla, and changes in government regulations, such as the OBBBA, have impacted the company's revenue from these credits.",
+        "retrieval_time_s": 0.3,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q24",
+        "question": "What competitive risks does Tesla describe in the electric vehicle market?",
+        "expected_ticker": "TSLA",
+        "retrieved_tickers": [
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA"
+        ],
+        "answer": "According to the provided SEC 10-K filings, Tesla identifies the following competitive risks in the electric vehicle market:\n\n1. Perceptions about electric vehicle features, quality, safety, performance, and cost.\n2. Perceptions about the limited range over which electric vehicles may be driven on a single battery charge, and access to charging facilities.\n3. Competition from other types of alternative fuel vehicles, plug-in hybrid electric vehicles, and high fuel-economy internal combustion engine vehicles.\n4. Volatility in the cost of oil, gasoline, and energy.\n5. Government regulations and economic incentives and conditions.\n6. Concerns about their future viability.\n\nAdditionally, Tesla also faces competition in the fields of AI and robotics, specifically in the autonomous ride-hailing service market, where their Robotaxi service competes with traditional ride-hailing and taxi services.\n\nThese competitive risks highlight the challenges that Tesla faces in the electric vehicle market, where the company's success is heavily dependent on factors such as consumer demand, technology, and regulatory environment.",
+        "retrieval_time_s": 0.23,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      }
+    ]
+  },
+  {
+    "chunk_strategy": "fixed_size",
+    "retrieval_strategy": "hybrid",
+    "num_questions": 24,
+    "avg_precision_at_k": 0.8583333333333334,
+    "avg_hit_at_k": 1.0,
+    "avg_mrr": 0.9791666666666666,
+    "avg_faithfulness": 4.833333333333333,
+    "avg_relevance": 4.375,
+    "per_question": [
+      {
+        "id": "q01",
+        "question": "What supply chain risks does Apple describe in its 10-K?",
+        "expected_ticker": "AAPL",
+        "retrieved_tickers": [
+          "AAPL",
+          "AAPL",
+          "AAPL",
+          "AAPL",
+          "PFE"
+        ],
+        "answer": "According to the provided excerpts from Apple's 2025 Form 10-K, the company identifies the following supply chain risks:\n\n1. Industrial accidents at suppliers and contract manufacturers, which can result in serious injuries or loss of life, disruption to the business, and harm to the company's reputation.\n2. Risks associated with the global semiconductor industry, including industry-wide shortages and significant commodity pricing fluctuations that can affect the company's ability to obtain sufficient quantities of components and products on commercially reasonable terms.\n3. Supply shortages and price increases for custom components used in the company's new products, which can be due to initial capacity constraints, supplier failures, or changes in supplier behavior.\n4. Exposure to additional regulatory and operational risks related to climate change, including increased energy prices, customer preference for low-carbon products, and new legal or regulatory requirements.\n5. Supply chain disruptions due to trade and other international disputes, geopolitical tensions, conflict, terrorism, natural disasters, public health issues, industrial accidents, and other business interruptions.\n6. Risks associated with the company's reliance on single or limited sources for the supply and manufacture of critical components, which can exacerbate negative consequences in the event of a business interruption.\n7. Potential risks related to the company's purchase of third-party components, including component defects that can make products unsafe and create a risk of environmental or property damage and personal injury.\n\nThese supply chain risks can have a material adverse impact on Apple's business, results of operations, financial condition, and stock price.",
+        "retrieval_time_s": 1.53,
+        "precision_at_k": 0.8,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 1
+      },
+      {
+        "id": "q02",
+        "question": "How does Apple describe risks from international trade restrictions and tariffs?",
+        "expected_ticker": "AAPL",
+        "retrieved_tickers": [
+          "AAPL",
+          "PFE",
+          "AAPL",
+          "AAPL",
+          "MSFT"
+        ],
+        "answer": "According to Apple's 2025 10-K filing, risks from international trade restrictions and tariffs are described as follows:\n\n* Adverse economic conditions can lead to increased credit and collectibility risk on trade receivables, failure of derivative counterparties, reduced liquidity, declines in the fair values of financial instruments, and material adverse effects on the Company's business, results of operations, financial condition, and stock price.\n* Trade and other international disputes can have a material adverse effect on the Company and its customers, employees, suppliers, contract manufacturers, logistics providers, distributors, cellular network carriers, and other channel partners.\n* Restrictions on international trade, such as tariffs and other controls on imports or exports of goods, technology, or data, can increase costs or limit the availability of the Company's products and the components and rare earths and other raw materials that go into them.\n* Changing the Company's business and supply chain in accordance with new or changed restrictions on international trade can be expensive, time-consuming, and disruptive to the Company's business and results of operations.\n* The ultimate impact of any new tariffs on the Company's business will depend on several factors, including the restrictions on trade, the effective date and duration of the tariffs, countries included in the scope of the tariffs, changes to the amounts of tariffs, and potential retaliatory tariffs or other retaliatory actions imposed by other countries.\n\nIn particular, Apple notes that the Company's global business is significantly impacted by trade and international disputes, and that restrictions on international trade can lead to increased costs, reduced liquidity, and material adverse effects on the Company's business and results of operations.",
+        "retrieval_time_s": 0.46,
+        "precision_at_k": 0.6,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q03",
+        "question": "What does Apple's 10-K say about risks from adverse macroeconomic conditions?",
+        "expected_ticker": "AAPL",
+        "retrieved_tickers": [
+          "AAPL",
+          "AAPL",
+          "AAPL",
+          "AAPL",
+          "AAPL"
+        ],
+        "answer": "According to Item 1A. (AAPL, Risk Factors), adverse macroeconomic conditions, including slow growth or recession, high unemployment, inflation, tighter credit, higher interest rates, and currency fluctuations, can adversely impact consumer confidence and spending and materially adversely affect demand for the Company's products and services. Specifically, the Company's operations and performance depend significantly on global and regional economic conditions, and adverse macroeconomic conditions can lead to:\n\n* Increased credit and collectibility risk on the Company's trade receivables\n* Failure of derivative counterparties and other financial institutions\n* Limitations on the Company's ability to issue new debt\n* Reduced liquidity\n* Declines in the fair values of the Company's financial instruments\n\nAdditionally, Item 7. (AAPL, Management's Discussion and Analysis of Financial Condition and Results of Operations) mentions that macroeconomic conditions, including inflation, interest rates, and currency fluctuations, have directly and indirectly impacted, and could in the future materially impact, the Company's results of operations and financial condition.\n\nTariffs and other measures announced in the second quarter of 2025, including additional tariffs on imports from China, India, Japan, South Korea, Taiwan, Vietnam, and the EU, among others, are also mentioned as a risk factor, potentially leading to increased costs, supply chain disruptions, and negative impacts on the Company's business, results of operations, and financial condition.",
+        "retrieval_time_s": 0.3,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q04",
+        "question": "What controls and procedures does Apple report regarding disclosure controls?",
+        "expected_ticker": "AAPL",
+        "retrieved_tickers": [
+          "TSLA",
+          "AAPL",
+          "AAPL",
+          "AAPL",
+          "MSFT"
+        ],
+        "answer": "According to Item 9A. Controls and Procedures in Apple Inc.'s 2025 Form 10-K, Apple's disclosure controls and procedures include:\n\n1. Maintaining records that accurately and fairly reflect the Company's transactions and dispositions of assets.\n2. Providing reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements in accordance with GAAP, and that receipts and expenditures are being made only in accordance with authorizations of management and directors.\n3. Providing reasonable assurance regarding prevention or timely detection of unauthorized acquisition, use, or disposition of the Company's assets that could have a material effect on the financial statements.\n\nAdditionally, Apple reports that its disclosure controls and procedures were designed at a reasonable assurance level and were effective as of September 27, 2025, to provide reasonable assurance that the information required to be disclosed in reports filed or submitted under the Exchange Act is recorded, processed, summarized, and reported within the time periods specified in the SEC rules and forms, and that such information is accumulated and communicated to management, including the Chief Executive Officer and Chief Financial Officer, as appropriate, to allow timely decisions regarding required disclosures.",
+        "retrieval_time_s": 0.26,
+        "precision_at_k": 0.6,
+        "hit_at_k": 1.0,
+        "mrr": 0.5,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q05",
+        "question": "What cybersecurity and data security risks does Microsoft disclose?",
+        "expected_ticker": "MSFT",
+        "retrieved_tickers": [
+          "MSFT",
+          "TSLA",
+          "MSFT",
+          "TSLA",
+          "AAPL"
+        ],
+        "answer": "Based on the provided context excerpts, Microsoft discloses the following cybersecurity and data security risks:\n\n1. Material risks associated with cybersecurity threats, including:\n\t* Operational risks\n\t* Intellectual property theft\n\t* Fraud\n\t* Extortion\n\t* Harm to employees or customers\n\t* Violation of data privacy or security laws\n2. Third-party risks, including:\n\t* Vendors\n\t* Suppliers\n\t* Other business partners\n\t* Service providers\n3. Risks associated with the use of third-party service providers, including:\n\t* Potential fourth-party risks\n\t* Data breaches\n\t* Intellectual property theft\n\t* Claims, litigation, regulatory investigations, significant liability, reputational damage, and other adverse consequences\n4. Risks related to cybersecurity incidents, including:\n\t* Preparation for a cybersecurity incident\n\t* Detection and analysis of a security incident\n\t* Containment, eradication, and recovery\n\t* Post-incident analysis\n5. Risks related to data privacy and security, including:\n\t* Violation of data privacy or security laws\n\t* Breaches\n\t* Intellectual property theft\n\t* Claims, litigation, regulatory investigations, significant liability, reputational damage, and other adverse consequences\n\nThese risks are discussed in Microsoft's Item 1C. CYBERSECURITY section, as well as in Item 1A. RISK FACTORS.",
+        "retrieval_time_s": 0.5,
+        "precision_at_k": 0.4,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q06",
+        "question": "How does Microsoft describe competition in cloud and AI markets?",
+        "expected_ticker": "MSFT",
+        "retrieved_tickers": [
+          "MSFT",
+          "MSFT",
+          "MSFT",
+          "MSFT",
+          "MSFT"
+        ],
+        "answer": "According to the provided context excerpts, Microsoft describes competition in cloud and AI markets as \"highly dynamic, characterized by shifting customer expectations, increasing regulatory and governmental scrutiny, intense competition, and rapid technological change\" (Item 1A). Specifically, it highlights the importance of competition from \"strategic partners\" and \"customers\" who are also significant users of Azure and other cloud services (Item 1A).",
+        "retrieval_time_s": 0.75,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 4,
+        "relevance": 2
+      },
+      {
+        "id": "q07",
+        "question": "What does Microsoft's 10-K say about risks tied to artificial intelligence?",
+        "expected_ticker": "MSFT",
+        "retrieved_tickers": [
+          "MSFT",
+          "MSFT",
+          "MSFT",
+          "MSFT",
+          "JPM"
+        ],
+        "answer": "Unfortunately, the provided context excerpts from Microsoft's 10-K filing do not explicitly mention risks tied to artificial intelligence. While Microsoft mentions AI in several places, discussing its mission, products, and services, and how it will shape the future of their business, there is no specific discussion of AI-related risks. \n\nIf you'd like to know more about risks associated with AI, you may want to explore other sources of information or look into more recent filings or industry reports.",
+        "retrieval_time_s": 0.89,
+        "precision_at_k": 0.8,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 4,
+        "relevance": 2
+      },
+      {
+        "id": "q08",
+        "question": "What does Microsoft report about legal proceedings?",
+        "expected_ticker": "MSFT",
+        "retrieved_tickers": [
+          "MSFT",
+          "XOM",
+          "JPM",
+          "MSFT",
+          "MSFT"
+        ],
+        "answer": "According to the provided context, Microsoft reports the following information about legal proceedings:\n\n* As of December 31, 2025, the company and its subsidiaries/affiliates are defendants or respondents in numerous legal proceedings, including private proceedings, public proceedings, government investigations, and regulatory enforcement matters. (ITEM 1. B, Note 30 - Litigation of 10-K filing)\n* The company estimates the aggregate range of reasonably possible losses, in excess of reserves established, for its legal proceedings is from $0 to approximately $1.2 billion at December 31, 2025. (ITEM 3. LEGAL PROCEEDINGS, Note 30 - Litigation of 10-K filing)\n* The company has implemented comprehensive compliance programs across its operations to adapt to changing regulatory requirements and maintain customer and regulator confidence. (ITEM 1. B, Note 7 - Compliance and Ethics of 10-K filing)\n* The company's business teams, with legal support, manage the compliance programs and processes, and internal audit teams conduct reviews of the programs and processes. (ITEM 1. B, Note 7 - Compliance and Ethics of 10-K filing)\n* The company's executive officers are not listed as having any reported legal proceedings, but the company reports on its overall legal risks and compliance efforts. (ITEM 1. B, Part I, Item 1A - Risk Factors of 10-K filing)",
+        "retrieval_time_s": 0.34,
+        "precision_at_k": 0.6,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 4,
+        "relevance": 2
+      },
+      {
+        "id": "q09",
+        "question": "What interest rate risks does JPMorgan Chase discuss in its 10-K?",
+        "expected_ticker": "JPM",
+        "retrieved_tickers": [
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM"
+        ],
+        "answer": "According to the provided SEC 10-K filings, JPMorgan Chase discusses the following interest rate risks:\n\n- Interest rate risk associated with fixed-rate assets and liabilities that appreciate or depreciate in market value as interest rates change.\n- Interest income and expense that increase or decrease as a result of variable-rate assets and liabilities resetting to current market rates.\n- Risk associated with changes in interest rates affecting the value of its credit exposure (specifically, in the context of the Apple Card transaction).\n\nThese risks are discussed in the context of the Firm's use of interest rate derivatives for market-making and risk management purposes, as well as the management of its balance sheet and liquidity risk through its Asset and Liability Committee (ALCO).",
+        "retrieval_time_s": 0.25,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q10",
+        "question": "How does JPMorgan Chase describe credit risk from its lending business?",
+        "expected_ticker": "JPM",
+        "retrieved_tickers": [
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM"
+        ],
+        "answer": "According to the 10-K filing (Section 1A. Risk Factors, Item 1A), JPMorgan Chase describes credit risk from its lending business as follows:\n\n\"Credit risk is the risk associated with the default or change in credit profile of a client, counterparty or customer. The Firm provides credit to a variety of clients and customers, ranging from large corporate and institutional clients to individual consumers and small businesses.\"\n\nAdditionally, the filing states that credit risk is generally mitigated by factors such as:\n\n* The short-term nature of lending activities\n* The fair value of collateral held\n* The Firm's right to call for and the borrower's obligation to provide additional margin when the fair value of the collateral declines\n\nIt is also mentioned that credit risk arising from lending activities subject to collateral maintenance requirements is \"generally mitigated\" and does not require an allowance for credit losses.\n\nHowever, it is noted that if management determines that an allowance for credit losses is required, the Firm estimates expected credit losses based on the value of the collateral and probability of borrower default.",
+        "retrieval_time_s": 0.72,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q11",
+        "question": "What market risk disclosures does JPMorgan Chase provide about trading and investment portfolios?",
+        "expected_ticker": "JPM",
+        "retrieved_tickers": [
+          "JPM",
+          "PFE",
+          "JPM",
+          "JPM",
+          "JPM"
+        ],
+        "answer": "JPMorgan Chase provides market risk disclosures about trading and investment portfolios through the following:\n\n1. The \"Market Risk Management\" section, which describes the firm's approach to managing principal investment risk and the governance and oversight structure for managing risk. (Item 15. Exhibits, Financial Statement Schedules, page 131-135)\n2. The \"Market Risk Management\" section provides details on the firm's risk measurement approaches, including the use of Value-at-Risk (VaR), stress testing, and qualitative risk assessments. (Item 15. Exhibits, Financial Statement Schedules, page 131-135)\n3. The \"Market Risk Management\" section also provides a table showing the results of the firm's VaR measure using a 95% confidence level for different types of securities, including CIB trading VaR, Credit Portfolio VaR, and Corporate VaR. (Item 15. Exhibits, Financial Statement Schedules, page 137)\n4. The \"Market Risk Management\" section provides additional information on the firm's stress testing and qualitative risk assessments, including the use of economic value sensitivity and other sensitivity-based measures. (Item 15. Exhibits, Financial Statement Schedules, page 131-135)\n\nRegarding trading portfolios, the following disclosures can be found in the \"Market Risk Management\" section:\n\n* The firm's trading activities are grouped into several trading businesses, including CIB (Corporate and Investment Banking), Corporate, and other. (Item 15. Exhibits, Financial Statement Schedules, page 131-135)\n* The firm's trading portfolios are subject to risk management and governance, including the use of VaR and stress testing. (Item 15. Exhibits, Financial Statement Schedules, page 131-135)\n\nIt's worth noting that JPMorgan Chase also provides additional information on its trading and investment portfolios through other sections of the 10-K filing, such as the \"Firmwide Risk Management\" section and the \"Risk Management\" section of the \"Analysis of Financial Condition, Liquidity, Capital Resources and Market Risk\" section.",
+        "retrieval_time_s": 0.18,
+        "precision_at_k": 0.8,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q12",
+        "question": "What does JPMorgan Chase's 10-K say about regulatory capital requirements?",
+        "expected_ticker": "JPM",
+        "retrieved_tickers": [
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM"
+        ],
+        "answer": "According to JPMorgan Chase's 2025 Form 10-K, the company is subject to various regulatory capital requirements, including those established by the Federal Reserve, the Office of the Comptroller of the Currency (OCC), and the Federal Deposit Insurance Corporation (FDIC). These requirements are outlined in the table below:\n\n* Standardized capital ratio requirements:\n\t+ CET1 capital: 11.5%\n\t+ Tier 1 capital: 13.0%\n\t+ Total capital: 15.0%\n* Advanced capital ratio requirements:\n\t+ CET1 capital: 11.5%\n\t+ Tier 1 capital: 13.0%\n\t+ Total capital: 15.0%\n* Well-capitalized ratios:\n\t+ BHC: 7.0% (CET1 capital)\n\t+ IDI: 6.5% (CET1 capital)\n\t+ BHC: 6.0% (Tier 1 leverage)\n\t+ IDI: 8.0% (Tier 1 leverage)\n\t+ BHC: 10.0% (Total capital)\n\t+ IDI: 10.0% (Total capital)\n\nThese requirements are in addition to the Basel III requirements, and JPMorgan Chase is also subject to the Prompt Corrective Action requirements of the FDIC Improvement Act. The company's CET1, Tier 1, and Total capital ratio requirements each include a respective minimum requirement plus a fixed capital conservation buffer of 2.5%.\n\nIt's worth noting that JPMorgan Chase's regulatory capital requirements are subject to change, and the company's ability to distribute capital to shareholders and support its business activities may be limited if it fails to meet these requirements.",
+        "retrieval_time_s": 0.21,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q13",
+        "question": "What commodity price risks does ExxonMobil describe?",
+        "expected_ticker": "XOM",
+        "retrieved_tickers": [
+          "XOM",
+          "XOM",
+          "XOM",
+          "XOM",
+          "XOM"
+        ],
+        "answer": "According to the provided context excerpt from ExxonMobil's 10-K filing, the company describes the following commodity price risks:\n\n1. Crude oil prices\n2. Natural gas prices (specifically, prices for Henry Hub and TTF)\n3. Petroleum product prices\n4. Chemical prices\n\nThese price risks are influenced by various factors, including global and regional supply/demand balances, inventory levels, industry refinery operations, import/export balances, currency fluctuations, seasonal demand, weather, and geopolitical considerations.",
+        "retrieval_time_s": 0.23,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q14",
+        "question": "How does ExxonMobil discuss climate change and environmental regulation risk?",
+        "expected_ticker": "XOM",
+        "retrieved_tickers": [
+          "XOM",
+          "XOM",
+          "XOM",
+          "JPM",
+          "XOM"
+        ],
+        "answer": "ExxonMobil discusses climate change and environmental regulation risk in several ways:\n\n1. (XOM, Item 1A) - Climate change is viewed as a driver of risk that may impact existing types of risks managed by the Company. The Company's 2030 greenhouse gas emission-reduction plans are incorporated into its medium-term business plans, which are updated annually. However, the reference case for planning beyond 2030 is based on ExxonMobil's Global Outlook (Outlook) research and publication, which reflects the existing global policy environment and an assumption of increasing policy stringency and technology improvement to 2050. The Company notes that current trends for policy stringency and development of lower-emission solutions are not yet on a pathway to achieve net-zero by 2050.\n2. (XOM, Item 1. BUSINESS) - The Company notes that future government regulations, including taxes, environmental regulations, and other government regulations and policies that directly or indirectly affect the production and sale of its products, may have material effects on the capital expenditures, earnings, and competitive position of ExxonMobil.\n3. (XOM, Item 1A) - Climate risk is categorized into physical risk and transition risk. Physical risk involves economic costs and financial losses due to a changing climate, while transition risk involves the financial and economic consequences of society's shift toward a lower-carbon economy.\n4. (XOM, Item 1. BUSINESS) - The Company's Climate, Nature and Social Risk Management function is responsible for establishing and maintaining the Firmwide framework and strategy for managing climate risk. The function also includes developing metrics, scenarios, and stress testing mechanisms to assess the range of potential climate-related financial and economic impacts to the Firm.\n5. (XOM, Item 1A) - The Company believes that the legal and factual theories set forth in the lawsuits against it for climate change-related claims are meritless and represent an inappropriate attempt to use the court system to usurp the proper role of policymakers in addressing the societal challenges of climate change.\n\nOverall, ExxonMobil views climate change and environmental regulation risk as a significant risk factor that may impact its business, financial condition, and results of operations. However, the Company also notes that it is taking steps to manage this risk, including developing its climate risk management framework and strategy, and defending against climate change-related lawsuits.",
+        "retrieval_time_s": 0.19,
+        "precision_at_k": 0.8,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q15",
+        "question": "What does ExxonMobil's 10-K say about operational and process safety risks?",
+        "expected_ticker": "XOM",
+        "retrieved_tickers": [
+          "XOM",
+          "JPM",
+          "JPM",
+          "JPM",
+          "XOM"
+        ],
+        "answer": "According to ExxonMobil's (XOM) 10-K, operational and process safety risks are considered a critical component of the company's competitive performance. The report highlights the importance of managing expenses, improving production yields, and successfully integrating and achieving synergies of acquisitions. To maintain its competitive position, ExxonMobil's technology, research, and development organizations must be successful and able to adapt to a changing market, regulatory, and policy environment.\n\nThe report specifically mentions the company's ability to operate efficiently, including its ability to manage expenses, improve production yields on an ongoing basis, and successfully integrate and achieve the anticipated synergies of acquisitions. This requires continuous management focus, including technology integration and improvements, cost control, productivity enhancements, harmonizing functions, policies, procedures, and processes.\n\nAdditionally, the report mentions the importance of continuous improvement in the efficiency of hydraulic fracturing technology and developing technologies to help reduce greenhouse gas emissions. To remain competitive, ExxonMobil must continuously adapt and capture the benefits of new and emerging technologies, such as AI, including successfully applying advances in the ability to process and integrate large amounts of data to its businesses and decision-making processes.\n\nThe report also discusses the company's operational risk management framework, which includes governance, awareness training, planning and testing of recovery strategies, and strategic and tactical initiatives to identify, assess, and manage resiliency risks. The framework operates in accordance with the company's overall approach to Operational Risk Management, including alignment with technology, cybersecurity, data, physical security, crisis management, real estate, and outsourcing programs.\n\nRegarding process safety, the report mentions the company's ability to minimize spills through a combined program of effective operations integrity management, ongoing upgrades, key equipment replacements, and comprehensive inspection and surveillance. It also mentions the implementation of cost-effective new technologies and adopting new operating practices to reduce emissions, not only in response to government requirements but also to address community priorities.\n\nOverall, ExxonMobil's 10-K highlights the importance of managing operational and process safety risks as part of its overall risk management framework, and emphasizes the company's commitment to continuous improvement and adaptation in this area.",
+        "retrieval_time_s": 0.23,
+        "precision_at_k": 0.4,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q16",
+        "question": "What properties and reserves information does ExxonMobil disclose?",
+        "expected_ticker": "XOM",
+        "retrieved_tickers": [
+          "XOM",
+          "XOM",
+          "XOM",
+          "XOM",
+          "XOM"
+        ],
+        "answer": "ExxonMobil discloses the following properties and reserves information:\n\n1. Proved reserves:\n\t* Total proved reserves at year-end 2025: approximately 7.0 billion oil-equivalent barrels (GOEB), which represents 36% of the total proved reserves.\n\t* Breakdown of proved reserves by type:\n\t\t+ Crude oil: 1.7 billion barrels\n\t\t+ Natural gas liquids: 1.5 billion barrels\n\t\t+ Natural gas: 3.3 trillion cubic feet\n\t\t+ Bitumen: 0.5 billion barrels\n\t\t+ Synthetic oil: 0.1 billion barrels\n\t* Classification of proved reserves:\n\t\t+ Proved developed reserves: those expected to be recovered through existing wells with existing equipment and operating methods or in which the cost of the required equipment is relatively minor compared to the cost of a new well.\n\t\t+ Proved undeveloped reserves: those expected to be recovered from new wells on undrilled acreage, or from existing wells where a relatively major expenditure is required for recompletion.\n2. Reserves estimation process:\n\t* The process involves technical evaluations, commercial and market assessments, analysis of well and field performance, and long-standing approval guidelines.\n\t* The Global Reserves and Resources group provides technical oversight and reviews annual changes in reserves estimates.\n3. Reserves data:\n\t* The data is based on estimates generated through the integration of available and appropriate geological, engineering, and production data, utilizing well-established technologies that have been demonstrated in the field to yield repeatable and consistent results.\n\t* The data used includes information obtained directly from the subsurface via wellbores, such as well logs, reservoir core samples, fluid samples, static and dynamic pressure information, production test data, and surveillance and performance information.\n4. Reserves information by division:\n\t* The Corporation does not view equity company reserves any differently than those from consolidated companies.\n5. Reserves information under production sharing and other nonconcessionary agreements:\n\t* The production and reserves reported for these types of arrangements typically vary inversely with oil and natural gas price changes.\n\t* The percentage of total proved reserves (consolidated subsidiaries plus equity companies) associated with production sharing contract arrangements was 12% on an oil-equivalent basis at year-end 2025.\n\nNote that the specific details of ExxonMobil's reserves information may not be comprehensive or up-to-date, as the information provided is based on SEC 10-K filings from 2025, 2024, and 2023.",
+        "retrieval_time_s": 0.24,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q17",
+        "question": "What regulatory risks does Pfizer describe related to drug approvals?",
+        "expected_ticker": "PFE",
+        "retrieved_tickers": [
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE"
+        ],
+        "answer": "Pfizer describes the following regulatory risks related to drug approvals in their 2025 Form 10-K filing:\n\n1. Regulatory decisions impacting labeling, approval, or authorization, including the scope of indicated patient populations, product dosage, manufacturing processes, safety, or other matters.\n2. Uncertainties regarding the future development of product candidates, including the possibility of unfavorable preclinical and clinical trial results, or regulatory decisions or feedback that could impact the future development of product candidates.\n3. Regulatory decisions or feedback that could impact the future development of product candidates, including the possibility of changes in regulatory requirements, including for potential development or approval of vaccine candidates.\n4. The risk that regulatory trial data are subject to differing interpretations and assessments, including during the peer review/publication process, in the scientific community generally, and by regulatory authorities.\n5. The risk that regulatory authorities may require additional data from Pfizer's pipeline programs, including the possibility of publication of additional data in scientific journal publications, and the attendant risk of disclosure of trade secrets or confidential commercial information.\n6. The risk that regulatory agencies may subject Pfizer to possible legal or regulatory actions, such as warning letters, suspension of manufacturing, seizure of product, injunctions, debarment, product recalls, delays, or denials of product approvals, if Pfizer fails to comply with regulatory requirements, such as cGMP.\n\nThese risks highlight the uncertainty and complexity of the regulatory environment, and the potential for regulatory decisions or actions to impact Pfizer's ability to develop, approve, and commercialize its products.",
+        "retrieval_time_s": 0.24,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q18",
+        "question": "What does Pfizer's 10-K say about patent protection and generic competition?",
+        "expected_ticker": "PFE",
+        "retrieved_tickers": [
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE"
+        ],
+        "answer": "According to the provided 10-K excerpts, Pfizer faces significant competition from generics and biosimilars due to patent protection expiration. Here are some key points:\n\n1. Patent protection expiration: Pfizer expects to face increased competition from generics and biosimilars in 2026 and beyond, particularly in China, due to the expansion of the QCE process and the continuation of the VBP program.\n2. Generic competition: Pfizer's patented products may face generic or biosimilar competition before patent-based and/or regulatory exclusivity expires. The company is concerned about the potential for generic or biosimilar versions of its products to enter the market, leading to price cuts and volume loss.\n3. Biosimilar competition: Pfizer commercializes biosimilar products that compete with branded products of others, including other biosimilar products. The company expects that the number of current and forthcoming competing biosimilars, coupled with Medicare's average sales price-based provider reimbursement methodology, will increase pricing pressures on its biosimilar products.\n4. Patent litigation: Pfizer is involved in patent litigation, including actions against generic companies that have filed applications with the FDA seeking approval to market generic versions of its products.\n5. Patent challenges: Pfizer faces challenges to its patent rights in various jurisdictions, including non-U.S. jurisdictions. The company is concerned about the potential for adverse decisions in these matters to have a material adverse effect on its results of operations.\n6. Patent damages suits: Pfizer is also party to patent damages suits in various jurisdictions, where generic drug manufacturers, payors, governments, or other parties are seeking damages from the company for allegedly causing delay of generic entry.\n7. Transition of commercial structure: As part of its commercial strategy, Pfizer made changes in its commercial structure in 2026, including the transition of certain off-patent branded and generic sterile injectables and biosimilars to a new Global Hospital and Biosimilars organization.\n\nIn summary, Pfizer faces significant competition from generics and biosimilars due to patent protection expiration, and the company is taking steps to address this competition through patent litigation, changes in its commercial structure, and other strategies.",
+        "retrieval_time_s": 0.27,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q19",
+        "question": "How does Pfizer describe risks from product liability and litigation?",
+        "expected_ticker": "PFE",
+        "retrieved_tickers": [
+          "PFE",
+          "PFE",
+          "PFE",
+          "TSLA",
+          "PFE"
+        ],
+        "answer": "Pfizer describes risks from product liability and litigation as \"substantial\" and believes that their claims and defenses in such matters are substantial, but litigation is inherently unpredictable and excessive verdicts can occur. They note that certain contingencies could result in increased expenses and/or losses, including damages, royalty payments, fines, and/or civil penalties, which could be substantial.\n\nPfizer also states that they have accrued for losses that are both probable and reasonably estimable, and that determining the likelihood of a loss and/or the measurement of any loss can be complex. They note that their assessments of the likelihood of a loss are based on estimates and assumptions that have been deemed reasonable by management, but that these estimates and assumptions may prove to be incomplete or inaccurate.\n\nAdditionally, Pfizer identifies the evaluation of product liability and other product-related litigation as a critical audit matter, requiring a complex series of judgments by the Company about future events, which involves a number of uncertainties.",
+        "retrieval_time_s": 0.18,
+        "precision_at_k": 0.8,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q20",
+        "question": "What does Pfizer's 10-K report about research and development risk?",
+        "expected_ticker": "PFE",
+        "retrieved_tickers": [
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE"
+        ],
+        "answer": "There is no explicit mention of \"research and development risk\" in the provided excerpts from Pfizer's 2025 Form 10-K report. However, there is a mention of the Pfizer R&D organization and its responsibilities, including overseeing all R&D activities with end-to-end responsibilities that span from discovery to late-phase clinical development and post-approval activities.\n\nOne potential indication of risk is the mention of \"Acquired in-process research and development expenses\" (Pfizer Inc. 2025 Form 10-K, 99, Notes to Consolidated Financial Statements, Other Business Activities). This type of expense is typically associated with the development of new products or technologies, and can be a significant risk if the development process is not successful.\n\nThere is also a mention of a \"one-time tax benefit\" related to changes in the tax rate (Pfizer Inc. 2025 Form 10-K, 41, Item 1. Business, Product Developments). This could be seen as a risk if the benefit is not sustained in future periods.\n\nWithout additional context, it is not possible to provide a definitive answer to the question of what Pfizer's 10-K report says about research and development risk.",
+        "retrieval_time_s": 0.23,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 4,
+        "relevance": 3
+      },
+      {
+        "id": "q21",
+        "question": "What manufacturing and production ramp risks does Tesla disclose?",
+        "expected_ticker": "TSLA",
+        "retrieved_tickers": [
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA"
+        ],
+        "answer": "According to the provided context excerpt (TSLA, ITEM 1A. RISK FACTORS), Tesla discloses the following manufacturing and production ramp risks:\n\n1. Issues or delays in developing, launching, and ramping the production of their products, services, and features.\n2. Unpredictability in the development and introduction of new products, services, and features.\n3. Uncertainty in the widespread adoption of their driver assistance systems and autonomous driving solutions.\n4. Bottlenecks and other unexpected challenges that may arise during production ramps.\n5. Delays in establishing and/or sustaining product ramps or being unable to meet related cost and profitability targets.\n6. Similar future delays in launching and/or ramping production of energy storage products, Solar Roof, new vehicles, and future products, features, and services.\n7. Challenges in scaling manufacturing, delivery, and service operations to meet demand, including:\n\t* Scaling production of proprietary battery cells and packs.\n\t* Incorporating sequential design and manufacturing changes into vehicles and energy products.\n\t* Maintaining and complying with regulatory requirements, procurement, and environmental and operational licenses and permitting.\n8. Uncertainty in the pace of bringing production equipment and processes online with the capability to manufacture high-quality units at scale.\n\nThese risks are associated with the development and production of various products, including their driver assistance systems, autonomous driving solutions, energy storage products, Solar Roof, new vehicles, and future products and services.",
+        "retrieval_time_s": 0.2,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q22",
+        "question": "How does Tesla describe risks related to autonomous driving technology?",
+        "expected_ticker": "TSLA",
+        "retrieved_tickers": [
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA"
+        ],
+        "answer": "According to the provided SEC 10-K filings, Tesla describes risks related to autonomous driving technology as follows:\n\n* Perceptions about electric vehicle features, quality, safety, performance and cost;\n* Perceptions about the limited range over which electric vehicles may be driven on a single battery charge, and access to charging facilities;\n* Competition, including from other types of alternative fuel vehicles, plug-in hybrid electric vehicles and high fuel-economy internal combustion engine vehicles;\n* Volatility in the cost of oil, gasoline and energy;\n* Government regulations and economic incentives and conditions;\n* Concerns about the future viability of autonomous driving solutions and Robotaxi as a preferable option.\n\nAdditionally, Tesla highlights the challenges of attracting and retaining senior leadership, engineering, manufacturing, marketing, sales and delivery personnel, and employees with specialized knowledge of electric vehicles and AI, as the company continues to grow and expand its autonomous driving technology.",
+        "retrieval_time_s": 0.22,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q23",
+        "question": "What does Tesla's 10-K say about regulatory credits as a revenue source?",
+        "expected_ticker": "TSLA",
+        "retrieved_tickers": [
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA"
+        ],
+        "answer": "According to Tesla's 10-K filing, regulatory credits are a source of revenue for the company. Specifically, it states that:\n\n\"Revenue recognized from the sale of automotive regulatory credits was immaterial as of December 31, 2024 and 2023.\" (Item 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA)\n\nAdditionally, it mentions that the revenue recognized from regulatory credits is directly related to the company's new vehicle production, sales, and pricing negotiated with customers.\n\nHowever, it also notes that changes in regulations, such as the One Big Beautiful Bill Act (OBBBA), have restricted certain regulatory credit programs tied to the company's products, which has impacted the company's revenue from this source. In 2025, the OBBBA restricted certain regulatory credit programs tied to Tesla's products, resulting in a $3.84 billion decrease in the company's remaining performance obligations as of December 31, 2025.\n\nIt also mentions that the company has elected the practical expedient to omit disclosure of the amount of the transaction price allocated to remaining performance obligations for contracts with an original expected contract length of one year or less.\n\nOverall, regulatory credits appear to be a relatively minor source of revenue for Tesla, with most of the revenue coming from other sources such as automotive sales, leasing, and energy generation and storage.",
+        "retrieval_time_s": 0.23,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q24",
+        "question": "What competitive risks does Tesla describe in the electric vehicle market?",
+        "expected_ticker": "TSLA",
+        "retrieved_tickers": [
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA"
+        ],
+        "answer": "According to the provided context excerpts from SEC 10-K filings, Tesla describes the following competitive risks in the electric vehicle market:\n\n1. Perceptions about electric vehicle features, quality, safety, performance and cost.\n2. Competition from other types of alternative fuel vehicles, plug-in hybrid electric vehicles, and high fuel-economy internal combustion engine vehicles.\n3. Volatility in the cost of oil, gasoline, and energy.\n4. Government regulations and economic incentives and conditions.\n5. Concerns about the future viability of electric vehicles.\n6. Sales of vehicles in the automotive industry tend to be cyclical in many markets, which may expose Tesla to further volatility.\n7. Rising interest rates, which may lead to consumers pulling back on spending, including on Tesla's products.\n8. Established and new automobile manufacturers entering the electric vehicle market, including those with greater financial resources.\n\nAdditionally, Tesla faces competition in the fields of AI and robotics, particularly in the autonomous ride-hailing service market, where its Robotaxi service competes with traditional ride-hailing and taxi services.",
+        "retrieval_time_s": 0.7,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      }
+    ]
+  },
+  {
+    "chunk_strategy": "semantic",
+    "retrieval_strategy": "dense",
+    "num_questions": 24,
+    "avg_precision_at_k": 0.9083333333333333,
+    "avg_hit_at_k": 1.0,
+    "avg_mrr": 0.9791666666666666,
+    "avg_faithfulness": 4.666666666666667,
+    "avg_relevance": 4.458333333333333,
+    "per_question": [
+      {
+        "id": "q01",
+        "question": "What supply chain risks does Apple describe in its 10-K?",
+        "expected_ticker": "AAPL",
+        "retrieved_tickers": [
+          "AAPL",
+          "AAPL",
+          "AAPL",
+          "AAPL",
+          "AAPL"
+        ],
+        "answer": "According to the provided context excerpts from Apple Inc.'s 2025 Form 10-K, the supply chain risks described by Apple include:\n\n1. Component and product manufacturing and logistical services provided by outsourcing partners, many of which are located outside of the U.S.\n2. Dependence on a limited number of suppliers for critical components, which can lead to industry-wide shortages and commodity pricing fluctuations.\n3. Supply chain disruptions due to:\n\t* Geopolitical tensions, conflict, terrorism, natural disasters, public health issues, industrial accidents, and other business interruptions.\n\t* Business interruptions affecting single or limited sources for the supply and manufacture of critical components.\n\t* Restrictions on international trade, which can increase the cost or limit the availability of the Company's products and components.\n4. Cybersecurity risks, including the potential for hacking, ransomware attacks, employee error, malfeasance, system error, faulty password management, or other irregularities that can result in unauthorized access to the Company's systems and services.\n5. Insolvency risks among suppliers, contract manufacturers, logistics providers, distributors, cellular network carriers, and other channel partners.\n6. Credit and collectibility risks related to trade receivables.\n7. Failure of derivative counterparties and other financial institutions.\n8. Limitations on the Company's ability to issue new debt.\n9. Declines in the fair values of the Company's financial instruments.\n\nThese supply chain risks can have a material adverse effect on Apple's business, results of operations, financial condition, and stock price.",
+        "retrieval_time_s": 0.34,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 4,
+        "relevance": 2
+      },
+      {
+        "id": "q02",
+        "question": "How does Apple describe risks from international trade restrictions and tariffs?",
+        "expected_ticker": "AAPL",
+        "retrieved_tickers": [
+          "AAPL",
+          "AAPL",
+          "AAPL",
+          "AAPL",
+          "AAPL"
+        ],
+        "answer": "According to Item 7 (Tariffs and Other Measures) in Apple's 2025 Form 10-K, Apple describes risks from international trade restrictions and tariffs as follows:\n\n\"Tariffs and other measures that are applied to the Company\u2019s products or their components can have a material adverse impact on the Company\u2019s business, results of operations and financial condition, including impacting the Company\u2019s supply chain, the availability of rare earths and other raw materials and components, pricing and gross margin. The ultimate impact remains uncertain and will depend on several factors, including whether additional or incremental U.S. Tariffs or other measures are announced or imposed, to what extent other countries implement tariffs or other retaliatory measures in response, and the overall magnitude and duration of these measures.\"\n\nAdditionally, Item 1A (Risk Factors) mentions that international trade restrictions and tariffs can have a material adverse effect on the Company's business, results of operations, financial condition, and stock price, and that the impact is uncertain and will depend on various factors.",
+        "retrieval_time_s": 0.35,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q03",
+        "question": "What does Apple's 10-K say about risks from adverse macroeconomic conditions?",
+        "expected_ticker": "AAPL",
+        "retrieved_tickers": [
+          "AAPL",
+          "AAPL",
+          "JPM",
+          "AAPL",
+          "AAPL"
+        ],
+        "answer": "According to Item 1A. Risk Factors in Apple's 2025 Form 10-K, adverse macroeconomic conditions can have a material adverse effect on the Company's business, results of operations, financial condition, and stock price. Specifically, the Company's allowance for credit losses is estimated using a weighted average of five internally developed macroeconomic scenarios. The adverse scenarios incorporate more punitive macroeconomic factors than the central case assumptions, resulting in:\n\n* A weighted average U.S. unemployment rate peaking at 5.8% in the fourth quarter of 2026\n* A weighted average U.S. real GDP level that is 2.1% lower than the central case at the end of the second quarter of 2027.\n\nThese scenarios are subject to change and may result in additional credit losses, which could negatively impact the Company's financial condition and results of operations.",
+        "retrieval_time_s": 0.5,
+        "precision_at_k": 0.8,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q04",
+        "question": "What controls and procedures does Apple report regarding disclosure controls?",
+        "expected_ticker": "AAPL",
+        "retrieved_tickers": [
+          "AAPL",
+          "AAPL",
+          "TSLA",
+          "MSFT",
+          "PFE"
+        ],
+        "answer": "According to Item 8. Financial Statements and Supplementary Data in Apple's 2025 Form 10-K, the Company's disclosure controls and procedures as defined in Rules 13a-15(e) and 15d-15(e) under the Exchange Act were effective as of September 27, 2025.",
+        "retrieval_time_s": 0.27,
+        "precision_at_k": 0.4,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q05",
+        "question": "What cybersecurity and data security risks does Microsoft disclose?",
+        "expected_ticker": "MSFT",
+        "retrieved_tickers": [
+          "MSFT",
+          "JPM",
+          "MSFT",
+          "MSFT",
+          "XOM"
+        ],
+        "answer": "According to the provided context excerpts from SEC 10-K filings, Microsoft discloses the following cybersecurity and data security risks:\n\n1. Cybersecurity risks from various threats, including:\n\t* Threat actors, including individual and groups of hackers and sophisticated organizations, including nation-states, state-sponsored organizations, or cybercriminal groups.\n\t* Malicious software, vulnerabilities, or intentionally designed processes in hardware, software, or infrastructure.\n\t* Social engineering and AI-assisted techniques to induce employees, users, partners, suppliers, or customers to disclose sensitive information.\n\t* Coordinated attacks.\n2. Risks associated with third-party service providers, including:\n\t* Third-party incidents, such as system breakdowns or failures, misconduct by employees of these parties, or cyber attacks.\n\t* Supply-chain compromises.\n3. Risks from cybersecurity threats, including:\n\t* Unauthorized access to systems and data.\n\t* Destruction of data.\n\t* Disruptions to or degradations of service.\n\t* Sabotaging of systems or other damage.\n4. Risks from artificial intelligence (AI) and emerging technologies, which can be leveraged by attackers.\n5. Risks from cybersecurity incidents, which have not materially affected Microsoft's business strategy, results of operations, or financial condition.\n6. Risks from cybersecurity threats, including prior cybersecurity events, which may have a material adverse effect on Microsoft's business strategy, results of operations, or financial condition.\n\nThese risks are discussed in the context of Microsoft's cybersecurity program, risk management, and strategy, as well as its efforts to mitigate these risks, including the use of threat intelligence experts, security awareness training, and a risk-based approach to managing third-party service providers.\n\nReferences:\n[1] (MSFT, ITEM 1C. CY)\n[2] (JPM, Item 15. Exhibits, Financial Statement Schedules.)\n[3] (MSFT, ITEM 1C. CYBERSECURITY)\n[4] (MSFT, ITEM 1C)",
+        "retrieval_time_s": 0.26,
+        "precision_at_k": 0.6,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q06",
+        "question": "How does Microsoft describe competition in cloud and AI markets?",
+        "expected_ticker": "MSFT",
+        "retrieved_tickers": [
+          "MSFT",
+          "MSFT",
+          "MSFT",
+          "MSFT",
+          "MSFT"
+        ],
+        "answer": "According to the context excerpts from MSFT's 10-K filings:\n\nMicrosoft describes competition in cloud and AI markets as highly competitive, dynamic, and rapidly evolving. They mention that they face competition from:\n\n* Hyperscalers (e.g. Amazon Web Services, Google Cloud Platform)\n* Open-source offerings\n* Frontier model providers\n* Companies developing and deploying competing cloud-based services\n* Companies offering free applications, online services, and content, funded by third-party advertising\n* Companies modifying and distributing open-source software at little or no cost to end users\n* Strategic partners and other customers who may adjust their purchasing decisions, deployment strategies, or anticipated use of their products and services.\n\nMicrosoft also notes that they are investing in AI across the entire company and infusing AI capabilities into their offerings to remain competitive, and that the cost structure for AI products and services is subject to significant uncertainty.",
+        "retrieval_time_s": 1.45,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q07",
+        "question": "What does Microsoft's 10-K say about risks tied to artificial intelligence?",
+        "expected_ticker": "MSFT",
+        "retrieved_tickers": [
+          "PFE",
+          "MSFT",
+          "JPM",
+          "MSFT",
+          "MSFT"
+        ],
+        "answer": "According to Microsoft's 10-K filing (Items 1A, 1C), Microsoft identifies several risks tied to artificial intelligence (AI), including:\n\n1. Reputational or competitive harm or liability: Microsoft may face reputational or competitive harm or liability due to issues in the development, deployment, and use of AI, such as inaccurate or biased output, ineffective or inadequate AI development or deployment practices, or the unauthorized release of confidential or proprietary information.\n2. Regulatory and compliance challenges: Rapidly evolving regulatory frameworks and standards related to AI may impose significant compliance costs, limit Microsoft's ability to deploy AI, or require changes to its practices.\n3. Competitive disadvantage: Microsoft may face a competitive disadvantage if competitors are able to deploy AI more quickly or effectively, potentially gaining advantages in cost efficiency, client and customer experience, or product innovation.\n4. Replacement or disintermediation of direct customer relationships: AI agents autonomously managing or intermediating financial decisions and product selection or other services for customers may lead to replacement or disintermediation of direct customer relationships.\n5. AI system failures, inadequate use, or lack of transparency: Microsoft's AI systems may be vulnerable to failures, inadequate use, or lack of transparency, which could disrupt operations, cause erroneous transactions, compromise data privacy, or harm clients and customers.\n6. Increased exposure to cyber attacks: Microsoft's AI systems may be more susceptible to cyber attacks, particularly if they are not designed and implemented with appropriate safeguards to prevent systems from accessing sensitive data sources or system resources and taking actions.\n7. Ethical issues: Certain AI technologies and use cases may present ethical issues or have broad or uneven impacts on society or vulnerable groups within society.\n\nMicrosoft also mentions that it has taken steps to address these risks, including:\n\n* Developing and deploying AI responsibly with safety and security from the outset\n* Providing access to AI across its offerings and enabling customers and partners to build AI-based solutions using its platforms\n* Conducting cybersecurity assessments and remediation efforts for acquired companies\n* Integrating security into its computing environments, products, and services through its Security Development Lifecycle\n* Continuing to monitor its computing environments, products, and services for vulnerabilities and signs of compromise.",
+        "retrieval_time_s": 0.36,
+        "precision_at_k": 0.6,
+        "hit_at_k": 1.0,
+        "mrr": 0.5,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q08",
+        "question": "What does Microsoft report about legal proceedings?",
+        "expected_ticker": "MSFT",
+        "retrieved_tickers": [
+          "MSFT",
+          "MSFT",
+          "MSFT",
+          "XOM",
+          "JPM"
+        ],
+        "answer": "According to Item 3. LEGAL (MSFT, 10-K), Microsoft refers readers to Note 14 \u2013 Contingencies of the Notes to Financial Statements (Part II, Item 8 of this Form 10-K) for information regarding legal proceedings in which Microsoft is involved.",
+        "retrieval_time_s": 0.88,
+        "precision_at_k": 0.6,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q09",
+        "question": "What interest rate risks does JPMorgan Chase discuss in its 10-K?",
+        "expected_ticker": "JPM",
+        "retrieved_tickers": [
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM"
+        ],
+        "answer": "I couldn't find specific information on interest rate risks in the provided 10-K excerpts. However, I did find a mention of changes in interest rates and credit spreads in the risk factors section:\n\n\"...the effects that unfavorable economic and market events and conditions, political developments, changes in interest rates and credit spreads, and market fluctuations could have on JPMorganChase's businesses, investments and market-making positions, as well as on its earnings and liquidity and capital levels.\"\n\nThis suggests that JPMorganChase recognizes the potential impact of changes in interest rates and credit spreads on its businesses and operations, but it does not provide further details on what specific interest rate risks they are concerned about.",
+        "retrieval_time_s": 0.29,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 4,
+        "relevance": 4
+      },
+      {
+        "id": "q10",
+        "question": "How does JPMorgan Chase describe credit risk from its lending business?",
+        "expected_ticker": "JPM",
+        "retrieved_tickers": [
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM"
+        ],
+        "answer": "According to JPMorgan Chase's 10-K filing, credit risk from its lending business is described as:\n\n\"Credit risk is the risk associated with the default or change in credit profile of a client, counterparty or customer.\" (Item 15. Exhibits, Financial Statement Schedules, Credit Risk Management)\n\nAdditionally, the wholesale credit portfolio is exposed to credit risk primarily through underwriting, lending, market-making, and hedging activities with and for clients and counterparties, as well as through various operating services. (Item 15. Exhibits, Financial Statement Schedules, Wholesale Credit Portfolio)\n\nJPMorgan Chase also notes that it has a credit risk policy framework, monitors and measures credit risk across all portfolio segments, and defines credit risk policies, procedures, and limits. (Item 15. Exhibits, Financial Statement Schedules, Credit Risk Management)\n\nHowever, the firm also acknowledges that credit risk can be concentrated in certain areas, such as industry and geographic locations, and that it has taken steps to manage this risk, including using loan syndications, participations, loan sales, securitizations, credit derivatives, master netting agreements, collateral, and other risk-reduction techniques. (Item 15. Exhibits, Financial Statement Schedules, Wholesale Exposure Management)",
+        "retrieval_time_s": 0.26,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 4,
+        "relevance": 2
+      },
+      {
+        "id": "q11",
+        "question": "What market risk disclosures does JPMorgan Chase provide about trading and investment portfolios?",
+        "expected_ticker": "JPM",
+        "retrieved_tickers": [
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM"
+        ],
+        "answer": "According to the provided SEC 10-K filings, JPMorgan Chase provides the following market risk disclosures about trading and investment portfolios:\n\n1. Market Risk Management is responsible for monitoring market risks throughout the Firm and defining market risk policies and procedures. (Item 15. Exhibits, Financial Statement Schedules, page 132)\n2. Market Risk Management uses various metrics to assess risk, including:\n\t* Value-at-risk\n\t* Stress testing\n\t* Profit and loss drawdowns (Item 15. Exhibits, Financial Statement Schedules, page 132)\n3. The Firm has established a Firmwide risk policy framework for all principal investing activities that includes approval by executives who are independent from the investing businesses, as appropriate. (Item 15. Exhibits, Financial Statement Schedules, page 402)\n4. The Firm conducts stress testing on principal investment portfolios using specific scenarios that estimate losses based on significant market moves and/or other risk events. (Item 15. Exhibits, Financial Statement Schedules, page 402)\n5. The aggregate carrying values of the principal investment portfolios are presented in the table below as of December 31, 2025 and 2024. (Item 15. Exhibits, Financial Statement Schedules, page 404)\n6. The wholesale credit portfolio includes exposure held in CIB, AWM, and Corporate, and risk-rated exposure held in CCB, for which the wholesale methodology is applied when determining the allowance for loan losses. (Item 15. Exhibits, Financial Statement Schedules, page 117)\n\nNote that the provided context excerpts do not provide detailed market risk disclosures specifically about trading and investment portfolios, but rather provide a broader overview of the Firm's risk management framework and market risk practices.",
+        "retrieval_time_s": 0.25,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 4,
+        "relevance": 2
+      },
+      {
+        "id": "q12",
+        "question": "What does JPMorgan Chase's 10-K say about regulatory capital requirements?",
+        "expected_ticker": "JPM",
+        "retrieved_tickers": [
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM"
+        ],
+        "answer": "According to Item 15. Exhibits, Financial Statement Schedules in JPMorgan Chase's 2025 10-K filing, regulatory capital requirements are as follows:\n\nJPMorgan Chase & Co. is required to maintain minimum ratios for CET1 capital, Tier 1 capital, Total capital, Tier 1 leverage, and the SLR (Suppressed Losses Ratio) under the Basel III rules. The minimum ratios are as follows:\n\n- CET1 capital: 11.5% (Standardized approach), 13.0% (Advanced approach)\n- Tier 1 capital: 13.0% (Standardized approach), 13.0% (Advanced approach)\n- Total capital: 15.0% (Standardized approach), 15.0% (Advanced approach)\n- Tier 1 leverage: 4.0% (Standardized approach), 4.0% (Advanced approach)\n- SLR: 5.0% (Standardized approach), 5.0% (Advanced approach)\n\nAdditionally, JPMorgan Chase & Co. is subject to regulatory capital requirements established by the Federal Reserve, OCC, and FDIC. The company is evaluated against the lower of the Standardized or Advanced approaches compared to their respective regulatory capital ratio requirements.\n\nIt is also mentioned that as of December 31, 2025, the Advanced risk-based ratios became more binding on the Firm than the Standardized risk-based ratios, primarily reflecting the increase in Advanced RWA related to the Apple Card transaction and a reduction in the Firm's SCB (Suppressed Capital Buffer) requirement which only applies to the Standardized risk-based ratios.\n\nThe company notes that it may use its regulatory capital buffers, allowing capital ratios to decline below regulatory requirements, subjecting it to restrictions on capital distributions and discretionary bonus payments to its executive officers. Any failure or inability to maintain the required level and composition of capital could have an adverse impact on JPMorgan Chase's shareholders.",
+        "retrieval_time_s": 0.97,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q13",
+        "question": "What commodity price risks does ExxonMobil describe?",
+        "expected_ticker": "XOM",
+        "retrieved_tickers": [
+          "XOM",
+          "XOM",
+          "XOM",
+          "XOM",
+          "XOM"
+        ],
+        "answer": "ExxonMobil describes the following commodity price risks:\n\n1. A material decline in oil or natural gas prices could have a material adverse effect on the Company's operations, results, financial condition, and proved reserves, especially in the Upstream segment.\n2. A material increase in oil or natural gas prices could have a material adverse effect on the Company's operations and results, especially in the Energy Products, Chemical Products, and Specialty Products segments.\n3. Changes in oil or natural gas prices depend on local, regional, and global events or conditions that affect supply and demand for the relevant commodity or product.\n\nThese risks are described in the context of the Company's operations and earnings being significantly affected by changes in oil, gas, and petrochemical prices and by changes in margins on refined products.",
+        "retrieval_time_s": 0.51,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q14",
+        "question": "How does ExxonMobil discuss climate change and environmental regulation risk?",
+        "expected_ticker": "XOM",
+        "retrieved_tickers": [
+          "XOM",
+          "XOM",
+          "XOM",
+          "XOM",
+          "XOM"
+        ],
+        "answer": "According to the provided context excerpts from ExxonMobil's 10-K filing (Item 1A, \"Climate Change and Energy Transition\"), ExxonMobil discusses climate change and environmental regulation risk as follows:\n\n* ExxonMobil's pursuit of lower-emission and other new business opportunities, including carbon capture and storage, hydrogen and ammonia, lower-emission fuels, Proxxima TM resin systems, carbon materials, low-carbon data centers, and lithium, depends on the growth and development of markets for those products and services.\n* The company's 2030 greenhouse gas emission-reductions plans are incorporated into its medium-term business plans, which are updated annually.\n* The reference case for planning beyond 2030 is based on ExxonMobil's Global Outlook (Outlook) research and publication, which reflects the existing global policy environment and an assumption of increasing policy stringency and technology improvement to 2050.\n* However, the Outlook does not project the degree of required future policy and technology advancement and deployment for the world or ExxonMobil to meet net-zero by 2050.\n* The company expects worldwide environmental expenditures to increase to approximately $9 billion annually in 2026 and 2027, with capital expenditures expected to account for approximately 44 percent of the total expenditures.\n* ExxonMobil has accrued environmental liabilities when it is probable that obligations have been incurred and the amounts can be reasonably estimated.\n* The company has provisions made in 2025 for environmental liabilities, and the balance sheet reflects liabilities of $0.9 billion as of December 31, 2025, and $0.7 billion as of December 31, 2024.\n\nOverall, ExxonMobil discusses climate change and environmental regulation risk as a material risk factor that could adversely affect its business, financial and operating results, or financial condition. The company is taking steps to address these risks, including investing in lower-emission technologies and developing its 2030 greenhouse gas emission-reductions plans.",
+        "retrieval_time_s": 0.34,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q15",
+        "question": "What does ExxonMobil's 10-K say about operational and process safety risks?",
+        "expected_ticker": "XOM",
+        "retrieved_tickers": [
+          "XOM",
+          "XOM",
+          "XOM",
+          "XOM",
+          "JPM"
+        ],
+        "answer": "According to the provided excerpts from ExxonMobil's 10-K filing, operational and process safety risks are mentioned in the following sections:\n\n* Item 1A. RISK FACTORS:\n\t+ \"Our pursuit of lower-emission and other new business opportunities, including carbon capture and storage, hydrogen and ammonia, lower-emission fuels, Proxxima\nTM\nresin systems, carbon materials, low-carbon data centers, and lithium also depends on the growth and development of markets for those products and services, including implementation of supportive and stable government policies and developments in existing and new technology to enable those products and services to be provided on a cost-effective basis at commercial scale.\" (No specific operational or process safety risks mentioned)\n\t+ \"Our consideration of changing weather conditions and inclusion of safety factors in design cover the engineering uncertainties that climate change and other events may potentially introduce.\" (A mention of safety factors in design, but not operational or process safety risks)\n* Item 7A:\n\t+ \"Operational efficiency.\"\n\t\t- \"An important component of ExxonMobil\u2019s competitive performance, especially given the commodity-based nature of many of our businesses, is our ability to operate efficiently, including our ability to manage expenses, improve production yields on an ongoing basis, and successfully integrate and achieve the anticipated synergies of acquisitions.\"\n\t\t- \"This requires continuous management focus, including technology integration and improvements, cost control, productivity enhancements, harmonizing functions, policies, procedures and processes, regular reappraisal of our asset portfolio, and the recruitment, development, and retention of high caliber employees.\"\n\t\t- \"To maintain our competitive position, especially in light of the technological nature of our businesses, the dynamic and rapidly evolving technological landscape, and the need for continuous efficiency improvement, ExxonMobil\u2019s technology, research, and development organizations must be successful and able to adapt to a changing market, regulatory, and policy environment...\"\n\t+ \"Safety, business controls, and risk management.\"\n\t\t- \"Our results depend on management\u2019s ability to minimize the inherent risks of oil, gas, and petrochemical operations, as well as potential risks related to new energy and other technologies, to effectively control our business activities, including trading, and to minimize the potential for human error.\"\n\t\t- \"We apply rigorous management systems and continuous focus on workplace safety, spills avoidance, and other adverse environmental events.\"\n\t\t- \"We work to minimize spills through a combined program of effective operations integrity management, ongoing upgrades, key equipment replacements, and comprehensive inspection and surveillance.\"\n\t\t- \"Similarly, we are implementing cost-effective new technologies and adopting new operating practices to reduce emissions, not only in response to government requirements but also to address community priorities.\"\n\t\t- \"Substantial liabilities and other adverse impacts could result if we do not timely identify and mitigate applicable risks, or if our management systems and controls do not function as intended.\"\n\t+ \"Cybersecurity.\"\n\t\t- \"Our operations may be disrupted by severe weather events, natural disasters, human error, and similar events.\"\n\t\t- \"We have limited ability to influence third parties, including our partners, suppliers, and service providers (including providers of cloud-hosting services for our data or applications), to implement strong cybersecurity controls and are exposed to potential harm from cybersecurity events that may affect their operations.\"\n\nThese excerpts suggest that ExxonMobil's operational and process safety risks include:\n\n* Human error and spills\n* Environmental events (e.g. hurricanes, natural disasters)\n* Cybersecurity disruptions\n* Operational efficiency and productivity risks\n* Regulatory and policy changes that may impact business operations",
+        "retrieval_time_s": 0.29,
+        "precision_at_k": 0.8,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 4,
+        "relevance": 5
+      },
+      {
+        "id": "q16",
+        "question": "What properties and reserves information does ExxonMobil disclose?",
+        "expected_ticker": "XOM",
+        "retrieved_tickers": [
+          "XOM",
+          "XOM",
+          "XOM",
+          "XOM",
+          "XOM"
+        ],
+        "answer": "ExxonMobil discloses the following properties and reserves information in its 10-K filings:\n\n* Oil and gas reserves are contained in the \"Oil and Gas Reserves\" section of the \"Supplemental Information on Oil and Gas Exploration and Production Activities\" portion of the Financial Section of this report.\n* Information on undeveloped acreage, including:\n\t+ 15,407 gross and 7,527 net thousand of acres for 2025 in the Other Americas region.\n\t+ 14,914 gross and 6,381 net thousand of acres for 2024 in the Other Americas region.\n* Details on refining capacity, including:\n\t+ United States: 1,967 thousand barrels daily, with varying capacities at different refineries.\n\t+ Canada: 100 thousand barrels daily at the Strathcona refinery.\n* Information on retail fuel sites, including:\n\t+ Number of sites in different regions: United States, Canada, Europe, Asia Pacific, Latin America, Middle East/Africa, and Worldwide.\n\nNote that ExxonMobil does not disclose information on specific properties or reserves, but rather provides general information on its oil and gas assets, refining capacity, and retail fuel sites.",
+        "retrieval_time_s": 0.33,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 4,
+        "relevance": 5
+      },
+      {
+        "id": "q17",
+        "question": "What regulatory risks does Pfizer describe related to drug approvals?",
+        "expected_ticker": "PFE",
+        "retrieved_tickers": [
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE"
+        ],
+        "answer": "According to Pfizer's 2025 Form 10-K, the company describes the following regulatory risks related to drug approvals:\n\n1. Uncertainty in regulatory decisions, including labeling, approval, and authorization, including the scope of indicated patient populations, product dosage, manufacturing processes, safety, and other matters (Item 1. Business\u2013\u2013Government Regulation and Price Constraints).\n2. Risk of post-approval requirements, such as additional clinical trials or studies, which may impact product approval and availability (Item 1. Business\u2013\u2013Government Regulation and Price Constraints).\n3. Potential for adverse post-marketing study results, which may impact the availability and commercial potential of products (Item 1. Business\u2013\u2013Government Regulation and Price Constraints).\n4. Regulatory hold on certain products, such as osivelotor, which may delay or prevent product approval (Item 1. Business).\n5. Biosimilar regulation, including the potential for delays and uncertainty in the approval process (Item 1. Business).\n6. Regulatory requirements and obligations, such as pharmacovigilance, which may require significant resources and investment (Item 1. Business\u2013\u2013Government Regulation and Price Constraints).\n7. Risk of EUA revocation or termination, which may impact the distribution and use of products during public health emergencies (Item 1. Business\u2013\u2013Government Regulation and Price Constraints).\n\nSpecifically, the company mentions that regulatory agencies outside the US, such as the EMA, may have similar regulations and requirements, which may contribute to inconsistency or uncertainty in the marketability of products (Item 1. Business\u2013\u2013Government Regulation and Price Constraints).\n\nTICKER: PFE",
+        "retrieval_time_s": 0.29,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 4,
+        "relevance": 2
+      },
+      {
+        "id": "q18",
+        "question": "What does Pfizer's 10-K say about patent protection and generic competition?",
+        "expected_ticker": "PFE",
+        "retrieved_tickers": [
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE"
+        ],
+        "answer": "According to the 10-K filing, Pfizer faces significant patent protection and generic competition in the pharmaceutical industry. Here are some key points:\n\n1. Patent protection: Pfizer's products face patent challenges from generic and biosimilar manufacturers, which may seek to invalidate or circumvent its patents. The company is involved in various patent infringement litigation and proceedings, including inter partes review, post-grant review, and court proceedings.\n2. Generic competition: Pfizer's patented products may face generic or biosimilar competition before patent-based and/or regulatory exclusivity expires. The company expects to face intense competition in China, where generic manufacturers may launch products that infringe on Pfizer's patents.\n3. Biosimilar competition: Pfizer also faces competition from biosimilars, which are generic versions of biologic products. The company expects to face increased pricing pressures from biosimilars, particularly in the Medicare market, due to the average sales price-based provider reimbursement methodology.\n4. Trademark protection: Pfizer's brand-name and logo trademarks and trade dress are protected, but the company recognizes the importance of protecting its trademarks to maintain a competitive advantage.\n\nOverall, Pfizer's 10-K filing highlights the challenges of patent protection and generic competition in the pharmaceutical industry, and the company's efforts to address these challenges through innovation, business development, and patent litigation.",
+        "retrieval_time_s": 0.22,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q19",
+        "question": "How does Pfizer describe risks from product liability and litigation?",
+        "expected_ticker": "PFE",
+        "retrieved_tickers": [
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE"
+        ],
+        "answer": "According to Item 1A. Risk Factors of Pfizer's 2025 Form 10-K, Pfizer describes risks from product liability and litigation as follows:\n\n* Product liability and other product-related litigation can result in significant losses, including damages, royalty payments, fines, and/or civil penalties.\n* These risks can include personal injury, consumer fraud, off-label promotion, securities, antitrust, and breach of contract claims, among others.\n* The outcome of these matters can be highly complex and unpredictable, with excessive verdicts occurring in the past.\n* Although Pfizer believes its claims and defenses in these matters are substantial, there is a risk that judgments, settlements, or revised expectations regarding the outcome could have a material adverse effect on its results of operations and/or cash flows.\n* The risks from product liability and litigation are subject to significant uncertainties, making it difficult to estimate the range of reasonably possible loss in excess of amounts accrued.\n* These risks can also result in a loss of patent protection for products, a significant loss of revenues, and impairment of the value of associated assets.\n\nOverall, Pfizer describes the risks from product liability and litigation as significant and unpredictable, with the potential to have a material adverse effect on its financial position.",
+        "retrieval_time_s": 0.24,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q20",
+        "question": "What does Pfizer's 10-K report about research and development risk?",
+        "expected_ticker": "PFE",
+        "retrieved_tickers": [
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE"
+        ],
+        "answer": "According to the provided context excerpt from Pfizer's 2025 Form 10-K (Item 1A. Risk Factors\u2014Concentration), the report states that:\n\n\"The process of drug, vaccine and biological product discovery from initiation through development and to potential regulatory approval is lengthy and can take more than ten years.\"\n\nAdditionally, it highlights that:\n\n\"The discovery and development of drugs, vaccines and biological products are time-consuming, costly and unpredictable.\"\n\nIt also mentions that:\n\n\"Development of a single compound is often pursued as part of multiple programs. While our product candidates may or may not receive regulatory approval, new candidates entering clinical development phases are the foundation for future products.\"\n\nFinally, it references the discussion in the Analysis of Financial Condition, Liquidity, Capital Resources and Market Risk section within MD&A (Item 7A) for more information on market risk.",
+        "retrieval_time_s": 0.22,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q21",
+        "question": "What manufacturing and production ramp risks does Tesla disclose?",
+        "expected_ticker": "TSLA",
+        "retrieved_tickers": [
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA"
+        ],
+        "answer": "Tesla discloses the following manufacturing and production ramp risks:\n\n1. Issues or delays in developing, launching and ramping the production of their products, services and features.\n2. Unpredictable manufacturing costs.\n3. Bottlenecks and other unexpected challenges that may arise during production ramps, and the need to address them promptly while continuing to improve manufacturing processes and reducing costs.\n4. Delays in establishing and/or sustaining product ramps or being unable to meet related cost and profitability targets.\n5. Difficulty in generating and maintaining demand for products manufactured at new factories and related services.\n6. Uncertainties inherent in new manufacturing operations, including compliance with regulatory requirements, procurement and maintenance of construction, environmental and operational licenses and permitting, supply chain constraints, hiring, training and retention of qualified employees, and the pace of bringing production equipment and processes online with the capability to manufacture high-quality units at scale.\n7. Delays in meeting projected timelines, costs, capital efficiency and production capacity for new factories, expanding and managing teams to implement iterative design and production changes, and maintaining and complying with debt financing terms.\n8. Challenges in ramping the production of proprietary battery cells and packs at new factories, and incorporating sequential design and manufacturing changes into vehicles and energy products manufactured at each new factory.",
+        "retrieval_time_s": 0.25,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q22",
+        "question": "How does Tesla describe risks related to autonomous driving technology?",
+        "expected_ticker": "TSLA",
+        "retrieved_tickers": [
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA"
+        ],
+        "answer": "Based on the provided context excerpts from Tesla's 10-K filing, Tesla describes risks related to autonomous driving technology as follows:\n\n* The rollout of new vehicle features, including autonomous vehicles, is subject to evolving laws and regulations globally, which may impose restrictions on features or vehicle designs.\n* In the US, the National Highway Traffic Safety Administration (NHTSA) has updated certain Federal Motor Vehicle Safety Standards (FMVSS) to account for autonomous vehicle design, but other FMVSS and regulations do not currently account for autonomous vehicle design, and additional rulemaking by NHTSA may occur.\n* In Europe and other countries, regulations and laws imposed by the European Union and individual countries may restrict the design of both advanced driver-assistance and autonomous systems, which can compromise or prevent their use entirely.\n* Proposed national laws and regulations may further hinder or complicate the path of autonomous vehicle systems.\n* The regulatory patchwork in the US and Europe increases the legal complexity with respect to autonomous vehicles and an autonomous vehicle ride-hailing business.\n* Tesla's autonomous driving capabilities and advancements in AI differentiate them from competitors, but the company may face claims and regulatory scrutiny arising from or related to misuse or claimed failures or alleged misrepresentations of these technologies.\n* The risk of product liability claims related to autonomous driving technology is significant, particularly if the market for electric vehicles and autonomous driving solutions does not develop as expected.\n\nOverall, Tesla describes risks related to autonomous driving technology as being related to regulatory uncertainty, legal complexity, and the potential for product liability claims.",
+        "retrieval_time_s": 0.3,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q23",
+        "question": "What does Tesla's 10-K say about regulatory credits as a revenue source?",
+        "expected_ticker": "TSLA",
+        "retrieved_tickers": [
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA"
+        ],
+        "answer": "According to [3] (TSLA, ITEM 1. BUSINESS), Tesla earns tradable credits in the operation of its automotive business under various regulations. These credits are sold globally to other regulated entities who can use the credits to comply with emission standards and other regulatory requirements. The credits are recognized within automotive regulatory credits revenue in the company's consolidated statements of operations.\n\nAdditionally, [3] mentions that governmental and regulatory actions, such as the OBBBA, have restricted certain regulatory credit programs tied to Tesla's products. This implies that regulatory credits can be both a source of revenue and a risk for the company, as changes in regulations can impact the availability and value of these credits.\n\nIt is also mentioned in [7] (TSLA, ITEM 1. ENERGY STORAGE SYSTEM INCENTIVES AND POLICIES), that while the regulatory regime for energy storage projects is still under development, various policies, incentives, and financial mechanisms support the adoption of energy storage. However, no information is provided about the revenue generated from regulatory credits in this context.",
+        "retrieval_time_s": 0.36,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 4,
+        "relevance": 5
+      },
+      {
+        "id": "q24",
+        "question": "What competitive risks does Tesla describe in the electric vehicle market?",
+        "expected_ticker": "TSLA",
+        "retrieved_tickers": [
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA"
+        ],
+        "answer": "According to excerpt [2], Tesla describes the following competitive risks in the electric vehicle market:\n\n1. Perceptions about electric vehicle features, quality, safety, performance, and cost.\n2. Competition from other types of alternative fuel vehicles, plug-in hybrid electric vehicles, and high fuel-economy internal combustion engine vehicles.\n3. Volatility in the cost of oil, gasoline, and energy.\n4. Government regulations and economic incentives and conditions.\n5. Concerns about the future viability of electric vehicles.\n\nAdditionally, excerpt [5] mentions that certain governmental rebates, tax credits, and other financial incentives that are currently available with respect to Tesla's solar and energy storage product businesses may expire or be reduced or terminated, potentially negatively impacting demand and demand for their products.",
+        "retrieval_time_s": 0.42,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      }
+    ]
+  },
+  {
+    "chunk_strategy": "semantic",
+    "retrieval_strategy": "hybrid",
+    "num_questions": 24,
+    "avg_precision_at_k": 0.8250000000000001,
+    "avg_hit_at_k": 1.0,
+    "avg_mrr": 0.951388888888889,
+    "avg_faithfulness": 4.791666666666667,
+    "avg_relevance": 4.5,
+    "per_question": [
+      {
+        "id": "q01",
+        "question": "What supply chain risks does Apple describe in its 10-K?",
+        "expected_ticker": "AAPL",
+        "retrieved_tickers": [
+          "AAPL",
+          "AAPL",
+          "AAPL",
+          "AAPL",
+          "PFE"
+        ],
+        "answer": "According to the provided context excerpts, Apple describes the following supply chain risks:\n\n1. Tariffs and other measures that can impact the Company's business, results of operations, and financial condition, including:\n\t* Reciprocal tariffs on imports from the U.S. and other countries\n\t* Additional tariffs on imports from China, India, Japan, South Korea, Taiwan, Vietnam, and the EU\n\t* Disruptions to the supply chain, availability of rare earths and other raw materials and components, pricing, and gross margin\n2. Industrial accidents at suppliers and contract manufacturers, which can result in:\n\t* Serious injuries or loss of life\n\t* Disruption to the Company's business and harm to its reputation\n\t* Intermittences to the supply of current products and offering of existing services, and delays in production ramps of new products and development of new services\n3. Supply shortages and price increases, which can:\n\t* Materially adversely affect the Company's business, results of operations, financial condition, and stock price\n\t* Result from disruptions to the supply chain, changes in demand, or limitations on obtaining components from suppliers\n4. Cybersecurity attacks, which can:\n\t* Result in disruptions to the Company's business and supply chain\n\t* Create delays and inefficiencies in the Company's supply and manufacturing chain\n\t* Harm the Company's reputation and business\n\nThese supply chain risks are explicitly stated in Apple's 2025 Form 10-K under the sections \"Tariffs and Other Measures,\" \"Segment Operating Performance,\" and \"Risk Factors.\"",
+        "retrieval_time_s": 0.96,
+        "precision_at_k": 0.8,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q02",
+        "question": "How does Apple describe risks from international trade restrictions and tariffs?",
+        "expected_ticker": "AAPL",
+        "retrieved_tickers": [
+          "AAPL",
+          "AAPL",
+          "PFE",
+          "PFE",
+          "PFE"
+        ],
+        "answer": "According to Section 21 of Apple Inc.'s 2025 Form 10-K, Apple describes risks from international trade restrictions and tariffs as follows:\n\n\"Tariffs and Other Measures. ... Tariffs and other measures that are applied to the Company's products or their components can have a material adverse impact on the Company's business, results of operations and financial condition, including impacting the Company's supply chain, the availability of rare earths and other raw materials and components, pricing and gross margin. The ultimate impact remains uncertain and will depend on several factors, including whether additional or incremental U.S. Tariffs or other measures are announced or imposed, to what extent other countries implement tariffs or other retaliatory measures in response, and the overall magnitude and duration of these measures.\"\n\nAdditionally, Section 1A. Risk Factors of the same filing states:\n\n\"... Restrictions on international trade, such as tariffs and other controls on imports or exports of goods, technology or data, can materially adversely affect the Company's business and supply chain. The impact can be particularly significant if these restrictive measures apply to countries and regions where the Company derives a significant portion of its revenues and/or has significant supply chain operations. ... Trade and other international disputes can have an adverse impact on the overall macroeconomic environment and result in shifts and reductions in consumer spending and negative consumer sentiment for the Company's products and services, all of which can further adversely affect the Company's business and results of operations.\"\n\nOverall, Apple describes the risks from international trade restrictions and tariffs as having a potential material adverse impact on its business, supply chain, pricing, gross margin, and overall financial condition.",
+        "retrieval_time_s": 0.27,
+        "precision_at_k": 0.4,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q03",
+        "question": "What does Apple's 10-K say about risks from adverse macroeconomic conditions?",
+        "expected_ticker": "AAPL",
+        "retrieved_tickers": [
+          "JPM",
+          "JPM",
+          "AAPL",
+          "AAPL",
+          "AAPL"
+        ],
+        "answer": "According to Item 1A of Apple's 2025 Form 10-K, adverse macroeconomic conditions can have a material adverse impact on Apple's business, results of operations, financial condition, and stock price. The risks associated with adverse macroeconomic conditions include:\n\n* Slow growth or recession\n* High unemployment\n* Inflation\n* Tighter credit\n* Higher interest rates\n* Currency fluctuations\n\nThese conditions can adversely impact consumer confidence and spending, and can also affect Apple's suppliers, contract manufacturers, logistics providers, distributors, cellular network carriers, and other channel partners. Potential outcomes include financial instability, inability to obtain credit to finance business operations, and insolvency.\n\nIn addition, Apple notes that uncertainty about or a decline in global or regional economic conditions can also have a significant impact on the Company's suppliers, contract manufacturers, logistics providers, distributors, cellular network carriers, and other channel partners.\n\nJPMorgan Chase's 2025 Form 10-K does not specifically discuss risks from adverse macroeconomic conditions, but it does note that the Firm's allowance for credit losses is estimated using a weighted average of five internally developed macroeconomic scenarios, and that forecasts of macroeconomic conditions are inherently uncertain.",
+        "retrieval_time_s": 0.51,
+        "precision_at_k": 0.6,
+        "hit_at_k": 1.0,
+        "mrr": 0.3333333333333333,
+        "faithfulness": 5,
+        "relevance": 1
+      },
+      {
+        "id": "q04",
+        "question": "What controls and procedures does Apple report regarding disclosure controls?",
+        "expected_ticker": "AAPL",
+        "retrieved_tickers": [
+          "TSLA",
+          "AAPL",
+          "PFE",
+          "MSFT",
+          "AAPL"
+        ],
+        "answer": "Based on the provided context excerpt from Apple Inc.'s (AAPL, 2025 Form 10-K), Apple's disclosure controls and procedures are effective as of September 27, 2025, and are designed at a reasonable assurance level. According to Item 9A. Controls and Procedures:\n\n\"Based on this evaluation, our Chief Executive Officer and our Chief Financial Officer concluded that, as of December 31, 2025, our disclosure controls and procedures were designed at a reasonable assurance level and were effective to provide reasonable assurance that the information we are required to disclose in reports that we file or submit under the Exchange Act is recorded, processed, summarized and reported within the time periods specified in the SEC rules and forms, and that such information is accumulated and communicated to our management, including our Chief Executive Officer and our Chief Financial Officer, as appropriate, to allow timely decisions regarding required disclosures.\"\n\nNote that this evaluation is made in conjunction with the evaluation of internal control over financial reporting, as both are covered under the same item (Item 9A).",
+        "retrieval_time_s": 2.9,
+        "precision_at_k": 0.4,
+        "hit_at_k": 1.0,
+        "mrr": 0.5,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q05",
+        "question": "What cybersecurity and data security risks does Microsoft disclose?",
+        "expected_ticker": "MSFT",
+        "retrieved_tickers": [
+          "MSFT",
+          "JPM",
+          "MSFT",
+          "MSFT",
+          "TSLA"
+        ],
+        "answer": "According to the provided excerpts, Microsoft discloses the following cybersecurity and data security risks:\n\n1. Cyberattacks and security vulnerabilities that could lead to reduced revenue, increased costs, liability claims, or harm to its reputation or competitive position (MSFT, Item 1A, CYBERSECURITY, DATA PRIVACY, AND PLATFORM ABUSE RISKS).\n2. Threats from individual and groups of hackers, sophisticated organizations, and nation-states, including:\n\t* Developing and deploying malicious software\n\t* Exploiting known, latent, or potential vulnerabilities\n\t* Using social engineering and AI-assisted techniques to induce employees, users, partners, suppliers, or customers to disclose sensitive information\n\t* Acting in a coordinated manner or conducting coordinated attacks (MSFT, Item 1A, CYBERSECURITY, DATA PRIVACY, AND PLATFORM ABUSE RISKS).\n3. Cybersecurity risks related to:\n\t* Third-party incidents, such as system breakdowns or failures, misconduct by third-party employees, or cyber attacks, including ransomware and supply-chain compromises (JPM, Item 15. Exhibits, Financial Statement Schedules, CYBERSECURITY RISK).\n4. Risks from cybersecurity threats, including any previous cybersecurity events, which have not materially affected the Firm or its business strategy, results of operations, or financial condition (JPM, Item 15. Exhibits, Financial Statement Schedules, CYBERSECURITY RISK).\n5. Risks related to the management of administrative access to systems, including unauthorized access to confidential information, the destruction of data, disruptions to or degradations of service, the sabotaging of systems, or other damage (JPM, Item 15. Exhibits, Financial Statement Schedules, CYBERSECURITY RISK).\n6. Cybersecurity risks associated with clients and customers, particularly when their activities and systems are beyond the Firm's own security and control systems (JPM, Item 15. Exhibits, Financial Statement Schedules, CYBERSECURITY RISK).\n7. Risks from cybersecurity threats, including the unauthorized disclosure of data, which could result in harm or loss (JPM, Item 15. Exhibits, Financial Statement Schedules, CYBERSECURITY RISK).\n\nMicrosoft's cybersecurity efforts are supported by a range of measures, including:\n\n1. A cybersecurity program and governance framework designed to protect its computing environments against cybersecurity threats.\n2. Controls, policies, and procedures to identify, manage, and mitigate cybersecurity threats.\n3. Enhanced threat monitoring.\n4. Annual assessments of its cybersecurity program's alignment with industry standards.\n5. Integrated planning and preparedness activities to support business continuity and operational resiliency.\n6. Mandatory cybersecurity training for employees.\n7. Real-time simulated employee education exercises, such as phishing email campaigns.\n8. Robust cybersecurity assessments and remediation efforts for acquired companies.\n9. A Cybersecurity Governance Council to oversee initiatives that safeguard Microsoft's computing environments, products, and services.\n10. The use of security products, third-party security products, and leading artificial intelligence models to combat cybersecurity threats.\n\nMicrosoft also has a comprehensive incident response and breach management process in place, which includes four stages: preparation, detection and analysis, containment, eradication, and recovery.",
+        "retrieval_time_s": 0.27,
+        "precision_at_k": 0.6,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q06",
+        "question": "How does Microsoft describe competition in cloud and AI markets?",
+        "expected_ticker": "MSFT",
+        "retrieved_tickers": [
+          "MSFT",
+          "MSFT",
+          "MSFT",
+          "MSFT",
+          "MSFT"
+        ],
+        "answer": "According to the provided context excerpts, Microsoft describes competition in cloud and AI markets as follows:\n\n* Azure faces \"diverse competition from cloud service providers and open-source offerings\" and its competitive advantage lies in enabling a hybrid cloud, allowing deployment of existing datacenters with its public cloud into a single, cohesive infrastructure, and the ability to run at a scale that meets the needs of businesses of all sizes and complexities.\n* The company's AI offerings compete with AI products from hyperscalers, as well as products from other emerging competitors and open-source offerings.\n* Microsoft's Azure Security offerings compete with providers in the cybersecurity and cloud security space.\n* The company's server products face competition from a wide variety of server operating systems and applications offered by companies with a range of market approaches.\n* Microsoft's database, business intelligence, and data warehousing solutions offerings compete with products from providers in the data and analytics industry.\n* The company's intelligent cloud segment competes with products from a range of competitors, including identity vendors, security solution vendors, and numerous other security point solution vendors.\n* LinkedIn faces competition from online professional networks, recruiting, talent management, and human resource services companies, job boards, companies that provide learning and development products and services, online and offline outlets that generate revenue from advertisers and marketers, and online and offline outlets for companies with lead generation and customer intelligence and insights.\n* Dynamics competes with cloud-based and on-premises business solution providers.\n\nOverall, Microsoft views the cloud and AI markets as highly competitive, with various players offering competing products and services. The company believes its competitive advantages lie in its ability to enable a hybrid cloud, its AI offerings, and its broad portfolio of identity and security solutions.",
+        "retrieval_time_s": 0.37,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q07",
+        "question": "What does Microsoft's 10-K say about risks tied to artificial intelligence?",
+        "expected_ticker": "MSFT",
+        "retrieved_tickers": [
+          "MSFT",
+          "MSFT",
+          "JPM",
+          "AAPL",
+          "MSFT"
+        ],
+        "answer": "From Microsoft's 10-K filing, the following information can be gathered about risks tied to artificial intelligence:\n\n1. Microsoft acknowledges that AI is \"fundamentally transforming productivity for every individual, organization, and industry\" and that AI should be \"as empowering as it is powerful\".\n2. The company states that AI is transforming business workstreams for organizations in every sector across the globe, and that digital transformation and adoption of AI continues to revolutionize more business workstreams.\n3. Microsoft's Secure Future Initiative (SFI) focuses on continual improvement in cybersecurity protection, and the company has controls, policies, and procedures in place to identify, manage, and mitigate cybersecurity threats, including those related to AI.\n4. The company emphasizes the importance of designing and deploying AI responsibly with safety and security from the outset.\n\nHowever, the 10-K filing does not provide explicit information on specific risks tied to AI, such as job displacement, bias, or data privacy concerns.",
+        "retrieval_time_s": 0.34,
+        "precision_at_k": 0.6,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 4,
+        "relevance": 4
+      },
+      {
+        "id": "q08",
+        "question": "What does Microsoft report about legal proceedings?",
+        "expected_ticker": "MSFT",
+        "retrieved_tickers": [
+          "MSFT",
+          "XOM",
+          "MSFT",
+          "PFE",
+          "MSFT"
+        ],
+        "answer": "According to the SEC 10-K filings, Microsoft reports on legal proceedings in the following ways:\n\n* The company provides information on its legal proceedings in the \"Legal Proceedings\" section (Part 1, Item 3) of its 10-K filing.\n* In Item 3. LEGAL PROCEEDINGS, it is stated that ExxonMobil has elected to use a $1 million threshold for disclosing environmental proceedings, and readers can refer to the relevant portions of Note 7 of the Financial Section for additional information.\n* Additionally, Microsoft reports on its legal proceedings in Item 1. B, which includes information on the company's executives, including their roles and experience.\n* The company also discloses information on its legal proceedings in Item 8. (PFE), which discusses the use of contingencies in its financial statements, including amounts recorded for legal and environmental contingencies.\n* Furthermore, Microsoft reports on its patent litigation in Item 3. LEGAL PROCEEDINGS, which refers to Note 14 \u2013 Contingencies of the Notes to Financial Statements.\n\nIt's worth noting that Microsoft makes various reports and resources available on its website, including the Reports Hub website, which provides information on the company's Corporate Responsibility programs and progress.",
+        "retrieval_time_s": 0.24,
+        "precision_at_k": 0.6,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 4,
+        "relevance": 2
+      },
+      {
+        "id": "q09",
+        "question": "What interest rate risks does JPMorgan Chase discuss in its 10-K?",
+        "expected_ticker": "JPM",
+        "retrieved_tickers": [
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM"
+        ],
+        "answer": "Based on the provided context excerpt, JPMorgan Chase discusses liquidity risk and interest rate risk. \n\nFrom [3], under Item 15. Exhibits, Financial Statement Schedules, \"Asset and Liability Committee (\u201cALCO\u201d) is responsible for overseeing the Firm\u2019s asset and liability management (\u201cALM\u201d), including the activities and frameworks supporting management of the balance sheet, liquidity risk, interest rate risk and capital risk.\"\n\nFrom [5], under Risk governance and oversight functions, \"The Asset and Liability Committee (\u201cALCO\u201d) is responsible for overseeing the Firm\u2019s asset and liability management (\u201cALM\u201d), including the activities and frameworks supporting management of the balance sheet, liquidity risk, interest rate risk and capital risk.\"\n\nNote that \"interest rate risk\" is not explicitly stated in the original question, but rather \"liquidity risk\" and \"interest rate risk\" are mentioned.",
+        "retrieval_time_s": 0.35,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q10",
+        "question": "How does JPMorgan Chase describe credit risk from its lending business?",
+        "expected_ticker": "JPM",
+        "retrieved_tickers": [
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM"
+        ],
+        "answer": "According to the provided 10-K filing, JPMorgan Chase describes credit risk from its lending business as follows:\n\n* The firm manages credit risk through established policies, standards, and procedures integrated across the various lines of business (LOBs) and Corporate functions.\n* Credit risk is primarily associated with the default or change in credit profile of clients, counterparties, or customers.\n* The firm is exposed to credit risk in its consumer businesses, primarily through its home lending, credit card, auto, and business banking businesses.\n* In its wholesale businesses, the firm is exposed to credit risk through its underwriting, lending, market-making, and hedging activities with and for clients and counterparties, as well as through various operating services, securities financing activities, and cash placed with banks.\n* The firm's wholesale credit portfolio is actively managed, with ongoing reviews of client credit quality and transaction structure, including collateral where applicable.\n* The firm estimates expected credit losses based on the value of the collateral and probability of borrower default, and considers factors such as product type, delinquency status, current FICO scores, geographic distribution, and, for collateralized loans, current LTV ratios.\n\nThe firm also notes that the majority of its credit exposures share risk characteristics with other similar exposures, and as a result, are collectively assessed for impairment (portfolio-based component). However, if an exposure does not share risk characteristics with other exposures, the firm generally estimates expected credit losses on an individual basis (asset-specific component).",
+        "retrieval_time_s": 0.4,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q11",
+        "question": "What market risk disclosures does JPMorgan Chase provide about trading and investment portfolios?",
+        "expected_ticker": "JPM",
+        "retrieved_tickers": [
+          "JPM",
+          "PFE",
+          "JPM",
+          "JPM",
+          "JPM"
+        ],
+        "answer": "According to JPMorgan Chase's 2025 Form 10-K, under \"Market Risk Management\", the Firm provides market risk disclosures about trading and investment portfolios as follows:\n\n* Market Risk Management monitors market risks throughout the Firm and defines market risk policies and procedures.\n* Market Risk Management measures market risk using various metrics, including:\n\t+ Value-at-Risk (VaR)\n\t+ Stress testing\n\t+ Profit and loss drawdowns\n* The Firm's independent control functions review the appropriateness of the carrying value of investments in accordance with relevant policies.\n* Approved levels for investments are established for each risk category, including capital and credit risks.\n* The Firm's investment securities risk is governed by the Firm's Risk Appetite framework, reviewed at the CTC Risk Committee, and provided to the Board Risk Committee with regular updates.\n* Principal investment risk is managed by the LOBs and Corporate, with a focus on private equity, various debt and equity instruments, and real assets.\n\nUnder \"Investment Portfolio Risk Management\", the Firm provides additional market risk disclosures about trading and investment portfolios, including:\n\n* Investment securities risk includes the exposure associated with a default in the payment of principal and interest, mitigated by the high-quality securities in the Treasury and CIO investment securities portfolio.\n* Principal investments include tax-oriented investments and investments made to enhance or accelerate the Firm's business strategies, managed by the LOBs and Corporate.\n* The Firm uses various metrics to measure market risk, including VaR, stress testing, and profit and loss drawdowns.\n\nNo specific disclosures are provided about trading portfolios, but the Firm's risk governance framework and market risk management processes are designed to capture risks associated with both trading and investment portfolios.",
+        "retrieval_time_s": 0.23,
+        "precision_at_k": 0.8,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q12",
+        "question": "What does JPMorgan Chase's 10-K say about regulatory capital requirements?",
+        "expected_ticker": "JPM",
+        "retrieved_tickers": [
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM",
+          "JPM"
+        ],
+        "answer": "According to JPMorgan Chase's 2025 Form 10-K, the company is subject to various regulatory capital requirements, including:\n\n1. Basel III requirements: The company must hold minimum amounts of regulatory capital, which are determined by calculating Risk-Weighted Assets (RWA) on-balance sheet assets and off-balance sheet exposures, weighted according to risk.\n2. Capital Accord requirements: The company is subject to the Capital Accord, which sets minimum capital ratios and overall capital adequacy standards for large and internationally active U.S. BHCs and banks.\n3. Standardized and Advanced Approaches: The company must calculate its RWA using both the Standardized and Advanced Approaches, which are two comprehensive approaches prescribed by Basel III.\n4. Leverage-based capital ratios: The company must maintain minimum ratios for CET1 capital, Tier 1 capital, Total capital, Tier 1 leverage, and the Secured Liquidity Ratio (SLR).\n5. Risk-based capital ratios: The company must maintain minimum ratios for CET1 capital, Tier 1 capital, Total capital, and the SLR.\n6. GSIB surcharge: The company is subject to a GSIB surcharge of 4.5% on its CET1 capital, Tier 1 capital, and Total capital.\n7. SCB requirement: The company's SCB requirement for Standardized ratios is 2.5%, but this requirement is subject to periodic review and calibration.\n8. EU capital requirements: The company's subsidiary, JPMorgan Chase Securities Europe (JPMSE), is subject to EU capital requirements under Basel III, including the EU implementation of the final Basel III standards.\n\nOverall, JPMorgan Chase's 10-K indicates that the company is subject to a complex and evolving regulatory capital framework, with multiple requirements and buffers that can impact its capital ratios and capital management strategy.",
+        "retrieval_time_s": 0.24,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q13",
+        "question": "What commodity price risks does ExxonMobil describe?",
+        "expected_ticker": "XOM",
+        "retrieved_tickers": [
+          "XOM",
+          "XOM",
+          "XOM",
+          "XOM",
+          "XOM"
+        ],
+        "answer": "According to the provided context excerpts, ExxonMobil describes the following commodity price risks:\n\n1. Crude oil prices: The company's earnings are closely tied to industry refining margins, which are largely driven by differences in crude oil prices.\n2. Refinery margins: Refining margins are a function of the difference between what a refinery pays for its raw materials and the market prices for the products produced.\n3. Natural gas prices: Although not explicitly stated, the mention of \"oil, gas, and petrochemical businesses\" and \"oil and natural gas prices\" suggests that ExxonMobil also considers natural gas prices as a risk factor.\n\nThese price risks are influenced by various factors, including:\n\n* Global and regional supply/demand balances\n* Inventory levels\n* Industry refinery operations\n* Import/export balances\n* Currency fluctuations\n* Seasonal demand\n* Weather\n* Geopolitical considerations\n\nThese factors are mentioned in the context of the company's ability to operate efficiently, manage expenses, and maintain its competitive position in the industry.",
+        "retrieval_time_s": 0.67,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q14",
+        "question": "How does ExxonMobil discuss climate change and environmental regulation risk?",
+        "expected_ticker": "XOM",
+        "retrieved_tickers": [
+          "XOM",
+          "XOM",
+          "XOM",
+          "XOM",
+          "JPM"
+        ],
+        "answer": "ExxonMobil discusses climate change and environmental regulation risk in various sections of their 10-K filing. Here are the key points:\n\n1. **Climate Change and Energy Transition**: ExxonMobil's outlook for climate change and energy transition is discussed in Item 1A. They acknowledge the increasing stringency of climate policies and the need for practical solutions that do not jeopardize energy affordability or reliability. They also discuss the impact of market forces, technology, and government policies on the energy transition.\n2. **Risks**: In Item 1A, Risk Factors, ExxonMobil identifies several risks related to climate change and environmental regulation, including:\n\t* Supply and demand risks, which depend on local, regional, and global events or conditions that affect oil, gas, and petrochemical prices and margins.\n\t* Economic conditions, which include the impact of climate change on energy demand and the need for significant investments to develop and supply resources to meet global demand through 2050.\n\t* International accords and underlying regional and national regulations covering greenhouse gas emissions, which continue to evolve with uncertain timing and outcome.\n3. **Climate Risk Management**: ExxonMobil has a Climate, Nature and Social Risk Management function that is responsible for establishing and maintaining the Firm-wide framework and strategy for managing climate risk. This includes:\n\t* Developing metrics, scenarios, and stress testing mechanisms to assess the range of potential climate-related financial and economic impacts.\n\t* Establishing a Firm-wide climate risk data strategy and supporting climate risk technology infrastructure.\n\t* Identifying, assessing, and managing climate risks present in their business activities, and adhering to applicable climate-related laws, rules, and regulations.\n4. **Physical and Transition Risk**: In the 2025 Form 10-K of JPMorgan Chase & Co., Item 15. Exhibits, Financial Statement Schedules, physical risk is discussed as involving economic costs and financial losses due to a changing climate, including the increased frequency or severity of climate and weather events. Transition risk involves the financial and economic consequences of society's shift toward a lower-carbon economy, including possible changes in public policy, adoption of new technologies, and shifts in consumer preferences.\n\nOverall, ExxonMobil recognizes the significant risks associated with climate change and environmental regulation, and has a framework in place to manage and mitigate these risks.",
+        "retrieval_time_s": 0.29,
+        "precision_at_k": 0.8,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q15",
+        "question": "What does ExxonMobil's 10-K say about operational and process safety risks?",
+        "expected_ticker": "XOM",
+        "retrieved_tickers": [
+          "XOM",
+          "JPM",
+          "JPM",
+          "XOM",
+          "XOM"
+        ],
+        "answer": "According to the provided context excerpts, ExxonMobil's 10-K reports the following information about operational and process safety risks:\n\n* ExxonMobil's Operational Risk Management Framework aims to manage operational risks, including compliance, conduct, legal, and estimations and model risk. (XOM, Item 15. Exhibits, Financial Statement Schedules)\n* The Company's Compliance, Conduct, and Operational Risk (\"CCOR\") Management Framework is designed to enable the Company to govern, identify, measure, monitor and test, manage and report on the Company's operational risk. (XOM, Item 15. Exhibits, Financial Statement Schedules)\n* The LOB and Corporate are responsible for the management of operational risk, while the Control Management Organization, led by the Global Chief Compliance Officer, is responsible for the day-to-day execution of the CCOR Management Framework. (XOM, Item 15. Exhibits, Financial Statement Schedules)\n* The Company's Operational Risk and Compliance organization provides oversight of and challenge to the evaluations and assessments conducted by the LOBs and Corporate with respect to compliance, conduct and operational risks. (XOM, Item 15. Exhibits, Financial Statement Schedules)\n* ExxonMobil's pursuit of lower-emission and other new business opportunities, including carbon capture and storage, hydrogen and ammonia, lower-emission fuels, Proxxima TM resin systems, carbon materials, low-carbon data centers, and lithium, depends on the growth and development of markets for those products and services. (XOM, Item 1A)\n* The Company's Global Outlook research and publication serves as the reference case for planning beyond 2030, but notes that current trends for policy stringency and development of lower-emission solutions are not yet on a pathway to achieve net-zero by 2050. (XOM, Item 1A)\n\nIn terms of specific measures taken to address operational and process safety risks, the 10-K mentions:\n\n* ExxonMobil works to minimize spills through a combined program of effective operations integrity management, ongoing upgrades, key equipment replacements, and comprehensive inspection and surveillance. (XOM, Item 7A)\n* The Company employs a robust and actively evolving enterprise risk management system to identify and manage risk across its businesses. (XOM, Item 7A)\n* The LOB and Corporate apply a controls management system for monitoring compliance with internal controls and procedures. (XOM, Item 15. Exhibits, Financial Statement Schedules)\n* The CCOR organization provides independent, risk-based review and oversight of assessments conducted by the LOBs and Corporate with respect to compliance, conduct and operational risks. (XOM, Item 15. Exhibits, Financial Statement Schedules)",
+        "retrieval_time_s": 0.33,
+        "precision_at_k": 0.6,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 4,
+        "relevance": 4
+      },
+      {
+        "id": "q16",
+        "question": "What properties and reserves information does ExxonMobil disclose?",
+        "expected_ticker": "XOM",
+        "retrieved_tickers": [
+          "XOM",
+          "XOM",
+          "XOM",
+          "XOM",
+          "XOM"
+        ],
+        "answer": "According to the provided excerpts, ExxonMobil discloses the following properties and reserves information:\n\n1. Oil and Gas Reserves:\n\t* Information on oil and gas reserves is contained in the \"Oil and Gas Reserves\" part of the \"Supplemental Information on Oil and Gas Exploration and Production Activities\" portion of the Financial Section of the 10-K report.\n\t* Proved reserves include 100% of each majority-owned affiliate's participation in proved reserves and ExxonMobil's ownership percentage of the proved reserves of equity companies.\n2. Natural Gas Reserves:\n\t* Information on natural gas reserves is contained in the \"Properties\" section of the 2025 Form 10-K.\n\t* Net proved developed and undeveloped reserves of consolidated subsidiaries are disclosed, including the volumes in billions of cubic feet for natural gas and millions of oil-equivalent barrels for oil-equivalent proved reserves.\n3. Reserves Change Categories:\n\t* The Corporation's year-end reserves volumes are calculated on the basis of average prices during the 12-month period prior to the ending date of the period covered by the report.\n\t* Revisions can include upward or downward changes in previously estimated volumes of proved reserves for existing fields due to evaluation or re-evaluation of geologic, reservoir, or production data, or changes in average first-of-month oil and natural gas prices and/or costs.\n4. Proved Reserves Tables:\n\t* The Corporation discloses two types of reserves:\n\t\t+ Consolidated reserves, which include the reserves of ExxonMobil and its consolidated subsidiaries.\n\t\t+ Equity company reserves, which include the reserves of ExxonMobil's equity companies.\n\nNote that the provided excerpts do not disclose all the properties and reserves information that ExxonMobil might have, such as the reserves volumes for specific fields or regions.",
+        "retrieval_time_s": 0.23,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q17",
+        "question": "What regulatory risks does Pfizer describe related to drug approvals?",
+        "expected_ticker": "PFE",
+        "retrieved_tickers": [
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE"
+        ],
+        "answer": "Pfizer describes the following regulatory risks related to drug approvals:\n\n1. Regulatory decisions impacting labeling, approval or authorization, including the scope of indicated patient populations, product dosage, manufacturing processes, safety and/or other matters. (Example: The scope of indicated patient populations for certain products.)\n2. Regulatory submission dates, regulatory approval and/or launch dates being uncertain or delayed.\n3. Regulatory authorities, such as the FDA or EMA, commenting on or disagreeing with Pfizer's regulatory submissions or approvals, potentially resulting in the disclosure of trade secrets or confidential commercial information.\n4. The FDA's recently adopted policy of disclosing Complete Response Letters for unapproved drug candidates, which may have an adverse impact on Pfizer's business.\n\nThese regulatory risks are mentioned in Section 1A. Risk Factors, \"Risks Related to Our Business, Industry and Operations, and Business Development\" (Item 1A.1) and Section 1A. Risk Factors, \"Risks Related to Government Regulation and Legal Proceedings\" (Item 1A.2).",
+        "retrieval_time_s": 0.27,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q18",
+        "question": "What does Pfizer's 10-K say about patent protection and generic competition?",
+        "expected_ticker": "PFE",
+        "retrieved_tickers": [
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE"
+        ],
+        "answer": "According to the provided context excerpts from Pfizer's 10-K filings:\n\n* Pfizer expects to face intense competition from generic manufacturers in China, which may result in price cuts and volume loss of some of its products.\n* The company's patented products may face generic or biosimilar competition before patent-based and/or regulatory exclusivity expires.\n* Generic and biosimilar manufacturers have filed or could file applications with the FDA seeking approval of product candidates that they claim do not infringe Pfizer's or its collaboration and licensing partners' patents.\n* Pfizer faces challenges in various jurisdictions by generic drug manufacturers to patents covering products for which the company has patent rights, licenses or co-promotion rights.\n* The company has to deal with biosimilars referencing its biologic products, which have the potential to offer high-quality, lower-cost alternatives to innovative biologic medicines.\n* Pfizer is often involved in patent litigation, including suits relating to its patents and those of its collaboration/licensing partners, as well as patent challenges from generic drug manufacturers and other parties.\n* The company faces claims by generic drug manufacturers that patents covering its products are invalid and/or do not cover the product of the generic drug manufacturer.\n* Adverse decisions in these matters could have a material adverse effect on Pfizer's results of operations.\n\nOverall, Pfizer's 10-K filings highlight the challenges posed by generic competition and patent litigation to its business, particularly in the context of regulatory exclusivity, biosimilars, and generic products.",
+        "retrieval_time_s": 0.22,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q19",
+        "question": "How does Pfizer describe risks from product liability and litigation?",
+        "expected_ticker": "PFE",
+        "retrieved_tickers": [
+          "PFE",
+          "PFE",
+          "PFE",
+          "TSLA",
+          "PFE"
+        ],
+        "answer": "According to Item 8 of Pfizer's 2025 Form 10-K, risks from product liability and litigation include:\n\n* Significant losses from products, including patent protection loss\n* Impairment of value of associated assets\n* Material adverse effects on financial position, results of operations, and/or cash flows\n\nPfizer also notes that:\n\n* Litigation is inherently unpredictable, and excessive verdicts can occur\n* The outcome of patent-related challenges can result in a loss of patent protection for a product, leading to a significant loss of sales\n* Government investigations can result in substantial fines, penalties, and reputational harm\n* The likelihood of a loss and/or the measurement of any loss can be complex, and estimates and assumptions may prove to be incomplete or inaccurate.\n\nOverall, Pfizer describes product liability and litigation risks as complex and potentially material, with the potential to have a significant impact on its financial position and results of operations.",
+        "retrieval_time_s": 0.32,
+        "precision_at_k": 0.8,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q20",
+        "question": "What does Pfizer's 10-K report about research and development risk?",
+        "expected_ticker": "PFE",
+        "retrieved_tickers": [
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE",
+          "PFE"
+        ],
+        "answer": "Unfortunately, the provided context excerpts do not explicitly mention research and development risk in Pfizer's 10-K report. While the report does provide information on ongoing regulatory actions, filings, and product approvals, it does not specifically discuss research and development risk.",
+        "retrieval_time_s": 0.37,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 4,
+        "relevance": 3
+      },
+      {
+        "id": "q21",
+        "question": "What manufacturing and production ramp risks does Tesla disclose?",
+        "expected_ticker": "TSLA",
+        "retrieved_tickers": [
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "PFE",
+          "TSLA"
+        ],
+        "answer": "According to the provided SEC 10-K filings, Tesla discloses the following manufacturing and production ramp risks:\n\n* Delays in developing, launching, and ramping the production of products, services, and features, or being unable to control manufacturing costs (TSLA, ITEM 1A. RISK FACTORS).\n* Issues or delays in developing and implementing new technologies, manufacturing processes, and design features in products.\n* Bottlenecks and unexpected challenges that may arise during production ramps, which must be addressed promptly while continuing to improve manufacturing processes and reduce costs.\n* Delays in meeting production timelines, costs, and capital efficiency for new factories.\n* Delays in establishing and/or sustaining product ramps, which may impact cost and profitability targets.\n* Delays in launching and ramping the production of new products, such as Bots for future commercialization.\n* Issues with hiring, training, and compensating skilled employees to operate manufacturing facilities.\n* Uncertainty regarding the pace of bringing production equipment and processes online with the capability to manufacture high-quality units at scale.\n* Delays in establishing and ramping production of proprietary battery cells and packs at new factories.\n* Uncertainty regarding the timely and cost-efficient implementation of sequential design and manufacturing changes in vehicles and energy products manufactured at each new factory.\n\nThese risks are related to the company's ability to grow its business, develop and launch new products, and ramp up production efficiently and effectively.",
+        "retrieval_time_s": 0.28,
+        "precision_at_k": 0.8,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q22",
+        "question": "How does Tesla describe risks related to autonomous driving technology?",
+        "expected_ticker": "TSLA",
+        "retrieved_tickers": [
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA"
+        ],
+        "answer": "According to the provided excerpts from Tesla's 10-K filing, the company describes risks related to autonomous driving technology as follows:\n\n* The acceptance and adoption of autonomous driving solutions by consumers is a key factor in Tesla's success in the Robotaxi service market. If the uptake rate for autonomous driving solutions does not develop as expected, Tesla's business, prospects, financial condition, and operating results may be harmed.\n* Tesla faces strong competition from established and new competitors in the market for electric and alternative fuel vehicles, as well as self-driving technology and services.\n* The regulatory landscape for autonomous vehicles is evolving and may impose restrictions on Tesla's features or vehicle designs, particularly in the U.S. and Europe.\n* There is a risk of product liability claims for vehicle exposure, which could harm Tesla's business and financial condition.\n* The development and commercialization of autonomous driving technology, including the Robotaxi service, is a nascent industry and carries risks, including the potential for delays, technical issues, and regulatory challenges.\n\nOverall, Tesla's 10-K filing highlights the risks associated with the adoption and commercialization of autonomous driving technology, including competition, regulatory uncertainty, and product liability concerns.",
+        "retrieval_time_s": 0.27,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 4,
+        "relevance": 4
+      },
+      {
+        "id": "q23",
+        "question": "What does Tesla's 10-K say about regulatory credits as a revenue source?",
+        "expected_ticker": "TSLA",
+        "retrieved_tickers": [
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA"
+        ],
+        "answer": "According to TSLA, ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA, the company has outstanding contracts with an original expected length of more than one year, and a total transaction price allocated to performance obligations that were unsatisfied or partially unsatisfied for these contracts is $841 million. However, changes in regulations on automotive regulatory credits may significantly impact the remaining performance obligations and revenue to be recognized under these contracts.\n\nIn 2025, governmental and regulatory actions, such as OBBBA, have restricted certain regulatory credit programs tied to their products, contributing to a $3.84 billion decrease in their remaining performance obligations as of December 31, 2025 compared to December 31, 2024.\n\nThis suggests that regulatory credits are a significant source of revenue for Tesla, but changes in regulations may impact their ability to recognize revenue from these contracts.",
+        "retrieval_time_s": 0.2,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      {
+        "id": "q24",
+        "question": "What competitive risks does Tesla describe in the electric vehicle market?",
+        "expected_ticker": "TSLA",
+        "retrieved_tickers": [
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA",
+          "TSLA"
+        ],
+        "answer": "Tesla describes the following competitive risks in the electric vehicle market:\n\n1. Competition from established and new automobile manufacturers, including those with internal combustion vehicles, who are entering or have announced plans to enter the electric vehicle market.\n2. Competition from hybrid vehicles, including plug-in versions.\n3. Intense competition in specific market segments, such as:\n\t* Premium sedans and SUVs (Model S and Model X compete with premium sedans and SUVs)\n\t* Small to medium-sized sedans and compact SUVs (Model 3 and Model Y compete with small to medium-sized sedans and compact SUVs)\n\t* Pickup trucks (Cybertruck competes with other pickup trucks)\n4. Competition from other types of alternative fuel vehicles, such as plug-in hybrid electric vehicles.\n\nOverall, Tesla acknowledges that the electric vehicle market is highly competitive and will become even more competitive in the future as more manufacturers enter the market.",
+        "retrieval_time_s": 0.21,
+        "precision_at_k": 1.0,
+        "hit_at_k": 1.0,
+        "mrr": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      }
+    ]
+  }
+]

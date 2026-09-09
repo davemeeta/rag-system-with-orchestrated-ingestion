@@ -2,6 +2,7 @@
 from dataclasses import dataclass
 
 from qdrant_client import QdrantClient
+from qdrant_client.models import FieldCondition, Filter, MatchValue
 
 from ragpipeline import config
 from ragpipeline.ingestion.embed import embed_text
@@ -16,13 +17,23 @@ class RetrievedChunk:
     section: str
 
 
-def dense_search(query: str, top_k: int = 5, client: QdrantClient | None = None) -> list[RetrievedChunk]:
+def strategy_filter(strategy: str) -> Filter:
+    return Filter(must=[FieldCondition(key="strategy", match=MatchValue(value=strategy))])
+
+
+def dense_search(
+    query: str,
+    top_k: int = 5,
+    strategy: str = "fixed_size",
+    client: QdrantClient | None = None,
+) -> list[RetrievedChunk]:
     client = client or QdrantClient(url=config.QDRANT_URL)
     query_vector = embed_text(query)
 
     hits = client.query_points(
         collection_name=config.QDRANT_COLLECTION,
         query=query_vector,
+        query_filter=strategy_filter(strategy),
         limit=top_k,
     ).points
 

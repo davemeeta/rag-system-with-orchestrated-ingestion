@@ -4,9 +4,9 @@ A retrieval-augmented generation system over SEC 10-K filings, built to compare
 retrieval strategies (dense vs. hybrid) on a measured eval set, with ingestion
 run as an orchestrated, schedulable pipeline rather than a one-off script.
 
-**Status: Phase 2 complete** (orchestrated ingestion DAG with data quality
-checks). Phases 3–5 (retrieval/chunking comparison, failure analysis,
-serving) are in progress — see [Build phases](#build-phases) below.
+**Status: Phase 3 complete** (chunking + retrieval comparison, measured on a
+24-question eval set). Phases 4–5 (failure analysis, serving) are in
+progress — see [Build phases](#build-phases) below.
 
 ## Architecture (target — see [Build phases](#build-phases) for what's live)
 
@@ -24,14 +24,14 @@ Orchestrated ingestion pipeline (Dagster, containerized)     [Phase 2, live]
 Qdrant (Docker)
      |
      v
-Retrieval layer: dense baseline vs. hybrid (dense + BM25)    [Phase 3]
+Retrieval layer: dense baseline vs. hybrid (dense+BM25, RRF) [Phase 3, live]
      |
      v
 Generation: llama3.2:3b via Ollama (local, no hosted API)
      |
      v
-Evaluation harness: hand-built context precision/recall,
-faithfulness, answer relevance on a 20-30 question eval set  [Phase 3]
+Evaluation harness: hand-built precision@5/hit@5/MRR +
+LLM-judged faithfulness/relevance, 24-question eval set      [Phase 3, live]
      |
      v
 FastAPI serving, structured logging                          [Phase 5]
@@ -49,7 +49,8 @@ src/ragpipeline/
     embed.py                  # Ollama embedding wrapper (nomic-embed-text)
     load.py                    # Qdrant collection create + upsert, dimension checks
   retrieval/
-    dense.py               # dense-only retrieval baseline
+    dense.py               # dense-only retrieval baseline, strategy-filtered
+    hybrid.py              # dense + BM25 sparse, fused via Reciprocal Rank Fusion
   generation/
     ollama_client.py       # grounded RAG prompt -> llama3.2:3b
 orchestration/             # Phase 2: Dagster ingestion DAG
@@ -58,6 +59,12 @@ orchestration/             # Phase 2: Dagster ingestion DAG
   definitions.py           # Definitions object, job, daily schedule
 scripts/
   run_naive_pipeline.py    # Phase 1 end-to-end script (--ingest, --query)
+  ingest_chunking_strategies.py  # Phase 3: load both chunking strategies side by side
+eval/
+  questions.json           # 24 hand-authored questions with expected source ticker
+  harness.py                # runs all 4 chunk x retrieval configs, scores + judges each
+  results.json              # full per-question results from the last harness run
+  make_chart.py              # renders results.json -> comparison_chart.png
 data/
   raw/                    # downloaded 10-K HTML (gitignored)
   processed/              # cleaned text per filing (gitignored)
@@ -151,10 +158,91 @@ stage's data quality check visible next to it.
 - **Caveat**: partitioned asset checks are a preview feature as of Dagster
   1.13 and may change in a future patch release.
 
+## Setup (Phase 3 — chunking + retrieval comparison)
+
+```bash
+./.venv/bin/pip install -r requirements.txt   # now includes rank_bm25
+
+# load both chunking strategies into the same collection (tagged by `strategy` payload field)
+./.venv/bin/python scripts/ingest_chunking_strategies.py --recreate
+
+# run all 4 configs (fixed_size/semantic x dense/hybrid) against the 24-question eval set
+PYTHONPATH=. ./.venv/bin/python -m eval.harness
+
+# optional: regenerate the chart below from eval/results.json
+./.venv/bin/pip install matplotlib
+PYTHONPATH=. ./.venv/bin/python -m eval.make_chart
+```
+
+## Phase 3 results
+
+24 hand-authored questions (one per company, several per company covering
+risk factors, financials, and strategy), each with a known expected source
+ticker. Retrieval metrics are computed directly (no LLM needed);
+faithfulness/relevance are scored by `llama3.2:3b` acting as an LLM judge —
+see [Why not RAGAS](#why-not-ragas) below.
+
+| chunking   | retrieval | precision@5 | hit@5 | MRR  | faithfulness | relevance |
+|------------|-----------|:-----------:|:-----:|:----:|:------------:|:---------:|
+| fixed_size | dense     | **0.93**    | 1.00  | **1.00** | **4.83** | 4.50 |
+| fixed_size | hybrid    | 0.86        | 1.00  | 0.98 | 4.83         | 4.38 |
+| semantic   | dense     | 0.91        | 1.00  | 0.98 | 4.67         | 4.46 |
+| semantic   | hybrid    | 0.83        | 1.00  | 0.95 | 4.79         | **4.50** |
+
+![Chunking x retrieval comparison chart](eval/comparison_chart.png)
+
+**Winner: fixed_size + dense.** Highest precision@5 and MRR, tied for
+highest faithfulness. This is the configuration Phase 5 serving will wrap.
+
+**Findings:**
+
+- **hit@5 = 1.00 across every configuration.** With only 6 companies in the
+  corpus and each question tied to one of them, the correct company's
+  chunks are essentially always retrievable somewhere in the top 5 — this
+  metric doesn't discriminate between configs here. It would matter more on
+  a larger, more topically overlapping corpus.
+- **Hybrid retrieval hurt precision, on both chunking strategies** (0.93→0.86
+  fixed_size, 0.91→0.83 semantic). Concretely: q05 asks about MSFT's
+  cybersecurity risk factors, but hybrid's BM25 component pulled in TSLA and
+  AAPL chunks (retrieved tickers `[MSFT, TSLA, MSFT, TSLA, AAPL]`,
+  precision@5 = 0.4) because those companies' risk-factor sections reuse
+  similar generic phrasing ("could materially and adversely affect our
+  business") that BM25 weights on lexical overlap alone. This is exactly
+  the boilerplate-language noise the corpus was chosen for (see
+  [Why these choices](#why-these-choices)) — dense embeddings capture the
+  topical difference that BM25's bag-of-words model misses. RRF fusion
+  still pulls in the BM25-favored-but-wrong-company chunks often enough to
+  measurably hurt precision, without improving recall (hit@5 was already
+  1.0 via dense alone).
+- **fixed_size slightly beat semantic on precision/MRR**, on both retrieval
+  methods. The recursive/semantic chunker keeps chunks aligned to sentence
+  and paragraph boundaries, which should help downstream generation
+  coherence, but it doesn't clearly outperform the naive sliding window on
+  this eval set's precision — plausible cause: 10-K risk-factor sections
+  are already short-paragraph-per-risk, so a 500-token fixed window rarely
+  crosses a topic boundary either.
+- **Generation quality (faithfulness/relevance) barely moves across
+  configs** (4.67–4.83 faithfulness, 4.38–4.50 relevance) — with hit@5
+  always 1.0, the correct context is present in all 4 configs, so
+  generation quality mostly reflects the 3B judge/generator model's own
+  ceiling rather than the retrieval config.
+
+### Why not RAGAS
+
+The project spec calls for RAGAS configured against a local Ollama judge, or
+a hand-built fallback if that proves unreliable. RAGAS's LLM-wrapper
+override path is built around LangChain's chat model interface and expects
+fairly reliable structured-output parsing per metric — a lot of moving
+parts to get right against a 3B local model with no fallback if it
+misbehaves. A ~40-line hand-built judge prompt (see `eval/harness.py`)
+asking for a `{"faithfulness": int, "relevance": int}` JSON blob is far
+easier to make robust against a small local model, and is the fallback the
+spec itself names as acceptable.
+
 ## Build phases
 
 - [x] **Phase 1** — Corpus + naive baseline.
 - [x] **Phase 2** — Orchestrated ingestion DAG (Dagster, partitioned per ticker) with dbt-style data quality checks at every stage; containerized.
-- [ ] **Phase 3** — Add semantic/recursive chunking and hybrid (dense+BM25) retrieval, build a 20–30 question eval set, produce a measured comparison table.
+- [x] **Phase 3** — Semantic/recursive chunking + hybrid (dense+BM25 RRF) retrieval, 24-question eval set, measured comparison table + chart.
 - [ ] **Phase 4** — Failure analysis (no-answer, ambiguous, multi-document questions) and a confidence-based refusal mechanism.
 - [ ] **Phase 5** — FastAPI serving with structured logging, full `docker-compose up` from a clean clone, final README pass.

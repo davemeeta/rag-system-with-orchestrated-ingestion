@@ -1,0 +1,170 @@
+[
+  {
+    "id": "q01",
+    "question": "What supply chain risks does Apple describe in its 10-K?",
+    "ticker": "AAPL",
+    "expected_section_contains": "Item 1A",
+    "reference_facts": "Apple relies on single or limited sources for many components; component shortages, supplier failures, and reliance on custom parts from a single source can disrupt its business."
+  },
+  {
+    "id": "q02",
+    "question": "How does Apple describe risks from international trade restrictions and tariffs?",
+    "ticker": "AAPL",
+    "expected_section_contains": "Item 1A",
+    "reference_facts": "A majority of Apple's net sales come from outside the U.S.; tariffs and other restrictions on the import/export of goods, technology, or data can materially harm its business and supply chain."
+  },
+  {
+    "id": "q03",
+    "question": "What does Apple's 10-K say about risks from adverse macroeconomic conditions?",
+    "ticker": "AAPL",
+    "expected_section_contains": "Item 1A",
+    "reference_facts": "Adverse economic conditions can increase credit/collectibility risk on receivables, reduce liquidity, hurt counterparties, and lower the fair value of financial instruments."
+  },
+  {
+    "id": "q04",
+    "question": "What controls and procedures does Apple report regarding disclosure controls?",
+    "ticker": "AAPL",
+    "expected_section_contains": "Item 9A",
+    "reference_facts": "Item 9A covers management's evaluation of disclosure controls and procedures and internal control over financial reporting."
+  },
+  {
+    "id": "q05",
+    "question": "What cybersecurity and data security risks does Microsoft disclose?",
+    "ticker": "MSFT",
+    "expected_section_contains": "Item 1A",
+    "reference_facts": "Employees or third parties may intentionally compromise Microsoft's or users' security or systems or reveal confidential information; laws in various jurisdictions impose data protection obligations."
+  },
+  {
+    "id": "q06",
+    "question": "How does Microsoft describe competition in cloud and AI markets?",
+    "ticker": "MSFT",
+    "expected_section_contains": "Item 1",
+    "reference_facts": "Microsoft competes across cloud services, productivity software, devices, and AI platforms against companies of varying size and specialization."
+  },
+  {
+    "id": "q07",
+    "question": "What does Microsoft's 10-K say about risks tied to artificial intelligence?",
+    "ticker": "MSFT",
+    "expected_section_contains": "Item 1A",
+    "reference_facts": "AI risks include reputational, competitive, legal, and regulatory issues from developing and deploying AI, including issues with training data, misuse, and evolving regulation."
+  },
+  {
+    "id": "q08",
+    "question": "What does Microsoft report about legal proceedings?",
+    "ticker": "MSFT",
+    "expected_section_contains": "Item 3",
+    "reference_facts": "Item 3 discloses material pending legal proceedings, including antitrust, intellectual property, and regulatory matters."
+  },
+  {
+    "id": "q09",
+    "question": "What interest rate risks does JPMorgan Chase discuss in its 10-K?",
+    "ticker": "JPM",
+    "expected_section_contains": "Item 1A",
+    "reference_facts": "Changes in interest rates affect net interest income, loan originations, credit losses, funding costs, and the value of the investment securities portfolio."
+  },
+  {
+    "id": "q10",
+    "question": "How does JPMorgan Chase describe credit risk from its lending business?",
+    "ticker": "JPM",
+    "expected_section_contains": "Item 1A",
+    "reference_facts": "Credit risk arises from the possibility that borrowers or counterparties fail to meet obligations, leading to charge-offs and increased allowance for credit losses."
+  },
+  {
+    "id": "q11",
+    "question": "What market risk disclosures does JPMorgan Chase provide about trading and investment portfolios?",
+    "ticker": "JPM",
+    "expected_section_contains": "Item 7A",
+    "reference_facts": "Item 7A (Quantitative and Qualitative Disclosures About Market Risk) covers exposure to interest rate, credit spread, equity, and other market risks in trading and investment activities."
+  },
+  {
+    "id": "q12",
+    "question": "What does JPMorgan Chase's 10-K say about regulatory capital requirements?",
+    "ticker": "JPM",
+    "expected_section_contains": "Item 1",
+    "reference_facts": "As a bank holding company, JPMorgan is subject to regulatory capital and liquidity requirements set by federal banking regulators."
+  },
+  {
+    "id": "q13",
+    "question": "What commodity price risks does ExxonMobil describe?",
+    "ticker": "XOM",
+    "expected_section_contains": "Item 1A",
+    "reference_facts": "ExxonMobil's results are affected by volatile crude oil, natural gas, and refined product prices driven by global supply/demand and geopolitical factors."
+  },
+  {
+    "id": "q14",
+    "question": "How does ExxonMobil discuss climate change and environmental regulation risk?",
+    "ticker": "XOM",
+    "expected_section_contains": "Item 1A",
+    "reference_facts": "Climate-related regulation, carbon pricing, and the energy transition can increase compliance costs and affect demand for oil and gas products."
+  },
+  {
+    "id": "q15",
+    "question": "What does ExxonMobil's 10-K say about operational and process safety risks?",
+    "ticker": "XOM",
+    "expected_section_contains": "Item 1A",
+    "reference_facts": "Operations involve risks of accidents, spills, and process safety incidents that can cause environmental damage, liability, and reputational harm."
+  },
+  {
+    "id": "q16",
+    "question": "What properties and reserves information does ExxonMobil disclose?",
+    "ticker": "XOM",
+    "expected_section_contains": "Item 2",
+    "reference_facts": "Item 2 (Properties) covers ExxonMobil's oil and gas reserves, exploration acreage, and production facilities."
+  },
+  {
+    "id": "q17",
+    "question": "What regulatory risks does Pfizer describe related to drug approvals?",
+    "ticker": "PFE",
+    "expected_section_contains": "Item 1",
+    "reference_facts": "Pfizer discusses uncertainty around whether and when regulatory authorizations (including emergency use authorizations) and licenses will be obtained, expire, or be revoked."
+  },
+  {
+    "id": "q18",
+    "question": "What does Pfizer's 10-K say about patent protection and generic competition?",
+    "ticker": "PFE",
+    "expected_section_contains": "Item 1A",
+    "reference_facts": "Loss of patent protection or exclusivity exposes Pfizer's products to generic competition, which can significantly reduce revenue."
+  },
+  {
+    "id": "q19",
+    "question": "How does Pfizer describe risks from product liability and litigation?",
+    "ticker": "PFE",
+    "expected_section_contains": "Item 1A",
+    "reference_facts": "Pfizer faces product liability claims and litigation related to its pharmaceutical products, which can result in substantial costs and reputational harm."
+  },
+  {
+    "id": "q20",
+    "question": "What does Pfizer's 10-K report about research and development risk?",
+    "ticker": "PFE",
+    "expected_section_contains": "Item 1A",
+    "reference_facts": "R&D is inherently uncertain; candidates may fail in clinical trials or fail to receive regulatory approval despite significant investment."
+  },
+  {
+    "id": "q21",
+    "question": "What manufacturing and production ramp risks does Tesla disclose?",
+    "ticker": "TSLA",
+    "expected_section_contains": "Item 1A",
+    "reference_facts": "Tesla discusses risks in ramping production, manufacturing complexity, and reliance on suppliers for components and raw materials like batteries."
+  },
+  {
+    "id": "q22",
+    "question": "How does Tesla describe risks related to autonomous driving technology?",
+    "ticker": "TSLA",
+    "expected_section_contains": "Item 1A",
+    "reference_facts": "Tesla discusses risks that its driver-assistance and autonomy features may not perform as expected, raising safety, regulatory, and liability concerns."
+  },
+  {
+    "id": "q23",
+    "question": "What does Tesla's 10-K say about regulatory credits as a revenue source?",
+    "ticker": "TSLA",
+    "expected_section_contains": "Item 1",
+    "reference_facts": "Tesla generates revenue from sales of automotive regulatory credits to other manufacturers, which can vary over time as regulations and competitor compliance change."
+  },
+  {
+    "id": "q24",
+    "question": "What competitive risks does Tesla describe in the electric vehicle market?",
+    "ticker": "TSLA",
+    "expected_section_contains": "Item 1A",
+    "reference_facts": "Tesla faces increasing competition from established and new automakers investing heavily in electric and autonomous vehicles."
+  }
+]
