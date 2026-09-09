@@ -1,0 +1,114 @@
+[
+  {
+    "category": "no_answer_off_topic",
+    "question": "What is the capital of France?",
+    "refused": true,
+    "top_score": 0.474,
+    "retrieved_tickers": [
+      "MSFT",
+      "PFE",
+      "PFE",
+      "JPM",
+      "TSLA"
+    ],
+    "answer": "I don't have enough relevant information in the indexed 10-K filings (AAPL, MSFT, JPM, XOM, PFE, TSLA) to answer that confidently, so I'd rather not guess."
+  },
+  {
+    "category": "no_answer_off_topic",
+    "question": "How do I bake a chocolate cake?",
+    "refused": true,
+    "top_score": 0.401,
+    "retrieved_tickers": [
+      "JPM",
+      "JPM",
+      "JPM",
+      "JPM",
+      "JPM"
+    ],
+    "answer": "I don't have enough relevant information in the indexed 10-K filings (AAPL, MSFT, JPM, XOM, PFE, TSLA) to answer that confidently, so I'd rather not guess."
+  },
+  {
+    "category": "no_answer_wrong_company",
+    "question": "What are Netflix's main risk factors?",
+    "refused": false,
+    "top_score": 0.677,
+    "retrieved_tickers": [
+      "XOM",
+      "PFE",
+      "JPM",
+      "MSFT",
+      "JPM"
+    ],
+    "answer": "The provided context excerpts from SEC 10-K filings do not mention Netflix's risk factors. The excerpts from XOM, PFE, JPM, and MSFT discuss various risk factors related to cybersecurity, managed care trends, climate risk, and operational risks, but Netflix is not mentioned."
+  },
+  {
+    "category": "no_answer_wrong_company",
+    "question": "What did Amazon report for AWS cloud revenue?",
+    "refused": false,
+    "top_score": 0.698,
+    "retrieved_tickers": [
+      "MSFT",
+      "MSFT",
+      "MSFT",
+      "MSFT",
+      "MSFT"
+    ],
+    "answer": "There is no information provided in the context excerpts about Amazon's report for AWS cloud revenue. The context excerpts are from Microsoft's (MSFT) 10-K filing, and they only contain information about Microsoft's financial performance, business segments, and industry trends, but not about Amazon or AWS."
+  },
+  {
+    "category": "ambiguous",
+    "question": "What are the risks?",
+    "refused": false,
+    "top_score": 0.736,
+    "retrieved_tickers": [
+      "PFE",
+      "JPM",
+      "JPM",
+      "JPM",
+      "PFE"
+    ],
+    "answer": "According to the provided context excerpts from SEC 10-K filings, the risks are categorized into several types:\n\n1. **Strategic Risk**: Risk to earnings, capital, liquidity, or reputation associated with poorly-designed or failed business plans or inadequate response to changes in the operating environment.\n2. **Credit and Investment Risk**: Risk associated with default or change in credit profile of a client, counterparty, or customer, or loss of principal or reduction in expected returns on investments.\n3. **Market Risk**: Risk associated with changes in market factors, such as interest and foreign exchange rates, equity and commodity prices, credit spreads, or implied volatilities, on the value of assets and liabilities held for both the short and long term.\n4. **Operational Risk**: Risk of an adverse outcome resulting from inadequate or failed internal processes or systems; human factors; or external events impacting the Firm's processes or systems.\n\nSpecific risks mentioned in the context excerpts include:\n\n* Managed care trends and private payor actions to control costs and manage utilization of pharmaceutical products\n* Climate change and its potential impact on the Firm's business activities\n* Regulatory decisions impacting labeling, approval, or authorization of pharmaceutical products\n* R&D activities and uncertainty around outcomes, including regulatory submissions, approval, and launch dates\n* Regulatory feedback that could impact the future development of product candidates\n* Cybersecurity risks\n* Compliance, conduct, and legal risks\n\nNote that these risks are not exhaustive, and the companies' risk management frameworks may cover additional types of risks."
+  },
+  {
+    "category": "ambiguous",
+    "question": "How much revenue did the company make last year?",
+    "refused": false,
+    "top_score": 0.663,
+    "retrieved_tickers": [
+      "MSFT",
+      "MSFT",
+      "MSFT",
+      "MSFT",
+      "JPM"
+    ],
+    "answer": "The company's revenue for the year 2025 is not explicitly stated in the provided excerpts. However, the excerpts do provide revenue data for the year 2026, which is $281,724 million."
+  },
+  {
+    "category": "multi_doc",
+    "question": "Compare the cybersecurity risk factors between Apple and Microsoft.",
+    "refused": false,
+    "top_score": 0.732,
+    "retrieved_tickers": [
+      "AAPL",
+      "MSFT",
+      "MSFT",
+      "XOM",
+      "MSFT"
+    ],
+    "answer": "Based on the provided context excerpts, here's a comparison of the cybersecurity risk factors between Apple (AAPL) and Microsoft (MSFT):\n\n**Similarities:**\n\n* Both Apple and Microsoft acknowledge that their security measures may not be sufficient for all eventualities and are vulnerable to various risks, including hacking, ransomware attacks, employee error, and system errors.\n* Both companies have implemented security measures, such as multifactor authentication, monitoring services, and incident response plans, to protect customers and their systems.\n* Both companies recognize the importance of continuous monitoring, vulnerability assessments, and remediation efforts to address cybersecurity risks.\n\n**Differences:**\n\n* **Scope and extent of cybersecurity measures:** Microsoft's cybersecurity program and governance framework seem more comprehensive, with a clear organizational structure and regular assessments (e.g., semiannual risk assessments). Apple's security measures are mentioned, but their scope and extent are not as detailed.\n* **Incident response plans:** Microsoft has a well-established incident response plan that includes triage, severity assessment, and communication plans. Apple's incident response plan is not explicitly mentioned.\n* **Risk assessment and prioritization:** Microsoft regularly assesses its cybersecurity program's alignment with industry standards and undertakes integrated planning and preparedness activities. Apple does not mention a similar process.\n* **Employee training and awareness:** Microsoft emphasizes the importance of cybersecurity awareness training and education for its employees, whereas Apple does not mention employee training as a specific risk factor.\n\n**Microsoft's added emphasis on:**\n\n* **Cybersecurity as a top corporate priority:** Microsoft plays a central role in the world's digital ecosystem and has made cybersecurity a top corporate priority.\n* **Continuous improvement and strengthening of processes:** Microsoft conducts post-incident reviews to capture learnings and strengthen its processes.\n* **Collaboration and partnerships:** Microsoft collaborates with peers, customers, service providers, regulators, and governments to advance cybersecurity defenses and resiliency.\n\n**Apple's added emphasis on:**\n\n* **High-profile and confidential information:** Apple's high profile and the value of its confidential information create a higher risk of being targeted by hackers and other malicious actors.\n* **Inadequate insurance coverage:** Apple's insurance coverage may not be sufficient to cover all losses or types of claims that may arise.\n\nIn summary, while both Apple and Microsoft acknowledge the importance of cybersecurity, Microsoft's approach seems more comprehensive, with a stronger focus on incident response, risk assessment, and employee training. Apple's approach, on the other hand, highlights the risks associated with its high profile and confidential information."
+  },
+  {
+    "category": "multi_doc",
+    "question": "Which of these companies has the largest litigation risk?",
+    "refused": false,
+    "top_score": 0.682,
+    "retrieved_tickers": [
+      "AAPL",
+      "JPM",
+      "PFE",
+      "JPM",
+      "AAPL"
+    ],
+    "answer": "Based on the provided context excerpts, it's difficult to determine which company has the largest litigation risk without more information. However, we can look at some indicators:\n\n* Pfizer Inc. (PFE) mentions \"commercial and other asserted or unasserted matters\" that can include acquisition-, licensing-, intellectual property-, collaboration- or co-promotion-related and product-pricing claims, which suggests a significant exposure to litigation risks related to its pharmaceutical business.\n* JPMorgan Chase & Co. (JPM) mentions \"legal risk, a subcategory of operational risk\" and has a dedicated IRM function to manage this risk. The company's three lines of defense (LOB, IRM, and Internal Audit) suggest a robust risk management framework, but also imply a significant amount of risk management activity.\n* Apple Inc. (AAPL) mentions \"new business strategies and ventures are inherently risky and may not be successful\" and has faced lawsuits related to antitrust laws, including a significant lawsuit related to its App Store.\n\nWhile all three companies have litigation risks, the nature and scope of the risks seem to vary. It's difficult to say which company has the largest litigation risk without more information.\n\nHowever, based on the context, it seems that JPMorgan Chase & Co. might have a more comprehensive risk management framework in place, which could be a positive indicator. On the other hand, Pfizer Inc.'s exposure to commercial and other asserted or unasserted matters related to its pharmaceutical business might be a significant risk."
+  }
+]

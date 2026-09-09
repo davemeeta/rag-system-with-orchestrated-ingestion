@@ -4,9 +4,9 @@ A retrieval-augmented generation system over SEC 10-K filings, built to compare
 retrieval strategies (dense vs. hybrid) on a measured eval set, with ingestion
 run as an orchestrated, schedulable pipeline rather than a one-off script.
 
-**Status: Phase 3 complete** (chunking + retrieval comparison, measured on a
-24-question eval set). Phases 4–5 (failure analysis, serving) are in
-progress — see [Build phases](#build-phases) below.
+**Status: Phase 4 complete** (failure analysis + confidence-based refusal
+guardrail). Phase 5 (serving) is in progress — see
+[Build phases](#build-phases) below.
 
 ## Architecture (target — see [Build phases](#build-phases) for what's live)
 
@@ -53,6 +53,7 @@ src/ragpipeline/
     hybrid.py              # dense + BM25 sparse, fused via Reciprocal Rank Fusion
   generation/
     ollama_client.py       # grounded RAG prompt -> llama3.2:3b
+  rag.py                   # Phase 4: winning config + confidence-based refusal gate
 orchestration/             # Phase 2: Dagster ingestion DAG
   assets.py                # extract/chunk/embed/load, partitioned per ticker
   checks.py                # dbt-style data quality assertions per stage
@@ -65,6 +66,8 @@ eval/
   harness.py                # runs all 4 chunk x retrieval configs, scores + judges each
   results.json              # full per-question results from the last harness run
   make_chart.py              # renders results.json -> comparison_chart.png
+  failure_analysis.py        # Phase 4: no-answer/ambiguous/multi-doc probe questions
+  failure_analysis_results.json  # actual captured behavior for each probe question
 data/
   raw/                    # downloaded 10-K HTML (gitignored)
   processed/              # cleaned text per filing (gitignored)
@@ -239,10 +242,68 @@ asking for a `{"faithfulness": int, "relevance": int}` JSON blob is far
 easier to make robust against a small local model, and is the fallback the
 spec itself names as acceptable.
 
+## Setup (Phase 4 — failure analysis + guardrail)
+
+```bash
+PYTHONPATH=. ./.venv/bin/python -m eval.failure_analysis
+```
+
+## Phase 4: failure analysis and guardrail
+
+`src/ragpipeline/rag.py` wraps the Phase 3 winning config (fixed_size +
+dense) with a confidence gate: if the top retrieved chunk's cosine score is
+below `CONFIDENCE_THRESHOLD` (0.55), the system refuses instead of calling
+the generator at all. The threshold comes directly from the empirical score
+gap found while probing four failure categories with
+`eval/failure_analysis.py` (real output below, from
+`eval/failure_analysis_results.json`) — genuinely off-topic questions
+scored 0.40–0.47, while every question actually about a 10-K-shaped topic
+(in-corpus or not) scored 0.66+.
+
+| category | question | top score | refused? | actual behavior |
+|---|---|:-:|:-:|---|
+| no-answer (off-topic) | "What is the capital of France?" | 0.474 | **yes** | Refused before generation ran. |
+| no-answer (off-topic) | "How do I bake a chocolate cake?" | 0.401 | **yes** | Refused before generation ran. |
+| no-answer (wrong company) | "What are Netflix's main risk factors?" | 0.677 | no | Gate did *not* fire (score above threshold — retrieved chunks are about the right *topic*, wrong *company*). But the model itself noticed: *"the excerpts... discuss various risk factors... but Netflix is not mentioned."* |
+| no-answer (wrong company) | "What did Amazon report for AWS cloud revenue?" | 0.698 | no | Same pattern — retrieved only MSFT chunks, and the model correctly said *"There is no information... about Amazon."* |
+| ambiguous | "What are the risks?" (no company named) | 0.736 | no | Answered as if unambiguous, using whichever company's chunks scored highest (PFE/JPM) — presented one company's risk taxonomy as "the risks" with no caveat that the corpus covers 6 different companies. |
+| ambiguous | "How much revenue did the company make last year?" | 0.663 | no | Answered with a specific number (\$281,724M) sourced from MSFT without ever naming MSFT, and conflated fiscal years in the same sentence ("revenue... for 2025 is not explicitly stated... revenue data for... 2026 is \$281,724 million"). |
+| multi-doc | "Compare cybersecurity risk factors between Apple and Microsoft" | 0.732 | no | Retrieved 1 AAPL chunk + 3 MSFT chunks + 1 irrelevant XOM chunk (top_k=5 split across 2 requested companies, plus noise) — produced a real comparison, but visibly thinner on the Apple side. |
+| multi-doc | "Which of these companies has the largest litigation risk?" | 0.682 | no | To its credit, hedged appropriately: *"it's difficult to determine... without more information"* rather than fabricating a ranking. |
+
+**What the guardrail actually solves:** genuinely off-topic questions —
+cleanly, cheaply (refuses before spending a generation call).
+
+**What it doesn't solve, and why that's a real limitation, not a bug:**
+
+- **Wrong-company-but-right-topic questions** (Netflix, Amazon) score just
+  as high as legitimate in-corpus questions, because dense retrieval
+  matches topic/domain, not entity identity — there's no retrieval-score
+  signal that distinguishes "this chunk is relevant" from "this chunk is
+  about the wrong company." The system prompt's grounding instruction
+  happened to catch both cases in testing, but that's a soft, model-dependent
+  backstop (relies on the LLM choosing to say "not mentioned" rather than
+  loosely paraphrasing nearby content), not a guaranteed one — a
+  less careful model, or a subtler false-topical-match, could still
+  hallucinate an attribution. A more robust fix would check whether the
+  question names a company outside the known ticker set before retrieval
+  even runs — not implemented here, flagged as follow-up work.
+- **Ambiguous questions score just as high as unambiguous ones** — the
+  retrieval score reflects "how well does *some* chunk match this query,"
+  not "is the query well-specified enough to have one right answer." Fixing
+  this needs a different signal entirely (e.g. detecting when top-k chunks
+  span multiple companies with comparable scores and asking the user to
+  disambiguate) — not implemented here.
+- **Multi-doc questions share one top_k budget across every company named**,
+  so a 2-company comparison gets roughly top_k/2 chunks per side rather than
+  a fair top_k *each* — visible above as the thinner Apple coverage. A
+  proper fix would detect multi-entity questions and retrieve per-entity,
+  then merge — not implemented here.
+
 ## Build phases
 
 - [x] **Phase 1** — Corpus + naive baseline.
 - [x] **Phase 2** — Orchestrated ingestion DAG (Dagster, partitioned per ticker) with dbt-style data quality checks at every stage; containerized.
 - [x] **Phase 3** — Semantic/recursive chunking + hybrid (dense+BM25 RRF) retrieval, 24-question eval set, measured comparison table + chart.
-- [ ] **Phase 4** — Failure analysis (no-answer, ambiguous, multi-document questions) and a confidence-based refusal mechanism.
+- [x] **Phase 4** — Failure analysis (no-answer, ambiguous, multi-document questions) against real captured behavior, plus a confidence-based refusal gate for the clearest failure mode (off-topic questions).
 - [ ] **Phase 5** — FastAPI serving with structured logging, full `docker-compose up` from a clean clone, final README pass.
