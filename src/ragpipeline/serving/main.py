@@ -6,8 +6,10 @@ per-request logging (latency per stage, tokens, retrieved doc IDs).
 """
 import time
 import uuid
+from pathlib import Path
 
 from fastapi import FastAPI
+from fastapi.responses import FileResponse
 
 from ragpipeline.rag import answer_question
 from ragpipeline.serving.logging_config import get_request_logger, log_request
@@ -15,6 +17,16 @@ from ragpipeline.serving.schemas import QueryRequest, QueryResponse, RetrievedCh
 
 app = FastAPI(title="RAG Pipeline API", version="0.1.0")
 _logger = get_request_logger()
+
+_STATIC_DIR = Path(__file__).resolve().parent / "static"
+
+
+@app.get("/", include_in_schema=False)
+def frontend() -> FileResponse:
+    """Minimal vanilla-JS UI over /query -- not part of the original spec's
+    Phase 5 (FastAPI + structured logging), added as a convenience for
+    trying the system without curl/Swagger."""
+    return FileResponse(_STATIC_DIR / "index.html")
 
 
 @app.get("/health")

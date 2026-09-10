@@ -91,6 +91,7 @@ src/ragpipeline/
     main.py                # /health, /query
     schemas.py              # Pydantic request/response models
     logging_config.py        # structured (JSON-per-line) request logging
+    static/index.html         # minimal vanilla-JS frontend, served at "/"
 orchestration/             # Phase 2: Dagster ingestion DAG
   assets.py                # extract/chunk/embed/load, partitioned per ticker
   checks.py                # dbt-style data quality assertions per stage
@@ -358,6 +359,14 @@ orchestrator, API) from nothing — it does not itself run ingestion. Load
 data either through the Dagster UI at `localhost:3000` (materialize all
 partitions) or `./.venv/bin/python scripts/ingest_chunking_strategies.py --recreate`
 before querying the API, the same two-step split as Phase 2.
+
+A minimal browser UI is served at `http://localhost:8000/` (vanilla HTML/JS,
+`serving/static/index.html`, no build step or extra dependency) — a
+question box, a few one-click example questions (including the Netflix and
+off-topic failure cases from Phase 4), and a rendered answer with its
+score/latency/token metadata and retrieved chunks. This is beyond the
+original Phase 5 spec (FastAPI + structured logging) — added afterward as a
+convenience for trying the system without curl or the `/docs` Swagger UI.
 
 ## Phase 5 results
 
